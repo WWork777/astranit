@@ -5,17 +5,17 @@ import localFont from "next/font/local";
 const bebasNeue = localFont({
   src: [
     {
-      path: './fonts/Bebas-Neue-Regular.ttf',
-      weight: '400',
-      style: 'normal',
+      path: "./fonts/Bebas-Neue-Regular.ttf",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: './fonts/Bebas-Neue-Bold.ttf',
-      weight: '500',
-      style: 'normal',
+      path: "./fonts/Bebas-Neue-Bold.ttf",
+      weight: "500",
+      style: "normal",
     },
-  ]
-})
+  ],
+});
 
 export const metadata = {
   title: "Create Next App",
