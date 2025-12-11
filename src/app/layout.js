@@ -1,12 +1,21 @@
 import Header from "@/components/layout/header/Header";
 import "./globals.css";
-import { Bebas_Neue } from "next/font/google";
+import localFont from "next/font/local";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
-});
+const bebasNeue = localFont({
+  src: [
+    {
+      path: './fonts/Bebas-Neue-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Bebas-Neue-Bold.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+  ]
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${bebasNeue.variable}`}>
+      <body>
         <Header />
         {children}
       </body>
