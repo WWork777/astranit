@@ -13,7 +13,7 @@ export default function Reviews() {
 		'/images/reviews/img3.png',
 		'/images/reviews/img1.png',
 		'/images/reviews/img2.png',
-		'/images/reviews/img2.png',
+		'/images/reviews/img3.png',
 	]
 	return (
 		<>
@@ -29,12 +29,12 @@ export default function Reviews() {
 						pagination={false}
 						navigation={true}
 						autoplay={{
-							delay: 4000, // 4 секунды
+							delay: 4000,
 							disableOnInteraction: false,
 							pauseOnMouseEnter: true,
 							waitForTransition: true,
 						}}
-						speed={1000} // 1 секунда анимации
+						speed={1000}
 						modules={[Navigation, Pagination, Autoplay]}
 						className=''
 						breakpoints={{
