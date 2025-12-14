@@ -1,6 +1,7 @@
 @import '../../../app/styles/variables';
 .services {
 	background-color: var(--layer-color2);
+
 	.title {
 		color: #ffffff;
 		font-size: 56px;
@@ -46,4 +47,7 @@
 			}
 		}
 	}
+}
+.services_container {
+	margin-bottom: 0;
 }

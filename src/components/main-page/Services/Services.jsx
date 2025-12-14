@@ -43,7 +43,7 @@ export default function Services() {
 	return (
 		<>
 			<section className={styles.services}>
-				<div className='container'>
+				<div className={`container ${styles.services_container}`}>
 					<h1 className={styles.title}>РЕШЕНИЯ И СЕРВИСЫ</h1>
 					<ul className={styles.grid}>
 						{data.map(item => (
