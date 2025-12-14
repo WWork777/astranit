@@ -1,0 +1,44 @@
+.benefit {
+	.title {
+		color: rgba(73, 72, 87, 1);
+		font-size: 56px;
+		font-weight: 500;
+		line-height: 56px;
+		letter-spacing: 0%;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		gap: 20px;
+		list-style: none;
+	}
+	.cart {
+		padding-top: 40px;
+		display: flex;
+		align-items: center;
+
+		&_img {
+			min-width: 25%;
+		}
+
+		&_text {
+			h2 {
+				color: rgba(73, 72, 87, 1);
+				font-family: Roboto;
+				font-size: 24px;
+				font-weight: 700;
+			}
+			p {
+				padding-right: 100px;
+				color: rgba(73, 72, 87, 1);
+				font-family: Roboto;
+				font-size: 18px;
+				line-height: 21px;
+				font-weight: 400;
+			}
+		}
+	}
+}
