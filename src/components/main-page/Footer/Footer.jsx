@@ -18,8 +18,11 @@ export default function Footer() {
 			{ title: 'Дублирование интернет канала', link: '#' },
 		],
 		info: [
-			{ title: 'astranit.ru', link: '/' },
-			{ title: 'Материалы данного сайта<br/>  не являются офертой', link: '/' },
+			{ title: 'astranit.ru<br/> (C) ООО "ИТ Спектр", 2009-2025', link: '/' },
+			{
+				title: 'Материалы данного сайта<br/> не являются публичной офертой',
+				link: '/',
+			},
 			{ title: 'Политика конфиденциальности', link: '/privacy' },
 		],
 	}
@@ -37,7 +40,7 @@ export default function Footer() {
 							))}
 						</ul>
 						<ul className={styles.footer_inner_box2}>
-							<li>Решения и сервисы</li>
+							<li>РЕШЕНИЯ И СЕРВИСЫ</li>
 							{data.servLink.map(item => (
 								<li key={item.title}>
 									<Link href={item.link}>{item.title}</Link>
