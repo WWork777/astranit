@@ -1,4 +1,5 @@
 import Calculator from '@/components/main-page/Calculator/Calculator'
+import Footer from '@/components/main-page/Footer/Footer'
 import Hero from '@/components/main-page/Hero/Hero'
 import Pluses from '@/components/main-page/Pluses/Pluses'
 import ProtectionRing from '@/components/main-page/Protection-ring/ProtectionRing'
@@ -24,6 +25,7 @@ export default function Home() {
 			<Support />
 			<Calculator />
 			<Reviews />
+			<Footer />
 		</>
 	)
 }

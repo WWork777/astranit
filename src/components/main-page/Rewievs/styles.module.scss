@@ -1,11 +1,13 @@
 .reviews {
+	position: relative;
+	padding-bottom: 100px;
 	.title {
 		color: rgba(73, 72, 87, 1);
 		font-size: 56px;
 		font-weight: 500;
 		line-height: 56px;
 		letter-spacing: 0%;
-		padding-bottom: 52 px;
+		padding-bottom: 52px;
 		text-align: center;
 	}
 }

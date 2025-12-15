@@ -1,14 +1,17 @@
 'use client'
 import styles from './styles.module.scss'
 
+import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
-// import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
 export default function Reviews() {
 	const reviews = [
-		'/images/reviews/img1.png',
+		'/images/reviews/img1.svg',
 		'/images/reviews/img2.png',
 		'/images/reviews/img3.png',
 		'/images/reviews/img1.png',
@@ -23,11 +26,15 @@ export default function Reviews() {
 					<Swiper
 						loop={true}
 						grabCursor={true}
-						centeredSlides={false}
+						centeredSlides={true}
 						// slidesPerView={3}
 						// spaceBetween={0}
 						pagination={false}
-						navigation={true}
+						navigation={
+							true
+							// nextEl: '.swiper-button-next',
+							// prevEl: '.swiper-button-prev',
+						}
 						autoplay={{
 							delay: 4000,
 							disableOnInteraction: false,
@@ -36,7 +43,7 @@ export default function Reviews() {
 						}}
 						speed={1000}
 						modules={[Navigation, Pagination, Autoplay]}
-						className=''
+						className={styles.reviewsSwiper}
 						breakpoints={{
 							320: {
 								slidesPerView: 1,
@@ -67,10 +74,23 @@ export default function Reviews() {
 						{reviews.map(src => (
 							<SwiperSlide className={''}>
 								<div key={Math.random()}>
-									<img src={src} alt='img' />
+									<Image
+										width={1000}
+										height={1000}
+										src={src}
+										style={{
+											width: '100%',
+											height: '100%',
+											objectFit: 'cover',
+										}}
+										alt='reviews'
+									/>
+									{/* <img src={src} alt='reviews' /> */}
 								</div>
 							</SwiperSlide>
 						))}
+						{/* <div className={`swiper-button-prev ${styles.button_prev}`}></div>
+						<div className={`swiper-button-next ${styles.button_next}`}></div> */}
 					</Swiper>
 				</div>
 			</section>
