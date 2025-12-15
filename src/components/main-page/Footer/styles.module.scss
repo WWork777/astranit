@@ -26,12 +26,12 @@
 			text-align: right;
 		}
 	}
-	.footer_form {
+	.footer_banner {
 		display: flex;
 		box-sizing: border-box;
-		border: 16px solid rgba(87, 136, 159, 1);
+		border: 16px solid var(--layer-color2);
 		box-shadow: 4px 4px 5px 0px rgba(204, 204, 204, 1);
-		border-radius: 100px;
+		border-radius: 50px;
 		width: 1200px;
 		height: 587px;
 		background-color: var(--layer-color1);
@@ -62,6 +62,89 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+		.footer_form {
+			&_body {
+				padding-top: 50px;
+				display: flex;
+				gap: 20px;
+				.form_inputs {
+					display: flex;
+					flex-direction: column;
+					input {
+						width: 240px;
+						height: 50px;
+						margin-bottom: 20px;
+						padding-left: 10px;
+						box-sizing: border-box;
+						border: 2px solid rgba(167, 186, 193, 1);
+						border-radius: 50px;
+						background: rgba(255, 255, 255, 1);
+						color: rgba(153, 153, 153, 1);
+						font-family: Roboto;
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 18px;
+						letter-spacing: 0%;
+						text-align: left;
+					}
+				}
+				.form_textarea {
+					textarea {
+						padding: 14px 20px;
+						width: 400px;
+						height: 190px;
+						box-sizing: border-box;
+						border: 2px solid rgba(167, 186, 193, 1);
+						border-radius: 30px;
+						background: rgba(255, 255, 255, 1);
+						color: rgba(153, 153, 153, 1);
+						font-family: Roboto;
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 21.6px;
+						resize: none;
+					}
+				}
+			}
+
+			button {
+				padding: 15px 75px;
+				border-radius: 30px;
+				border: none;
+				background-color: #ff9933;
+				color: white;
+				font-size: 18px;
+				font-weight: 500;
+				font-family: Roboto, sans-serif;
+				cursor: pointer;
+				transition: background-color 0.3s ease, transform 0.2s ease;
+				box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+				&:hover {
+					background-color: #e68a29;
+					transform: translateY(-2px);
+				}
+
+				&:active {
+					transform: translateY(0);
+				}
+
+				@media (max-width: 768px) {
+					padding: 16px 40px;
+					font-size: 16px;
+					max-width: 250px;
+				}
+
+				@media (max-width: 480px) {
+					padding: 14px 30px;
+					font-size: 15px;
+					max-width: 220px;
+				}
+
+				span {
+					display: inline-block;
+				}
+			}
 		}
 	}
 	.footer_container {

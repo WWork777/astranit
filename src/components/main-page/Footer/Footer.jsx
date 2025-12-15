@@ -59,15 +59,47 @@ export default function Footer() {
 						</ul>
 					</div>
 				</div>
-				<div className={styles.footer_form}>
-					<div className={styles.footer_form_text}>
+				<div className={styles.footer_banner}>
+					<div className={styles.footer_banner_text}>
 						<h1>ОБСУДИМ ВАШУ ЗАДАЧУ!</h1>
 						<p>
 							Остались вопросы? С удовольствием проконсультируем вас по решению
 							необходимой задачи и условиям обслуживания!
 						</p>
+						<form className={styles.footer_form}>
+							<div className={styles.footer_form_body}>
+								<div className={styles.form_inputs}>
+									<input
+										type='text'
+										name='name'
+										placeholder='Как к вам обращаться?'
+									/>
+									<input
+										type='text'
+										name='phone'
+										placeholder='+7 (000) 000-00-00'
+										required
+									/>
+									<input
+										type='email'
+										name='email'
+										placeholder='name@company*'
+									/>
+								</div>
+								<div className={styles.form_textarea}>
+									<textarea
+										name='message'
+										id='message'
+										placeholder='Ваша задача или вопрос.Или не пишите ничего, уточним все в ходе обсуждения.'
+									></textarea>
+								</div>
+							</div>
+							<button>
+								<span>Отправить</span>
+							</button>
+						</form>
 					</div>
-					<div className={styles.footer_form_img}>
+					<div className={styles.footer_banner_img}>
 						<img src='/images/footer/footer.svg' alt='footer-img' />
 					</div>
 				</div>
