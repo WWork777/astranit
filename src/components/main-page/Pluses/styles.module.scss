@@ -1,105 +1,488 @@
 .pluses {
-	@media (max-width: 1280) {
-		padding-bottom: 100px;
-	}
-	@media (max-width: 1024) {
-		padding-bottom: 150px;
-	}
-	@media (max-width: 768) {
-		padding-bottom: 200px;
-	}
+  padding: 60px 0;
+
+  @media (max-width: 992px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 0;
+  }
 }
+
+.text {
+  @media (max-width: 480px) {
+    max-width: 200px !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 6%;
+
+  @media (max-width: 1280px) {
+    padding: 0 4%;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
+}
+
 .pluses_title {
-	text-align: center;
-	color: #494857;
-	font-size: 56px;
-	margin-bottom: 40px;
+  text-align: center;
+  color: #494857;
+  font-size: 56px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (max-width: 1280px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 }
 
-.pluses_conatiner {
-	display: flex;
-	font-family: Roboto, sans-serif;
-	padding-left: 6%;
-	padding-right: 6%;
-	gap: 20px;
-	height: 500px;
-	@media (max-width: 1280) {
-		flex-direction: column;
-		gap: 10px;
-		min-height: 500px;
-	}
+.pluses_container {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  gap: 20px;
+  min-height: 550px;
+  height: 550px;
+
+  @media (max-width: 1280px) {
+    height: auto;
+    min-height: auto;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+  }
 }
 
-.pluses_conatiner_left {
-	width: 30%;
-	position: relative;
-	height: 100%;
+.pluses_container_left {
+  width: 30%;
+  height: 100%;
 
-	@media (max-width: 1600) {
-		width: 30%;
-	}
-	@media (max-width: 1280) {
-		width: 100%;
-	}
-	img {
-		position: absolute;
-		bottom: 0;
-		right: 20px;
-		height: 250px;
-		width: auto;
-		@media (max-width: 1800) {
-			height: 180px;
-		}
-		@media (max-width: 1280) {
-			height: 100px;
-		}
-	}
+  @media (max-width: 1280px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 }
 
-.pluses_conatiner_right {
-	display: flex;
-	flex-direction: column;
-	width: 75%;
-	gap: 20px;
-	height: 100%;
-	@media (max-width: 1280) {
-		width: 100%;
-		gap: 10px;
-	}
+.content_wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fafafa;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  /* Десктоп: текст сверху, картинка внизу справа */
+  @media (min-width: 992px) {
+    flex-direction: column;
+  }
+
+  /* Планшет и мобилка: текст слева, картинка справа */
+  @media (max-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    padding: 25px;
+    min-height: auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 22px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    min-height: 200px; /* Минимальная высота для мобилок */
+  }
 }
 
-.pluses_conatiner_right_top,
-.pluses_conatiner_right_bottom {
-	display: flex;
-	gap: 20px;
-	height: 100%;
-	@media (max-width: 1280) {
-		gap: 10px;
-	}
-	@media (max-width: 1024) {
-		flex-direction: column;
-	}
+.text_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+
+  p {
+    color: #494857;
+    line-height: 25px;
+    max-width: 280px;
+    font-size: 16px;
+
+    /* На планшетах и мобилках увеличиваем максимальную ширину текста */
+    @media (max-width: 992px) {
+      max-width: 100%;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  span {
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: #494857;
+    display: block;
+
+    @media (max-width: 992px) {
+      font-size: 19px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+
+  /* На планшетах и мобилках текст занимает основное пространство */
+  @media (max-width: 992px) {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  /* На маленьких мобилках тоже добавляем отступ справа для картинки */
+  @media (max-width: 480px) {
+    padding-right: 20px;
+    width: 100%;
+  }
 }
 
-.pluses_conatiner_right_top__left,
-.pluses_conatiner_left,
-.pluses_conatiner_right_top__right,
-.pluses_conatiner_right_bottom__left,
-.pluses_conatiner_right_bottom__right {
-	color: #494857;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	background-color: #fafafa;
-	border: 1px solid #cccccc;
-	border-radius: 10px;
-	padding: 20px;
+.image_wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 20px; /* Убираем правый отступ */
+  width: 300px;
+  height: 250px;
+  z-index: 0;
+  opacity: 40%;
 
-	span {
-		font-size: 20px;
-		font-weight: 600;
-	}
-	@media (max-width: 1280) {
-		width: 100%;
-	}
+  @media (max-width: 1600px) {
+    width: 250px;
+    height: 200px;
+  }
+
+  @media (max-width: 1400px) {
+    width: 220px;
+    height: 180px;
+  }
+
+  /* На экранах меньше 992px картинка должна быть прижата к правому нижнему углу */
+  @media (max-width: 992px) {
+    position: absolute; /* Оставляем абсолютное позиционирование */
+    width: 180px;
+    height: 140px;
+    bottom: 0;
+    right: 20px; /* Прижимаем к правому нижнему углу */
+    margin: 0; /* Убираем все отступы */
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 160px;
+    height: 130px;
+  }
+
+  /* На маленьких мобилках тоже прижимаем к правому нижнему углу */
+  @media (max-width: 480px) {
+    width: 140px;
+    height: 110px;
+    position: absolute; /* Оставляем абсолютное позиционирование */
+    bottom: 0;
+    right: 10px;
+    margin: 0;
+  }
+
+  @media (max-width: 360px) {
+    width: 120px;
+    height: 95px;
+  }
+}
+
+.image {
+  object-fit: contain;
+  object-position: right bottom; /* Прижимаем изображение к правому нижнему углу контейнера */
+
+  /* На всех мобильных устройствах прижимаем к правому нижнему углу */
+  @media (max-width: 992px) {
+    object-position: right bottom;
+  }
+}
+
+.pluses_container_right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 20px;
+  height: 100%;
+
+  @media (max-width: 1280px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+    gap: 15px;
+  }
+}
+
+.pluses_container_right_top,
+.pluses_container_right_bottom {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+
+  @media (max-width: 1280px) {
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: row;
+    gap: 15px;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+// Стили для блоков 2-5
+.pluses_item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fafafa;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 25px;
+  color: #494857;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  flex: 1;
+
+  @media (max-width: 1280px) {
+    padding: 22px;
+    gap: 15px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 20px;
+    gap: 12px;
+    min-height: 220px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    display: block;
+
+    @media (max-width: 1280px) {
+      font-size: 19px;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 19px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+
+    @media (max-width: 1280px) {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Адаптивность для экранов < 992px
+@media (max-width: 991px) {
+  .pluses_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pluses_container_left {
+    width: 100%;
+
+    .content_wrapper {
+      min-height: 250px; /* Минимальная высота для контейнера */
+      position: relative; /* Важно для абсолютного позиционирования картинки */
+    }
+  }
+
+  .pluses_container_right_top,
+  .pluses_container_right_bottom {
+    > div {
+      flex: 1;
+      min-height: 220px;
+    }
+  }
+
+  // Особые стили для блоков в ряд на 992px-768px
+  @media (min-width: 769px) and (max-width: 991px) {
+    .pluses_container_right_top,
+    .pluses_container_right_bottom {
+      > div {
+        min-height: 240px;
+      }
+    }
+  }
+}
+
+// Еще меньшие экраны
+@media (max-width: 768px) {
+  .pluses_container_right_top,
+  .pluses_container_right_bottom {
+    > div {
+      width: 100%;
+    }
+  }
+
+  .pluses_item {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pluses_title {
+    font-size: 26px;
+  }
+
+  .content_wrapper {
+    padding: 18px;
+    min-height: 200px; /* Фиксированная высота для мобилок */
+  }
+
+  .text_content {
+    gap: 15px;
+
+    span {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .pluses_item {
+    padding: 20px;
+
+    span {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+// Очень маленькие экраны
+@media (max-width: 360px) {
+  .pluses_title {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .content_wrapper {
+    padding: 15px;
+    min-height: 180px;
+  }
+
+  .pluses_item {
+    padding: 18px;
+  }
+
+  .text_content,
+  .pluses_item {
+    span {
+      font-size: 17px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
 }

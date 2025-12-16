@@ -14,11 +14,26 @@
   }
 
   @media (max-width: 1350px) {
-    padding: 20px 5%;
+    padding: 20px 10%;
   }
 
   @media (max-width: 1150px) {
-    padding: 20px 2%;
+    padding: 10px 5%;
+  }
+
+  @media (max-width: 400px) {
+    padding: 10px 2%;
+  }
+}
+
+.logo_container {
+  a {
+    img {
+      @media (max-width: 992px) {
+        height: 50px;
+        width: 150px;
+      }
+    }
   }
 }
 
@@ -30,6 +45,12 @@
     font-size: 36px;
     color: #494857;
     line-height: 36px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #58899f;
+    }
 
     @media (max-width: 1500px) {
       font-size: 30px;
@@ -53,6 +74,12 @@
   .phone_link {
     color: #58899f;
     font-size: 48px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #3a6a7f;
+    }
 
     @media (max-width: 1500px) {
       font-size: 40px;
@@ -63,4 +90,152 @@
 .socials_links {
   display: flex;
   gap: 5px;
+
+  a {
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Бургер-кнопка */
+.burger_button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+
+  @media (max-width: 1150px) {
+    display: flex;
+  }
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: #494857;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+}
+
+/* Мобильное меню */
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background-color: #fafafa;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: right 0.4s ease;
+  padding-top: 80px;
+
+  &.active {
+    right: 0;
+  }
+
+  @media (max-width: 480px) {
+    width: 250px;
+  }
+}
+
+.mobile_menu_content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 25px;
+}
+
+.mobile_nav_link {
+  font-size: 24px;
+  color: #494857;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #58899f;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.mobile_contacts {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile_phone_link {
+  color: #58899f;
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #3a6a7f;
+  }
+}
+
+.mobile_socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+
+  a {
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Оверлей */
+.menu_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
