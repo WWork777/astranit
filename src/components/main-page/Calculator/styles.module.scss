@@ -1,5 +1,8 @@
 .calc {
 	padding-top: 100px;
+	@media (max-width: 1400px) {
+		display: none;
+	}
 
 	.clipped {
 		position: relative;

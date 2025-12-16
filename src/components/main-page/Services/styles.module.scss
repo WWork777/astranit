@@ -16,6 +16,12 @@
 		justify-items: center;
 		gap: 20px;
 		list-style: none;
+		@media (max-width: 1280px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	.cart {
 		cursor: pointer;

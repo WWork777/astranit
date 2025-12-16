@@ -2,6 +2,9 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
+	@media (max-width: 1280px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
 	&_cols_1 {
 		h1 {
@@ -21,6 +24,9 @@
 		display: flex;
 		justify-content: start;
 		align-items: center;
+		@media (max-width: 1280px) {
+			display: none;
+		}
 	}
 }
 

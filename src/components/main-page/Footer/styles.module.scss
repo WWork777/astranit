@@ -11,6 +11,14 @@
 		grid-template-columns: repeat(3, 1fr);
 		color: #ffffff;
 		justify-content: space-between;
+		@media (max-width: 1800px) {
+			margin-top: 250px;
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+			padding-top: 300px;
+			padding-bottom: 50px;
+		}
 
 		&_box1 {
 			list-style: none;
@@ -28,6 +36,9 @@
 			display: flex;
 			flex-direction: column;
 			margin: 0 auto;
+			@media (max-width: 768px) {
+				margin: 0;
+			}
 
 			li {
 				color: rgba(245, 245, 245, 1);
@@ -47,6 +58,10 @@
 		}
 		&_box3 {
 			margin-left: auto;
+			@media (max-width: 768px) {
+				margin: 0;
+			}
+
 			li {
 				list-style: none;
 				color: rgba(245, 245, 245, 1);
@@ -88,6 +103,9 @@
 				font-size: 22px;
 				font-weight: 400;
 				line-height: 21.8px;
+				@media (max-width: 768px) {
+					display: none;
+				}
 			}
 		}
 		&_img {
@@ -95,12 +113,18 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			@media (max-width: 1280px) {
+				display: none;
+			}
 		}
 		.footer_form {
 			&_body {
 				padding-top: 50px;
 				display: flex;
 				gap: 20px;
+				@media (max-width: 768px) {
+					flex-direction: column;
+				}
 				.form_inputs {
 					display: flex;
 					flex-direction: column;
@@ -137,6 +161,9 @@
 						font-weight: 400;
 						line-height: 21.6px;
 						resize: none;
+						@media (max-width: 768px) {
+							display: none;
+						}
 					}
 				}
 			}
@@ -178,6 +205,10 @@
 					display: inline-block;
 				}
 			}
+		}
+		@media (max-width: 992px) {
+			flex-direction: column;
+			height: auto;
 		}
 	}
 	.footer_container {

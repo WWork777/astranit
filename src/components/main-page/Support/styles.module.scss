@@ -15,6 +15,9 @@
 		grid-auto-rows: 1fr;
 		gap: 20px;
 		list-style: none;
+		@media (max-width: 992px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 
 		li {
 			display: grid;
@@ -24,10 +27,14 @@
 				grid-column: 1 / -1; // Занимает всю ширину
 				display: flex;
 				justify-content: center;
+				@media (max-width: 992px) {
+					grid-column: 1;
+				}
 				.cart {
-					width: calc(
-						50% - 10px
-					); // Ширина как у остальных карточек (50% минус половина gap)
+					width: calc(50% - 10px);
+					@media (max-width: 992px) {
+						width: 100%;
+					} // Ширина как у остальных карточек (50% минус половина gap)
 				}
 			}
 		}
