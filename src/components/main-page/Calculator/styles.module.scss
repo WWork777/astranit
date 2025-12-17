@@ -1,7 +1,6 @@
 .calc {
 	padding-top: 100px;
-	@media (max-width: 1400px) {
-		display: none;
+	@media (max-width: 1024px) {
 	}
 
 	.clipped {
@@ -19,25 +18,74 @@
 			height: 100%;
 			clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 			display: flex;
-			justify-content: center;
+			justify-content: end;
 			align-items: center;
+			@media (max-width: 1024px) {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+				top: 0;
+				width: 100%;
+				justify-content: start;
+				align-items: start;
+			}
 
 			&_inner {
 				display: flex;
 				flex-direction: column;
+				padding: 50px 300px 60px 0;
+				@media (max-width: 1680px) {
+					padding: 50px 280px 60px 0;
+				}
+				@media (max-width: 1440px) {
+					padding: 50px 230px 60px 0;
+				}
+				@media (max-width: 1280px) {
+					padding: 50px 200px 60px 0;
+				}
+				@media (max-width: 1024px) {
+					flex-direction: row;
+					padding: 30px 0 0 50px;
+				}
 				h1 {
 					color: rgba(245, 245, 245, 1);
 					font-size: 56px;
-					font-weight: 400;
+					font-weight: 500;
 					line-height: 56px;
+					padding-bottom: 40px;
+					@media (max-width: 1800px) {
+						font-size: 48px;
+						line-height: 48px;
+					}
+					@media (max-width: 1680px) {
+						font-size: 40px;
+						line-height: 40px;
+					}
+					@media (max-width: 1540px) {
+						padding-bottom: 20px;
+						font-size: 36px;
+						line-height: 36px;
+					}
+					@media (max-width: 1440px) {
+						padding-bottom: 10px;
+						font-size: 28px;
+						line-height: 28px;
+					}
+					@media (max-width: 1280px) {
+						font-size: 20px;
+						line-height: 20px;
+					}
+					@media (max-width: 1024px) {
+						font-size: 30px;
+						line-height: 30px;
+					}
 				}
 
 				.ranges {
-					margin-top: 40px;
-
 					&_box1 {
 						list-style: none;
 						margin-bottom: 10px;
+						@media (max-width: 1440px) {
+							margin-bottom: 5px;
+						}
 
 						&_title {
 							font-size: 30px;
@@ -46,6 +94,9 @@
 							font-size: 20px;
 							font-weight: 400;
 							margin-bottom: 15px;
+							@media (max-width: 1280px) {
+								font-size: 14px;
+							}
 						}
 
 						&_body {
@@ -62,11 +113,19 @@
 								font-family: Roboto;
 								font-size: 25px;
 								font-weight: 700;
-								width: 100px;
+								width: 120px;
 								height: 40px;
 								background: rgba(245, 245, 245, 1);
 								border-radius: 50px;
 								box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+								@media (max-width: 1440px) {
+									height: 35px;
+									font-size: 18px;
+								}
+								@media (max-width: 1280px) {
+									height: 30px;
+									font-size: 16px;
+								}
 							}
 
 							.range_input {
@@ -76,8 +135,8 @@
 								height: 10px;
 								background: linear-gradient(
 									to right,
-									#ff9933 0%,
-									#ff9933 50%,
+									#ff9a22 0%,
+									#ff9a22 50%,
 									#e0e0e0 50%,
 									#e0e0e0 100%
 								);
@@ -111,7 +170,7 @@
 									height: 25px;
 									background: linear-gradient(145deg, #ffffff, #f0f0f0);
 									border-radius: 50%;
-									border: 3px solid #ff9933;
+									border: 3px solid #ff9a22;
 									cursor: pointer;
 									box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
 										0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -132,7 +191,7 @@
 									height: 25px;
 									background: linear-gradient(145deg, #ffffff, #f0f0f0);
 									border-radius: 50%;
-									border: 3px solid #ff9933;
+									border: 3px solid #ff9a22;
 									cursor: pointer;
 									box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
 										0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -171,7 +230,10 @@
 
 					&_box2 {
 						list-style: none;
-						margin-bottom: 10px;
+						margin-bottom: 20px;
+						@media (max-width: 1440px) {
+							margin-bottom: 5px;
+						}
 
 						&_title {
 							font-size: 30px;
@@ -210,8 +272,8 @@
 								height: 20px;
 								background: linear-gradient(
 									to right,
-									#ff9933 0%,
-									#ff9933 50%,
+									#ff9a22 0%,
+									#ff9a22 50%,
 									#e0e0e0 50%,
 									#e0e0e0 100%
 								);
@@ -245,7 +307,7 @@
 									height: 20px;
 									background: linear-gradient(145deg, #ffffff, #f0f0f0);
 									border-radius: 50%;
-									border: 3px solid #ff9933;
+									border: 3px solid #ff9a22;
 									cursor: pointer;
 									box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
 										0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -266,7 +328,7 @@
 									height: 20px;
 									background: linear-gradient(145deg, #ffffff, #f0f0f0);
 									border-radius: 50%;
-									border: 3px solid #ff9933;
+									border: 3px solid #ff9a22;
 									cursor: pointer;
 									box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
 										0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -306,6 +368,9 @@
 					&_box3 {
 						list-style: none;
 						margin-bottom: 10px;
+						@media (max-width: 1440px) {
+							margin-bottom: 5px;
+						}
 
 						&_title {
 							font-size: 30px;
@@ -344,8 +409,8 @@
 								height: 20px;
 								background: linear-gradient(
 									to right,
-									#ff9933 0%,
-									#ff9933 50%,
+									#ff9a22 0%,
+									#ff9a22 50%,
 									#e0e0e0 50%,
 									#e0e0e0 100%
 								);
@@ -379,7 +444,7 @@
 									height: 20px;
 									background: linear-gradient(145deg, #ffffff, #f0f0f0);
 									border-radius: 50%;
-									border: 3px solid #ff9933;
+									border: 3px solid #ff9a22;
 									cursor: pointer;
 									box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
 										0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -400,7 +465,7 @@
 									height: 20px;
 									background: linear-gradient(145deg, #ffffff, #f0f0f0);
 									border-radius: 50%;
-									border: 3px solid #ff9933;
+									border: 3px solid #ff9a22;
 									cursor: pointer;
 									box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
 										0 0 0 2px rgba(255, 255, 255, 0.8);
@@ -436,6 +501,9 @@
 							}
 						}
 					}
+					@media (max-width: 1024px) {
+						display: none;
+					}
 				}
 
 				button {
@@ -446,10 +514,10 @@
 					border: none;
 					box-sizing: border-box;
 					border: 1px solid rgba(0, 0, 0, 1), rgba(245, 245, 245, 1);
-					background: rgba(255, 153, 51, 1);
+					background: var(--accent-color1);
 					color: white;
 					font-size: 18px;
-					font-weight: 500;
+					font-weight: 900;
 					font-family: Roboto, sans-serif;
 					cursor: pointer;
 					transition: all 0.3s ease;
@@ -477,7 +545,7 @@
 					}
 
 					&:hover {
-						background-color: #e68a29;
+						background-color: var(--accent-hover1);
 						transform: translateY(-3px);
 						box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4),
 							inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -491,6 +559,11 @@
 						transform: translateY(-1px);
 						box-shadow: 0 2px 10px rgba(255, 153, 51, 0.3),
 							inset 0 1px 0 rgba(255, 255, 255, 0.1);
+					}
+					@media (max-width: 1280px) {
+						padding: 12px 25px;
+						font-size: 15px;
+						max-width: 200px;
 					}
 
 					@media (max-width: 768px) {
@@ -509,6 +582,9 @@
 						display: inline-block;
 						position: relative;
 						z-index: 1;
+					}
+					@media (max-width: 1024px) {
+						display: none;
 					}
 				}
 			}
