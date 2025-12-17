@@ -64,6 +64,69 @@
 .start_container {
   display: flex;
   gap: 120px;
+  position: relative;
+
+  .arrow {
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    top: 20%;
+    z-index: 1;
+
+    @media (max-width: 1500px) {
+      width: 480px;
+    }
+
+    @media (max-width: 1450px) {
+      width: 450px;
+    }
+
+    @media (max-width: 1350px) {
+      width: 420px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 390px;
+    }
+
+    @media (max-width: 1150px) {
+      width: 360px;
+    }
+
+    @media (max-width: 992px) {
+      transform: rotate(90deg);
+      height: 100px;
+      transform-origin: center;
+      display: none;
+
+      &:nth-child(1) {
+        left: 30% !important;
+        top: 10%;
+      }
+
+      &:nth-child(3) {
+        left: 30% !important;
+        top: 50%;
+      }
+
+      &:nth-child(5) {
+        left: 30% !important;
+        top: 78.8%;
+      }
+    }
+
+    &:nth-child(1) {
+      left: -5%;
+    }
+
+    &:nth-child(3) {
+      left: 31.5%;
+    }
+
+    &:nth-child(5) {
+      left: 68%;
+    }
+  }
 
   @media (max-width: 1600px) {
     gap: 60px;
@@ -79,7 +142,7 @@
 
   @media (max-width: 992px) {
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
   }
 }
 
@@ -97,6 +160,8 @@
   flex: 1;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 10;
 
   &:hover {
     transform: translateY(-5px);
@@ -126,6 +191,42 @@
   }
 }
 
+.text_wrapper_mobile,
+.image_wrapper_mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.image_wrapper_mobile {
+  text-align: left;
+}
+
+.text_wrapper_mobile {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.text_wrapper,
+.image_wrapper {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
 .item_content {
   display: flex;
   flex-direction: column;
@@ -140,6 +241,10 @@
     align-items: center;
     text-align: left;
     gap: 30px;
+
+    .text_wrapper {
+      order: 1;
+    }
   }
 
   @media (max-width: 768px) {

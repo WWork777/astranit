@@ -129,11 +129,14 @@
 
   @media (max-width: 768px) {
     padding: 22px;
+    // Первая карточка (большая) на мобилках
+    min-height: 250px;
+    height: auto;
   }
 
   @media (max-width: 480px) {
     padding: 20px;
-    min-height: 200px; /* Минимальная высота для мобилок */
+    min-height: 200px;
   }
 }
 
@@ -289,6 +292,14 @@
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 15px;
+    // Уменьшаем высоту контейнеров для 4 нижних карточек
+    height: auto;
+  }
+}
+
+.top_left {
+  @media (max-width: 768px) {
+    height: auto !important; // Убираем фиксированную высоту
   }
 }
 
@@ -317,13 +328,23 @@
   }
 
   @media (max-width: 768px) {
+    // МЕНЬШАЯ ВЫСОТА ДЛЯ 4 НИЖНИХ КАРТОЧЕК
     min-height: auto;
-    padding: 25px;
+    height: 180px; // Фиксированная высота для нижних карточек
+    padding: 20px; // Уменьшаем отступы для экономии места
   }
 
   @media (max-width: 480px) {
-    padding: 20px;
+    // ЕЩЕ МЕНЬШЕ НА МОБИЛЬНЫХ
+    height: 160px;
+    padding: 18px;
     gap: 10px;
+  }
+
+  @media (max-width: 360px) {
+    height: 150px;
+    padding: 16px;
+    gap: 8px;
   }
 
   span {
@@ -341,11 +362,13 @@
     }
 
     @media (max-width: 768px) {
-      font-size: 19px;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 5px;
     }
 
     @media (max-width: 480px) {
-      font-size: 18px;
+      font-size: 17px;
     }
   }
 
@@ -364,9 +387,24 @@
       line-height: 1.45;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
+      // Уменьшаем текст для нижних карточек
       font-size: 14px;
       line-height: 1.4;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4; // Ограничиваем количество строк
+      -webkit-box-orient: vertical;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 13px;
+      line-height: 1.35;
+      -webkit-line-clamp: 4;
+    }
+
+    @media (max-width: 400px) {
+      -webkit-line-clamp: 5;
     }
   }
 }
@@ -383,8 +421,8 @@
     width: 100%;
 
     .content_wrapper {
-      min-height: 250px; /* Минимальная высота для контейнера */
-      position: relative; /* Важно для абсолютного позиционирования картинки */
+      min-height: 250px; // Первая карточка - больше
+      position: relative;
     }
   }
 
@@ -392,7 +430,7 @@
   .pluses_container_right_bottom {
     > div {
       flex: 1;
-      min-height: 220px;
+      // Убираем min-height для мобильных, используем фиксированную высоту
     }
   }
 
@@ -413,11 +451,15 @@
   .pluses_container_right_bottom {
     > div {
       width: 100%;
+      // Фиксированная высота для нижних карточек
+      height: 180px;
     }
   }
 
-  .pluses_item {
-    min-height: auto;
+  // Первая карточка остается выше
+  .pluses_container_left .content_wrapper {
+    min-height: 250px;
+    height: auto;
   }
 }
 
@@ -428,7 +470,7 @@
 
   .content_wrapper {
     padding: 18px;
-    min-height: 200px; /* Фиксированная высота для мобилок */
+    min-height: 200px; // Первая карточка - 200px
   }
 
   .text_content {
@@ -444,14 +486,15 @@
   }
 
   .pluses_item {
-    padding: 20px;
+    padding: 18px;
+    height: 160px; // Нижние карточки - 160px
 
     span {
-      font-size: 18px;
+      font-size: 17px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 }
@@ -468,15 +511,23 @@
 
   .content_wrapper {
     padding: 15px;
-    min-height: 180px;
+    min-height: 180px; // Первая карточка - 180px
   }
 
   .pluses_item {
-    padding: 18px;
+    padding: 16px;
+    height: 150px; // Нижние карточки - 150px
+
+    span {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12.5px;
+    }
   }
 
-  .text_content,
-  .pluses_item {
+  .text_content {
     span {
       font-size: 17px;
     }
@@ -484,5 +535,39 @@
     p {
       font-size: 13px;
     }
+  }
+}
+
+// Специальные стили для разной высоты карточек на мобилках
+@media (max-width: 768px) {
+  // Первая карточка (большая)
+  .pluses_container_left .content_wrapper {
+    height: 250px;
+    min-height: 250px;
+    padding: 10px;
+  }
+
+  // Вторая и третья карточки (меньше)
+  .pluses_container_right_top .pluses_item {
+    height: 180px;
+    padding: 10px;
+  }
+
+  // Четвертая и пятая карточки (меньше)
+  .pluses_container_right_bottom .pluses_item {
+    height: 180px;
+    padding: 10px;
+  }
+}
+
+// Еще больше разница на очень маленьких экранах
+@media (max-width: 480px) {
+  .pluses_container_left .content_wrapper {
+    min-height: 250px;
+  }
+
+  .pluses_container_right_top .pluses_item,
+  .pluses_container_right_bottom .pluses_item {
+    height: 200px;
   }
 }
