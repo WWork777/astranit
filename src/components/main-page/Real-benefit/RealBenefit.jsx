@@ -47,6 +47,22 @@ export default function RealBenefit() {
                   <p>{item.desc}</p>
                 </div>
               </div>
+
+              <div className={styles.cart_mobile}>
+                <div className={styles.cart_img}>
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    width={250}
+                    height={250}
+                    className={styles.image}
+                  />
+                  <h2>{item.title}</h2>
+                </div>
+                <div className={styles.cart_text_mobile}>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
