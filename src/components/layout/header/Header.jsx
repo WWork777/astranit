@@ -1,11 +1,173 @@
+// 'use client'
+// import Image from 'next/image'
+// import Link from 'next/link'
+// import { useState } from 'react'
+// import styles from './styles.module.scss'
+
+// export default function Header() {
+// 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+// 	const toggleMenu = () => {
+// 		setIsMenuOpen(!isMenuOpen)
+// 	}
+
+// 	const closeMenu = () => {
+// 		setIsMenuOpen(false)
+// 	}
+
+// 	return (
+// 		<>
+// 			<div className={styles.header}>
+// 				<div className={styles.logo_container}>
+// 					<Link href='/' onClick={closeMenu}>
+// 						<Image
+// 							src='/logo/logo.svg'
+// 							alt='astrinit logo'
+// 							width={200}
+// 							height={50}
+// 						/>
+// 					</Link>
+// 				</div>
+
+// 				<div className={styles.nav_container}>
+// 					<Link href='/' className={styles.nav_link} onClick={closeMenu}>
+// 						ИТ-ПОДДЕРЖКА
+// 					</Link>
+// 					<Link href='/tariffs' className={styles.nav_link} onClick={closeMenu}>
+// 						ТАРИФЫ
+// 					</Link>
+// 					<Link
+// 						href='/services'
+// 						className={styles.nav_link}
+// 						onClick={closeMenu}
+// 					>
+// 						РЕШЕНИЯ
+// 					</Link>
+// 					<Link
+// 						href='/contacts'
+// 						className={styles.nav_link}
+// 						onClick={closeMenu}
+// 					>
+// 						КОНТАКТЫ
+// 					</Link>
+// 				</div>
+
+// 				<div className={styles.socials_container}>
+// 					<Link href='tel:+78123363646' className={styles.phone_link}>
+// 						(812) 336 36 46
+// 					</Link>
+// 					<div className={styles.socials_links}>
+// 						<Link href='#'>
+// 							<Image
+// 								src='/svg/socials/tg.svg'
+// 								alt='tg'
+// 								width={35}
+// 								height={35}
+// 							/>
+// 						</Link>
+// 						<Link href='#'>
+// 							<Image
+// 								src='/svg/socials/wa.svg'
+// 								alt='wa'
+// 								width={35}
+// 								height={35}
+// 							/>
+// 						</Link>
+// 					</div>
+// 				</div>
+
+// 				{/* Бургер-кнопка */}
+// 				<button
+// 					className={`${styles.burger_button} ${
+// 						isMenuOpen ? styles.active : ''
+// 					}`}
+// 					onClick={toggleMenu}
+// 					aria-label='Открыть меню'
+// 				>
+// 					<span></span>
+// 					<span></span>
+// 					<span></span>
+// 				</button>
+// 			</div>
+
+// 			{/* Мобильное меню */}
+// 			<div
+// 				className={`${styles.mobile_menu} ${isMenuOpen ? styles.active : ''}`}
+// 			>
+// 				<div className={styles.mobile_menu_content}>
+// 					<Link href='/' className={styles.mobile_nav_link} onClick={closeMenu}>
+// 						ИТ-ПОДДЕРЖКА
+// 					</Link>
+// 					<Link
+// 						href='/tariffs'
+// 						className={styles.mobile_nav_link}
+// 						onClick={closeMenu}
+// 					>
+// 						ТАРИФЫ
+// 					</Link>
+// 					<Link
+// 						href='/services'
+// 						className={styles.mobile_nav_link}
+// 						onClick={closeMenu}
+// 					>
+// 						РЕШЕНИЯ
+// 					</Link>
+// 					<Link
+// 						href='/contacts'
+// 						className={styles.mobile_nav_link}
+// 						onClick={closeMenu}
+// 					>
+// 						КОНТАКТЫ
+// 					</Link>
+
+// 					<div className={styles.mobile_contacts}>
+// 						<Link
+// 							href='tel:+78123363646'
+// 							className={styles.mobile_phone_link}
+// 							onClick={closeMenu}
+// 						>
+// 							(812) 336 36 46
+// 						</Link>
+// 						<div className={styles.mobile_socials}>
+// 							<Link href='#' onClick={closeMenu}>
+// 								<Image
+// 									src='/svg/socials/tg.svg'
+// 									alt='tg'
+// 									width={40}
+// 									height={40}
+// 								/>
+// 							</Link>
+// 							<Link href='#' onClick={closeMenu}>
+// 								<Image
+// 									src='/svg/socials/wa.svg'
+// 									alt='wa'
+// 									width={40}
+// 									height={40}
+// 								/>
+// 							</Link>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+
+// 			{/* Оверлей для закрытия меню */}
+// 			{isMenuOpen && (
+// 				<div className={styles.menu_overlay} onClick={closeMenu}></div>
+// 			)}
+// 		</>
+// 	)
+// }
+
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from './styles.module.scss'
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const pathname = usePathname()
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
@@ -19,7 +181,7 @@ export default function Header() {
 		<>
 			<div className={styles.header}>
 				<div className={styles.logo_container}>
-					<Link href='#' onClick={closeMenu}>
+					<Link href='/' onClick={closeMenu}>
 						<Image
 							src='/logo/logo.svg'
 							alt='astrinit logo'
@@ -30,16 +192,40 @@ export default function Header() {
 				</div>
 
 				<div className={styles.nav_container}>
-					<Link href='/' className={styles.nav_link} onClick={closeMenu}>
+					<Link
+						href='/'
+						className={`${styles.nav_link} ${
+							pathname === '/' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						ИТ-ПОДДЕРЖКА
 					</Link>
-					<Link href='/tariffs' className={styles.nav_link} onClick={closeMenu}>
+					<Link
+						href='/tariffs'
+						className={`${styles.nav_link} ${
+							pathname === '/tariffs' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						ТАРИФЫ
 					</Link>
-					<Link href='#' className={styles.nav_link} onClick={closeMenu}>
+					<Link
+						href='/services'
+						className={`${styles.nav_link} ${
+							pathname === '/services' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						РЕШЕНИЯ
 					</Link>
-					<Link href='#' className={styles.nav_link} onClick={closeMenu}>
+					<Link
+						href='/contacts'
+						className={`${styles.nav_link} ${
+							pathname === '/contacts' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						КОНТАКТЫ
 					</Link>
 				</div>
@@ -87,20 +273,40 @@ export default function Header() {
 				className={`${styles.mobile_menu} ${isMenuOpen ? styles.active : ''}`}
 			>
 				<div className={styles.mobile_menu_content}>
-					<Link href='/' className={styles.mobile_nav_link} onClick={closeMenu}>
+					<Link
+						href='/'
+						className={`${styles.mobile_nav_link} ${
+							pathname === '/' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						ИТ-ПОДДЕРЖКА
 					</Link>
 					<Link
 						href='/tariffs'
-						className={styles.mobile_nav_link}
+						className={`${styles.mobile_nav_link} ${
+							pathname === '/tariffs' ? styles.active : ''
+						}`}
 						onClick={closeMenu}
 					>
 						ТАРИФЫ
 					</Link>
-					<Link href='#' className={styles.mobile_nav_link} onClick={closeMenu}>
+					<Link
+						href='/services'
+						className={`${styles.mobile_nav_link} ${
+							pathname === '/services' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						РЕШЕНИЯ
 					</Link>
-					<Link href='#' className={styles.mobile_nav_link} onClick={closeMenu}>
+					<Link
+						href='/contacts'
+						className={`${styles.mobile_nav_link} ${
+							pathname === '/contacts' ? styles.active : ''
+						}`}
+						onClick={closeMenu}
+					>
 						КОНТАКТЫ
 					</Link>
 

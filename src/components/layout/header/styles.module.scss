@@ -81,9 +81,6 @@
 		line-height: 36px;
 		text-decoration: none;
 		transition: color 0.3s ease;
-		&:nth-child(1) {
-			border-bottom: 1px solid var(--accent-color1);
-		}
 
 		&:hover {
 			color: #58899f;
@@ -279,5 +276,25 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+// Добавьте в конец существующих стилей .nav_link
+.nav_link {
+	// ... существующие стили ...
+
+	&.active {
+		border-bottom: 1px solid var(--accent-color1);
+	}
+}
+
+// Добавьте в конец существующих стилей .mobile_nav_link
+.mobile_nav_link {
+	// ... существующие стили ...
+
+	&.active {
+		color: #58899f;
+		font-weight: 600;
+		border-bottom: 2px solid #58899f;
 	}
 }
