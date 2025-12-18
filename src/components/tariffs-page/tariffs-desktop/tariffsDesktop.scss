@@ -1,0 +1,284 @@
+.tariffs {
+	padding-top: 90px;
+	@media (max-width: 1200px) {
+		padding-top: 70px;
+		margin: 0 10px;
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	// .tariffs__body-list
+
+	&__body-list {
+	}
+
+	// .tariffs__body-list-item
+
+	&__body-list-item {
+	}
+}
+.tariffs-title {
+	padding: 52px 0;
+	color: rgba(73, 72, 87, 1);
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 56px;
+}
+.tariffs-body {
+	box-sizing: border-box;
+	border: 1px solid rgba(204, 204, 204, 1);
+	background: #ffffff;
+	border-radius: 50px;
+	// .tariffs-body__ranges
+
+	&__ranges {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 190px;
+		padding: 56px 40px 20px;
+		background-color: var(--layer-color2);
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+		&_title {
+			color: rgba(245, 245, 245, 1);
+			font-family: Roboto;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 24px;
+		}
+	}
+
+	// .tariffs-body__inner
+
+	&__inner {
+		padding: 40px;
+	}
+
+	// .tariffs-body__header
+
+	&__header {
+		display: grid;
+		grid-template-columns: 1.5fr repeat(4, 1fr);
+		// .tariffs-body__header_title
+
+		&_title {
+			margin: 0 auto;
+			color: rgba(73, 72, 87, 1);
+			font-family: Roboto;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 28.8px;
+			letter-spacing: 0px;
+			text-align: left;
+		}
+
+		// .tariffs-body__header_econom
+
+		&_econom {
+			margin: 0 auto;
+		}
+
+		// .tariffs-body__header_lite
+
+		&_lite {
+			margin: 0 auto;
+		}
+
+		// .tariffs-body__header_standart
+
+		&_standart {
+			margin: 0 auto;
+		}
+
+		// .tariffs-body__header_comfort
+
+		&_comfort {
+		}
+	}
+
+	// .tariffs-body__list
+
+	&__list {
+	}
+
+	// .tariffs-body__footer
+
+	&__footer {
+		padding-top: 40px;
+		display: grid;
+		grid-template-columns: 1.5fr repeat(4, 1fr);
+		// grid-template-columns: repeat(5, 1fr);
+		// .tariffs-body__footer_title
+
+		&_title {
+			color: rgba(73, 72, 87, 1);
+			font-family: Roboto;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 28.8px;
+			letter-spacing: 0px;
+			text-align: left;
+		}
+
+		// .tariffs-body__footer_econom
+
+		&_econom {
+			margin: 0 auto;
+		}
+
+		// .tariffs-body__footer_lite
+
+		&_lite {
+			margin: 0 auto;
+		}
+
+		// .tariffs-body__footer_standart
+
+		&_standart {
+			margin: 0 auto;
+		}
+
+		// .tariffs-body__footer_comfort
+
+		&_comfort {
+			margin: 0 auto;
+		}
+	}
+
+	// .tariffs-body__reference
+
+	&__reference {
+	}
+
+	// .tariffs-body__reference-box
+
+	&__reference-box {
+	}
+}
+.tariffs-econom {
+}
+.tariffs-lite {
+}
+.tariffs-standart {
+}
+.tariffs-comfort {
+}
+.tariffs-list {
+	// .tariffs-list__item
+
+	&__item {
+		// .tariffs-list__item_title
+
+		&_title {
+			background-color: var(--layer-color1);
+			color: rgba(73, 72, 87, 1);
+			font-family: Roboto;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 35px;
+			letter-spacing: 0%;
+			text-align: center;
+		}
+
+		// .tariffs-list__item_body
+
+		&_body {
+			display: grid;
+			grid-template-columns: 1.5fr repeat(4, 1fr);
+			border-bottom: 1px solid #cccccc;
+			.ttitle {
+				padding: 5px 0;
+				color: rgba(73, 72, 87, 1);
+				font-family: Roboto;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 13.8px;
+				letter-spacing: 0%;
+				text-align: left;
+			}
+		}
+	}
+}
+.reference-box {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	// .reference-box__marker
+
+	&__marker {
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		&_1 {
+			background-color: #63a663;
+		}
+		&_2 {
+			background-color: #cccccc;
+		}
+		&_3 {
+			background-color: #d84f47;
+		}
+	}
+
+	// .reference-box__title
+
+	&__title {
+		color: rgba(73, 72, 87, 1);
+
+		font-family: Roboto;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0%;
+	}
+}
+.tariffs-econom,
+.tariffs-lite,
+.tariffs-standart,
+.tariffs-comfort {
+	padding-bottom: 30px;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+	align-items: center;
+	&_title {
+		color: rgba(73, 72, 87, 1);
+		font-family: Roboto;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 18.8px;
+		letter-spacing: 0px;
+	}
+	&_counter {
+		color: var(--layer-color2);
+		font-family: Roboto;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 18.8px;
+		letter-spacing: 0px;
+	}
+	&_button {
+		color: #ffffff;
+		padding: 10px 15px;
+		background-color: var(--layer-color2);
+		border: none;
+		border-radius: 50px;
+		font-family: Roboto;
+		font-size: 16px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+}
+// .tariffs-econom {
+// 	&_title {
+// 	}
+// 	&_counter {
+// 	}
+// 	&_button {
+// 	}
+// }

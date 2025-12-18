@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/footer/Footer'
 import Header from '@/components/layout/header/Header'
 import { Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
 			<body className={`${bebasNeue.variable}  ${roboto.variable} antialiased`}>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)
