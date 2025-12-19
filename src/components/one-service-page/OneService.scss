@@ -1,0 +1,28 @@
+.one-service {
+	padding-top: 90px;
+	@media (max-width: 1200px) {
+		padding-top: 70px;
+		margin: 0 10px;
+	}
+}
+.one-service-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.one-service-title {
+	padding: 52px 0;
+	color: rgba(73, 72, 87, 1);
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 56px;
+}
+.one-service-img {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.one-service-description {
+}

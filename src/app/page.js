@@ -1,3 +1,7 @@
+export const metadata = {
+	title: 'АСТРАНИТ | ИТ-ПОДДЕРЖКА БИЗНЕСА',
+	description: 'ИТ-ПОДДЕРЖКА БИЗНЕСА',
+}
 import Calculator from '@/components/main-page/Calculator/Calculator'
 import Hero from '@/components/main-page/Hero/Hero'
 import Pluses from '@/components/main-page/Pluses/Pluses'

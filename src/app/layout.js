@@ -26,9 +26,6 @@ const bebasNeue = localFont({
 })
 
 export const metadata = {
-	title: 'АСТРАНИТ | ИТ-ПОДДЕРЖКА БИЗНЕСА',
-	description: 'ИТ-ПОДДЕРЖКА БИЗНЕСА',
-
 	icons: {
 		icon: [
 			{ rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' },
