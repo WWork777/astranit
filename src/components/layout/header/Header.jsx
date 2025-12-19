@@ -163,6 +163,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { RxCross2 } from 'react-icons/rx'
 import styles from './styles.module.scss'
 
 export default function Header() {
@@ -272,6 +273,9 @@ export default function Header() {
 			<div
 				className={`${styles.mobile_menu} ${isMenuOpen ? styles.active : ''}`}
 			>
+				<div className={styles.mobile_menu_cross}>
+					<RxCross2 onClick={toggleMenu} size={40} />
+				</div>
 				<div className={styles.mobile_menu_content}>
 					<Link
 						href='/'

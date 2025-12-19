@@ -1,4 +1,6 @@
+'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import './footer.scss'
 
 export default function Footer() {
@@ -27,15 +29,23 @@ export default function Footer() {
 			{ title: 'Политика конфиденциальности', link: '/privacy' },
 		],
 	}
+	const pathname = usePathname()
 
 	return (
 		<>
 			<footer className='footer'>
-				<div className='footer-top'></div>
+				<div
+					style={{ display: `${pathname === '/contacts' ? 'none' : 'block'}` }}
+					className='footer-top'
+				></div>
 				<div className='footer-bottom'>
 					<div className='footer-bottom__banner footer-banner'>
 						<div className='footer-banner__inner banner-inner'>
-							<h1 className='banner-inner__title'>ОБСУДИМ ВАШУ ЗАДАЧУ!</h1>
+							<h1 className='banner-inner__title'>
+								{pathname === '/contacts'
+									? 'НАПИШИТЕ НАМ!'
+									: 'ОБСУДИМ ВАШУ ЗАДАЧУ!'}
+							</h1>
 							<p className='banner-inner__desc'>
 								Остались вопросы? С удовольствием проконсультируем вас по
 								решению необходимой задачи и условиям обслуживания!
