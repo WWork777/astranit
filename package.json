@@ -16,6 +16,9 @@
     "swiper": "^12.0.3"
   },
   "devDependencies": {
-    "babel-plugin-react-compiler": "1.0.0"
+    "@types/node": "25.0.3",
+    "@types/react": "19.2.7",
+    "babel-plugin-react-compiler": "1.0.0",
+    "typescript": "5.9.3"
   }
 }

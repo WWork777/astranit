@@ -22,7 +22,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		justify-items: center;
-		gap: 20px;
+		row-gap: 30px;
 		list-style: none;
 
 		@media (max-width: 1280px) {
@@ -88,16 +88,22 @@
 
 	.cart {
 		cursor: pointer;
-		height: 100%;
+		width: 400px;
+		height: 190px;
 		display: flex;
 		flex-direction: column;
+		border: 1px solid rgba(73, 72, 87, 0.5);
+		border-top-left-radius: 60px;
+		border-bottom-right-radius: 60px;
+		overflow: hidden;
 
 		&:hover {
 			transform: scale(1.02);
 		}
 
 		&_img {
-			height: 250px;
+			height: 100%;
+
 			flex: 1;
 			border-top-left-radius: 30px;
 			overflow: hidden;

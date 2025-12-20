@@ -1,5 +1,8 @@
 import { services } from '@/data'
 import './OneService.scss'
+import Block1C from './blocks/1c/Block1C'
+import BlockNetwork from './blocks/block-network/BlockNetwork'
+import BlockServer from './blocks/block-server/BlockServer'
 
 export default function OneService({ link }) {
 	const service = services.find(item => item.link == link)
@@ -10,6 +13,18 @@ export default function OneService({ link }) {
 			</>
 		)
 	}
+	const renderDescription = () => {
+		switch (service.id) {
+			case 1:
+				return <Block1C data={service} />
+			case 2:
+				return <BlockServer data={service} />
+			case 3:
+				return <BlockNetwork data={service} />
+			default:
+				return <p>Стандартное описание</p>
+		}
+	}
 
 	return (
 		<>
@@ -19,11 +34,7 @@ export default function OneService({ link }) {
 					<div className='one-service-img'>
 						<img src={service.src2} alt={service.title} />
 					</div>
-					<div className='one-service-description'>
-						{service.p.map(item => (
-							<p key={Math.random()}>{item}</p>
-						))}
-					</div>
+					<div className='one-service-description'>{renderDescription()}</div>
 				</div>
 			</section>
 		</>

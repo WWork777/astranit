@@ -2,6 +2,9 @@
 	height: 100svh;
 	position: relative;
 	padding-top: 90px;
+	@media (max-width: 1280px) {
+		padding-left: 10px;
+	}
 	@media (max-width: 1200px) {
 		padding-top: 70px;
 		margin: 0 10px;
@@ -9,7 +12,7 @@
 }
 .contacts-container {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: 0 auto;
 }
 .contacts-title {
@@ -68,12 +71,12 @@
 		position: absolute;
 		z-index: 22;
 		bottom: 41%;
-		left: 40%;
+		left: 39%;
 		@media (max-width: 1600px) {
-			left: 35%;
+			left: 33%;
 		}
 		@media (max-width: 1200px) {
-			left: 30%;
+			left: 28%;
 		}
 		@media (max-width: 1198px) {
 			display: none;
@@ -101,9 +104,9 @@
 
 .contacts-map {
 	background: url('/images/contacts/map.png') center center/cover no-repeat;
-	width: 70%;
+	width: 78%;
 	height: 100%;
-	clip-path: polygon(35% 0, 100% 0, 100% 100%, 15% 100%);
+	clip-path: polygon(36% 0, 100% 0, 100% 100%, 19% 100%);
 	position: absolute;
 	top: 80px;
 	right: 0;
@@ -121,7 +124,7 @@
 		width: 243px;
 		height: 146px;
 		position: absolute;
-		bottom: 60%;
+		bottom: 59%;
 		right: 33%;
 		@media (max-width: 1440px) {
 			right: 30%;
