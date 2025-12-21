@@ -2,26 +2,38 @@
 	height: 100svh;
 	position: relative;
 	padding-top: 90px;
+	// Первыми идут самые широкие условия
 	@media (max-width: 1280px) {
 		padding-left: 10px;
 	}
+
+	// Затем уже конкретные комбинации для этого размера
 	@media (width: 1280px) and (height: 800px) {
 		margin-bottom: 100px;
 	}
+
+	// Дальше меньшие размеры
 	@media (max-width: 1200px) {
 		padding-top: 70px;
 		margin: 0 10px;
 	}
+
+	// Конкретная комбинация для планшета
 	@media (width: 1024px) and (height: 600px) {
 		margin-bottom: 200px;
 	}
+
+	// Мобильные устройства
 	@media (max-width: 640px) {
 		margin-bottom: 250px;
 	}
 
+	// Конкретные модели телефонов
 	@media (width: 375px) and (height: 667px) {
 		margin-bottom: 450px;
 	}
+
+	// Самые маленькие устройства - в самом конце
 	@media (width: 320px) and (height: 568px) {
 		margin-bottom: 600px;
 	}
