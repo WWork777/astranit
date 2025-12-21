@@ -7,7 +7,7 @@
 }
 .one-service-container {
 	width: 100%;
-	max-width: 1280px;
+	max-width: 1240px;
 	margin: 0 auto;
 }
 .one-service-title {
@@ -18,9 +18,9 @@
 	line-height: 56px;
 }
 .one-service-img {
-	border-top-left-radius: 150px;
-	border-bottom-right-radius: 150px;
-	border: 10px solid var(--layer-color1);
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border: 8px solid var(--layer-color1);
 	max-height: 400px;
 	overflow: hidden;
 	img {

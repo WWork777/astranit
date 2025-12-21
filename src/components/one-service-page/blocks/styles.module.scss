@@ -1,0 +1,113 @@
+.block {
+	font-family: Roboto, sans-serif;
+	color: rgba(73, 72, 87, 1);
+}
+.block_grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, auto); /* Две строки */
+	gap: 40px;
+}
+
+.block_grid__box1 {
+	padding: 30px 30px 0;
+	border: 1px solid #cccccc;
+	border-radius: 40px;
+	background-color: #fff;
+	grid-column: 1 / 4; /* Левая половина */
+	grid-row: 1 / 3; /* Занимает обе строки */
+	height: auto;
+	h3 {
+		font-size: 25px;
+		padding-bottom: 25px;
+	}
+	h4 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 19px;
+	}
+	ul {
+		padding-bottom: 25px;
+	}
+	ul > li {
+		font-size: 19px;
+	}
+}
+.block_grid__box2 {
+	padding: 30px;
+	border: 1px solid #cccccc;
+	border-radius: 40px;
+	background-color: #fff;
+	grid-column: 4 / 7; /* Правая половина */
+	grid-row: 1 / 2; /* Только первая строка */
+	height: auto;
+	h3 {
+		font-size: 25px;
+		padding-bottom: 25px;
+	}
+	h4 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	ul {
+		padding-bottom: 25px;
+	}
+	ul > li {
+		font-size: 19px;
+	}
+}
+.block_grid__box3 {
+	padding: 30px;
+	border: 1px solid #cccccc;
+	border-radius: 40px;
+	background-color: #fff;
+	grid-column: 1 / 4; /* Левая половина */
+	grid-row: 3 / 4; /* Новая строка под блоком 1 */
+	height: auto;
+	h3 {
+		font-size: 25px;
+		padding-bottom: 25px;
+	}
+	h4 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 19px;
+	}
+	ul {
+		padding-bottom: 25px;
+	}
+	ul > li {
+		font-size: 19px;
+	}
+}
+.block_grid__box4 {
+	padding: 30px;
+	border: 1px solid #cccccc;
+	border-radius: 40px;
+	background-color: #fff;
+	grid-column: 4 / 7; /* Правая половина */
+	grid-row: 2 / 4; /* Занимает строки 2 и 3 */
+	height: auto;
+	h3 {
+		font-size: 25px;
+		padding-bottom: 25px;
+	}
+	h4 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 19px;
+	}
+	ul {
+		padding-bottom: 25px;
+	}
+	ul > li {
+		font-size: 19px;
+	}
+}

@@ -214,7 +214,9 @@ export default function Header() {
 					<Link
 						href='/services'
 						className={`${styles.nav_link} ${
-							pathname === '/services' ? styles.active : ''
+							pathname === '/services' || pathname.startsWith('/services/')
+								? styles.active
+								: ''
 						}`}
 						onClick={closeMenu}
 					>
