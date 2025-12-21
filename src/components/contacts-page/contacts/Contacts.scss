@@ -5,19 +5,20 @@
 	@media (max-width: 1280px) {
 		padding-left: 10px;
 	}
+	@media (width: 1280px) and (height: 800px) {
+		margin-bottom: 100px;
+	}
 	@media (max-width: 1200px) {
 		padding-top: 70px;
 		margin: 0 10px;
 	}
-	@media (max-width: 640px) {
-		margin-bottom: 250px;
-	}
-	@media (width: 1280px) and (height: 800px) {
-		margin-bottom: 100px;
-	}
 	@media (width: 1024px) and (height: 600px) {
 		margin-bottom: 200px;
 	}
+	@media (max-width: 640px) {
+		margin-bottom: 250px;
+	}
+
 	@media (width: 375px) and (height: 667px) {
 		margin-bottom: 450px;
 	}
