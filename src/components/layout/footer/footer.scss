@@ -26,8 +26,10 @@
 		display: flex;
 		gap: 10px;
 		box-sizing: border-box;
-		border: 16px solid var(--layer-color2);
-		box-shadow: 4px 4px 2px 0px rgba(204, 204, 204, 1);
+		border: 15px solid var(--layer-color2);
+		-webkit-box-shadow: 2px -1px 6px 4px rgba(34, 60, 80, 0.2);
+		-moz-box-shadow: 2px -1px 6px 4px rgba(34, 60, 80, 0.2);
+		box-shadow: 2px -1px 6px 4px rgba(34, 60, 80, 0.2);
 		border-radius: 50px;
 		width: 100%;
 		max-width: 1200px;

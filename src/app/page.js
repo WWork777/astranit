@@ -26,6 +26,7 @@ export default function Home() {
 			<RealBenefit />
 			<Services />
 			<Support />
+			{/* <Hexagon /> */}
 			<Calculator />
 			<Reviews />
 		</>

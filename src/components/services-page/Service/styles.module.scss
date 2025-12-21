@@ -6,24 +6,41 @@
 	list-style: none;
 
 	@media (max-width: 1280px) {
+		gap: 20px;
+		width: 100%;
+		max-width: 992px;
+		margin: 0 auto;
 		grid-template-columns: repeat(2, 1fr);
+		li:last-child:nth-child(odd) {
+			grid-column: 1 / -1;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		grid-template-columns: repeat(1, 1fr);
+		li:last-child:nth-child(odd) {
+			grid-column: auto;
+			display: block;
+			width: auto;
+		}
 	}
 }
 
 .cart {
 	cursor: pointer;
 	height: 190px;
-	width: 400px;
+	width: 100%;
+	max-width: 400px;
 	display: flex;
 	flex-direction: column;
 	border: 1px solid rgba(73, 72, 87, 0.5);
 	border-top-left-radius: 60px;
 	border-bottom-right-radius: 60px;
 	overflow: hidden;
+
 	&:hover {
 		transform: scale(1.02);
 	}

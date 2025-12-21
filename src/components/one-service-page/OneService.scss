@@ -1,5 +1,8 @@
 .one-service {
 	padding-top: 90px;
+	padding-left: 10px;
+	padding-right: 10px;
+
 	@media (max-width: 1200px) {
 		padding-top: 70px;
 		margin: 0 10px;
@@ -16,6 +19,14 @@
 	font-size: 56px;
 	font-weight: 700;
 	line-height: 56px;
+	@media (max-width: 1200px) {
+		padding-bottom: 25px;
+	}
+	@media (max-width: 640px) {
+		font-size: 33px;
+		line-height: 33px;
+		padding-bottom: 15px;
+	}
 }
 .one-service-img {
 	border-top-left-radius: 100px;
@@ -23,6 +34,10 @@
 	border: 8px solid var(--layer-color1);
 	max-height: 400px;
 	overflow: hidden;
+	@media (max-width: 768px) {
+		border: none;
+		border-radius: 0%;
+	}
 	img {
 		width: 100%;
 		height: 100%;
@@ -32,6 +47,9 @@
 }
 .one-service-description {
 	padding-top: 57px;
+	@media (max-width: 1200px) {
+		padding-top: 25px;
+	}
 	p {
 		padding-bottom: 30px;
 		color: rgba(73, 72, 87, 1);

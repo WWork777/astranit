@@ -11,9 +11,9 @@ export default function Contacts() {
 							<p className='contacts-info__box-title'>
 								Договоры, взаиморасчеты:
 							</p>
-							<p className='contacts-info__box-title-phone'>(812) 407 39 87</p>
+							<p className='contacts-info__box-title-phone'>(812) 336 36 46</p>
 							<p className='contacts-info__box-title-email'>
-								support@astranit.ru
+								client@astranit.ru
 							</p>
 						</div>
 						<div className='contacts-info__box'>
@@ -31,6 +31,10 @@ export default function Contacts() {
 							<p className='contacts-info__box-title-email'>
 								пр. Юрия Гагарина, д.23, офис 303
 							</p>
+						</div>
+						<div className='contacts-info__tooltip1'>
+							<img src='/images/contacts/logotype.png' alt='logotype' />
+							<span>пр. Юрия Гагарина, д.23</span>
 						</div>
 						<div className='contacts-info__tooltip2'>
 							<h3 className='contacts-info__tooltip2-title'>
