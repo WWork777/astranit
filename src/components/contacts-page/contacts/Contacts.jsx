@@ -33,7 +33,7 @@ export default function Contacts() {
 							</p>
 							<div className='contacts-info__tooltip0'>
 								<img src='/images/contacts/logotype.png' alt='logotype' />
-								<span>пр. Юрия Гагарина, д.232</span>
+								<span>пр. Юрия Гагарина, д.23</span>
 							</div>
 						</div>
 						<div className='contacts-info__tooltip1'>

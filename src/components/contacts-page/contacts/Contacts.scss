@@ -89,6 +89,7 @@
 		padding-bottom: 35px;
 	}
 	&__tooltip0 {
+		position: relative;
 		background: url('/images/contacts/tooltip1.png') no-repeat;
 		width: 243px;
 		height: 146px;
@@ -100,8 +101,11 @@
 		}
 
 		img {
-			display: block;
-			margin: 10% auto 2%;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			display: inline-block;
+			margin: 10% 0 2%;
 		}
 		span {
 			width: 100%;
