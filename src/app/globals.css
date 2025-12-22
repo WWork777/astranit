@@ -1,4 +1,10 @@
 :root {
+	--font-family: 'Roboto', sans-serif;
+	--second-family: 'Montserrat', sans-serif;
+	--third-family: 'Bebas Neue', sans-serif;
+	--font3: 'Inter', sans-serif;
+	--font4: 'Podkova', sans-serif;
+
 	--accent-color1: #ff9a22;
 	--accent-hover1: #e68a29;
 	--layer-color1: #e5eef2;
