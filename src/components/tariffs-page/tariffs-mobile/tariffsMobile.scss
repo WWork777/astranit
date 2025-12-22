@@ -1,0 +1,260 @@
+.mobile-tariffs-body__ranges {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 35px 20px;
+	border-radius: 20px;
+	background-color: var(--layer-color2);
+	@media (max-width: 640px) {
+		padding: 20px;
+	}
+}
+.mobile-tariffs-body__inner {
+}
+.mobile-tariffs-body__header {
+}
+.mobile-tariffs-body__header_title {
+	color: rgba(73, 72, 87, 1);
+	font-family: Roboto;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: 0px;
+	text-align: center;
+	padding: 30px 20px;
+}
+.mobile-tariffs-body__header_body {
+	display: grid;
+	grid-template-columns: (repeat(4, 1fr));
+}
+.mobile-tariffs-body__header_econom {
+	text-align: center;
+}
+.mobile-tariffs-econom {
+	// .mobile-tariffs-econom_title
+
+	&_title {
+	}
+
+	// .mobile-tariffs-econom_counter
+
+	&_counter {
+	}
+}
+
+.mobile-tariffs-body__header_lite {
+	text-align: center;
+}
+.mobile-tariffs-lite {
+	// .mobile-tariffs-lite_title
+
+	&_title {
+	}
+
+	// .mobile-tariffs-lite_counter
+
+	&_counter {
+	}
+}
+
+.mobile-tariffs-body__header_standart {
+	text-align: center;
+}
+.mobile-tariffs-standart {
+	// .mobile-tariffs-standart_title
+
+	&_title {
+	}
+
+	// .mobile-tariffs-standart_counter
+
+	&_counter {
+	}
+}
+
+.mobile-tariffs-body__header_comfort {
+	text-align: center;
+}
+.mobile-tariffs-comfort {
+	// .mobile-tariffs-comfort_title
+
+	&_title {
+	}
+
+	// .mobile-tariffs-comfort_counter
+
+	&_counter {
+	}
+}
+
+.mobile-tariffs-body__list {
+}
+.mobile-tariffs__body-list .tariffs-list {
+}
+.mobile-tariffs__body-list-item .tariffs-list__item {
+}
+.mobile-tariffs-list__item_title {
+	color: rgba(73, 72, 87, 1);
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
+	background-color: var(--layer-color1);
+}
+
+.mobile-tariffs-list__item_body__inner {
+}
+.mobile-tariffs-list__item_body__inner-title {
+	color: rgba(73, 72, 87, 1);
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 110%;
+	letter-spacing: 0%;
+	text-align: center;
+	padding: 10px 0;
+}
+.mobile-tariffs-list__item_body__inner-circles {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(204, 204, 204, 1);
+}
+.mobile-tariffs-econom,
+.mobile-tariffs-lite,
+.mobile-tariffs-standart,
+.mobile-tariffs-comfort {
+	padding-bottom: 30px;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+	align-items: center;
+	&_title {
+		color: rgba(73, 72, 87, 1);
+		font-family: Roboto;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 18.8px;
+		letter-spacing: 0px;
+	}
+	&_counter {
+		color: var(--layer-color2);
+		font-family: Roboto;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 18.8px;
+		letter-spacing: 0px;
+	}
+}
+
+.mobile-tariffs-body {
+	// .mobile-tariffs-body__reference
+
+	&__reference {
+		padding-top: 20px;
+	}
+
+	// .mobile-tariffs-body__reference-box
+
+	&__reference-box {
+		padding-bottom: 10px;
+	}
+}
+.mobile-reference-box {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	// .mobile-reference-box__marker
+
+	&__marker {
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// .mobile-reference-box__marker_1
+
+		&_1 {
+			background-color: #63a663;
+		}
+
+		// .mobile-reference-box__marker_2
+
+		&_2 {
+			background-color: #cccccc;
+		}
+
+		// .mobile-reference-box__marker_3
+
+		&_3 {
+			background-color: #d84f47;
+		}
+	}
+
+	// .mobile-reference-box__title
+
+	&__title {
+		color: rgba(73, 72, 87, 1);
+		font-family: Roboto;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 18.8px;
+		letter-spacing: 0px;
+	}
+}
+.reference-box {
+	// .reference-box__marker
+
+	&__marker {
+	}
+}
+
+.mobile-tariffs {
+	// .mobile-tariffs__button
+
+	&__button {
+		position: fixed;
+		z-index: 100;
+		bottom: 20px;
+		left: 15px;
+		width: 198px;
+		height: 65px;
+		color: rgba(254, 254, 254, 1);
+		font-family: Roboto;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 100%;
+		letter-spacing: 0px;
+		text-align: center;
+		border: none;
+		border-radius: 30px;
+		background: rgba(255, 153, 51, 1);
+		cursor: pointer;
+		&:hover {
+			background: var(--hover-color1);
+		}
+	}
+
+	// .mobile-tariffs__message
+
+	&__message {
+		position: fixed;
+		z-index: 100;
+		bottom: 20px;
+		right: 15px;
+		width: 65px;
+		height: 65px;
+		border: none;
+		border-radius: 100px;
+		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+		background: rgba(255, 153, 51, 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
