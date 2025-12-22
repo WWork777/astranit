@@ -1,5 +1,5 @@
 .contacts {
-	height: 100svh;
+	min-height: 100vh;
 	position: relative;
 	padding-top: 90px;
 	// Первыми идут самые широкие условия
@@ -23,20 +23,15 @@
 		margin-bottom: 200px;
 	}
 
-	// Мобильные устройства
-	@media (max-width: 640px) {
-		margin-bottom: 250px;
-	}
-
 	// Конкретные модели телефонов
-	@media (width: 375px) and (height: 667px) {
-		margin-bottom: 450px;
-	}
+	// @media (width: 375px) and (height: 667px) {
+	// 	margin-bottom: 450px;
+	// }
 
 	// Самые маленькие устройства - в самом конце
-	@media (width: 320px) and (height: 568px) {
-		margin-bottom: 600px;
-	}
+	// @media (width: 320px) and (height: 568px) {
+	// 	margin-bottom: 600px;
+	// }
 }
 .contacts-container {
 	width: 100%;
@@ -93,6 +88,33 @@
 		text-align: left;
 		padding-bottom: 35px;
 	}
+	&__tooltip0 {
+		background: url('/images/contacts/tooltip1.png') no-repeat;
+		width: 243px;
+		height: 146px;
+		margin: 0 auto;
+		display: none;
+		@media (max-width: 640px) {
+			display: block;
+			padding-bottom: 550px;
+		}
+
+		img {
+			display: block;
+			margin: 10% auto 2%;
+		}
+		span {
+			width: 100%;
+			display: inline-block;
+			color: rgba(73, 72, 87, 1);
+			font-family: Roboto;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 19.2px;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+	}
 	&__tooltip1 {
 		background: url('/images/contacts/tooltip1.png') no-repeat;
 		width: 243px;
@@ -108,18 +130,21 @@
 			bottom: 50%;
 		}
 		@media (max-width: 640px) {
-			left: 50%;
-			top: 75%;
-			transform: translate(-50%, -50%);
+			display: none;
 		}
-		@media (width: 375px) and (height: 667px) {
-			left: 50%;
-			top: 95%;
-			transform: translate(-50%, -50%);
-		}
-		@media (width: 320px) and (height: 568px) {
-			top: 125%;
-		}
+		// @media (max-width: 640px) {
+		// 	left: 50%;
+		// 	top: 75%;
+		// 	transform: translate(-50%, -50%);
+		// }
+		// @media (width: 375px) and (height: 667px) {
+		// 	left: 50%;
+		// 	top: 95%;
+		// 	transform: translate(-50%, -50%);
+		// }
+		// @media (width: 320px) and (height: 568px) {
+		// 	top: 125%;
+		// }
 		img {
 			display: block;
 			margin: 10% auto 2%;

@@ -31,11 +31,16 @@ export default function Contacts() {
 							<p className='contacts-info__box-title-email'>
 								пр. Юрия Гагарина, д.23, офис 303
 							</p>
+							<div className='contacts-info__tooltip0'>
+								<img src='/images/contacts/logotype.png' alt='logotype' />
+								<span>пр. Юрия Гагарина, д.232</span>
+							</div>
 						</div>
 						<div className='contacts-info__tooltip1'>
 							<img src='/images/contacts/logotype.png' alt='logotype' />
 							<span>пр. Юрия Гагарина, д.23</span>
 						</div>
+
 						<div className='contacts-info__tooltip2'>
 							<h3 className='contacts-info__tooltip2-title'>
 								Приедем быстро, где бы вы ни находились!
