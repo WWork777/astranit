@@ -13,6 +13,7 @@ import Services from '@/components/main-page/Services/Services'
 import Start from '@/components/main-page/Start/Start'
 import Support from '@/components/main-page/Support/Support'
 import UnderHero from '@/components/main-page/Under-hero/UnderHero'
+import HexagonGrid from '@/components/ui/hexagonGrid/HexagonGrid'
 
 export default function Home() {
 	return (
@@ -26,7 +27,7 @@ export default function Home() {
 			<RealBenefit />
 			<Services />
 			<Support />
-			{/* <Hexagon /> */}
+			<HexagonGrid />
 			<Calculator />
 			<Reviews />
 		</>

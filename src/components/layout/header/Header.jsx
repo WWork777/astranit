@@ -276,7 +276,7 @@ export default function Header() {
 				className={`${styles.mobile_menu} ${isMenuOpen ? styles.active : ''}`}
 			>
 				<div className={styles.mobile_menu_cross}>
-					<RxCross2 onClick={toggleMenu} size={40} />
+					<RxCross2 onClick={toggleMenu} color='#3289a1' size={40} />
 				</div>
 				<div className={styles.mobile_menu_content}>
 					<Link
