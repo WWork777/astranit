@@ -14,7 +14,7 @@ export default function Reviews() {
 	const swiperRef = useRef(null)
 
 	const reviews = [
-		'/images/reviews/img1.svg',
+		'/images/reviews/img1.png',
 		'/images/reviews/img2.png',
 		'/images/reviews/img3.png',
 		'/images/reviews/img1.png',

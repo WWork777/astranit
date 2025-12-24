@@ -1,0 +1,169 @@
+.hexagon-grid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 20px;
+	@media (max-width: 1280px) {
+		display: none;
+	}
+
+	.hexagon-row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 100%;
+	}
+
+	// Первый ряд (3 шестиугольника)
+	.hexagon-row-top {
+		margin-bottom: -130px;
+
+		.hexagon-item {
+			margin: 0 25px;
+			position: relative;
+			z-index: 2;
+			&:nth-child(1) {
+				&::after {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 3px;
+					height: 270px;
+					top: 44%;
+					right: -25px;
+					transform: translateY(-50%);
+					background-color: var(--accent-color1);
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 270px;
+					height: 3px;
+					bottom: 58px;
+					right: -40px;
+					transform: rotate(-30deg);
+					background-color: var(--accent-color1);
+				}
+			}
+			&:nth-child(2) {
+				&::after {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 3px;
+					height: 270px;
+					top: 44%;
+					right: -30px;
+					transform: translateY(-50%);
+					background-color: var(--accent-color1);
+				}
+			}
+			&:nth-child(3) {
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 270px;
+					height: 3px;
+					bottom: 60px;
+					left: -40px;
+					transform: rotate(30deg);
+					background-color: var(--accent-color1);
+				}
+			}
+		}
+	}
+
+	// Второй ряд (2 шестиугольника) со смещением
+	.hexagon-row-bottom {
+		.hexagon-item {
+			margin: 25px 25px 0;
+			position: relative;
+			z-index: 1;
+			&:nth-child(1) {
+				&::after {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 3px;
+					height: 270px;
+					top: 49%;
+					right: -25px;
+					transform: translateY(-50%);
+					background-color: var(--accent-color1);
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 245px;
+					height: 3px;
+					top: 35px;
+					right: -38px;
+					transform: rotate(29deg);
+					background-color: var(--accent-color1);
+				}
+			}
+			&:nth-child(2) {
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					width: 250px;
+					height: 3px;
+					top: 35px;
+					left: -40px;
+					transform: rotate(-29deg);
+					background-color: var(--accent-color1);
+				}
+			}
+		}
+	}
+
+	// Адаптивность
+	// @media (max-width: 1024px) {
+	// 	.hexagon-row-top {
+	// 		margin-bottom: -80px;
+
+	// 		.hexagon-item {
+	// 			margin: 0 -25px;
+	// 		}
+	// 	}
+
+	// 	.hexagon-row-bottom {
+	// 		.hexagon-item {
+	// 			margin: 0 50px;
+	// 		}
+	// 	}
+	// }
+
+	// @media (max-width: 768px) {
+	// 	flex-direction: column;
+	// 	padding: 20px 10px;
+
+	// 	.hexagon-row {
+	// 		flex-direction: column;
+	// 		margin-bottom: 20px;
+	// 	}
+
+	// 	.hexagon-row-top {
+	// 		margin-bottom: 20px;
+
+	// 		.hexagon-item {
+	// 			margin: 20px 0;
+	// 		}
+	// 	}
+
+	// 	.hexagon-row-bottom {
+	// 		.hexagon-item {
+	// 			margin: 20px 0;
+	// 		}
+	// 	}
+	// }
+}

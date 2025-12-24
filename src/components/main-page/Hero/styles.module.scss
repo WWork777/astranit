@@ -5,14 +5,18 @@
 	}
 }
 .hero_container {
+	// background-color: var(--layer-color1);
 	width: 100%;
-	padding-left: 10%;
-	padding-right: 10%;
-	height: 70vh;
+	max-width: 1400px;
+	margin: 0 auto;
+	overflow: hidden;
+	// padding-left: 10%;
+	// padding-right: 10%;
+	height: 75vh;
 	position: relative;
 	display: flex;
 
-	@media (max-width: 1300px) {
+	@media (max-width: 992px) {
 		display: none;
 	}
 }
@@ -21,7 +25,7 @@
 .hero_container__mobile {
 	display: none;
 
-	@media (max-width: 1300px) {
+	@media (max-width: 992px) {
 		display: flex;
 		flex-direction: column;
 		background-color: #e5eef2;
@@ -160,7 +164,7 @@
 	}
 
 	img {
-		background-color: #57889f;
+		background-color: var(--layer-color2);
 		padding: 12px;
 		border-radius: 50%;
 		width: 60px;
@@ -262,16 +266,21 @@
 
 // Десктопная версия (остается без изменений)
 .hero_container__left {
-	background-color: #e5eef2;
+	background-color: var(--layer-color1);
 	width: 59%;
+	max-height: auto;
 	padding: 70px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: start;
+	gap: 60px;
 	height: 100%;
 	z-index: 2;
-	clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+	clip-path: polygon(0 0, 98% 0, 78% 90%, 0 90%);
 	position: relative;
+	-webkit-box-shadow: 13px 16px 20px -6px rgba(22, 23, 24, 0.2);
+	-moz-box-shadow: 13px 16px 20px -6px rgba(22, 23, 24, 0.2);
+	box-shadow: 13px 16px 20px -6px rgba(22, 23, 24, 0.2);
 
 	@media (max-width: 1600px) {
 		padding: 50px;
@@ -280,16 +289,33 @@
 	@media (max-width: 1450px) {
 		padding: 40px;
 	}
+	@media (max-width: 1200px) {
+		clip-path: polygon(0 0, 98% 0, 80% 83%, 0 83%);
+		gap: 40px;
+	}
 }
 
 .hero_container__right {
+	background-color: var(--layer-color1);
 	position: absolute;
-	right: 10%;
-	top: 378px;
+	min-width: 75%;
+	right: -13%;
+	top: 355px;
 	transform: translateY(-50%);
 	z-index: 1;
 	width: 50%;
-	clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+	@media (max-width: 1350px) {
+		min-width: 77%;
+		top: 300px;
+		right: -15%;
+	}
+	@media (max-width: 1140px) {
+		min-width: 80%;
+		top: 270px;
+		right: -17%;
+	}
+
 	img {
 		object-fit: cover;
 		width: 100%;
@@ -318,7 +344,7 @@
 .hero_content {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 20px;
 }
 
 .hero_item__container {
@@ -343,27 +369,37 @@
 	}
 
 	img {
-		background-color: #57889f;
+		background-color: var(--layer-color2);
 		padding: 10px;
 		border-radius: 50%;
+		@media (max-width: 1200px) {
+			width: 45px;
+			height: 45px;
+		}
 	}
 }
 
 .hero_form {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 10px;
+	@media (max-width: 1200px) {
+		gap: 20px;
+	}
 
 	p {
 		font-size: 18px;
+		font-weight: 600;
 		font-family: Roboto, sans-serif;
 		color: #494857;
-		line-height: 21.6px;
+		@media (max-width: 1200px) {
+			font-size: 16px;
+		}
 	}
 
 	form {
 		display: flex;
-		gap: 30px;
+		gap: 20px;
 
 		@media (max-width: 1450px) {
 			gap: 10px;
@@ -388,16 +424,19 @@
 			outline: none;
 			box-shadow: 0 0 0 3px rgba(167, 186, 193, 0.2);
 		}
+		@media (max-width: 1200px) {
+			width: 200px;
+		}
 	}
 
 	button {
-		padding: 20px 40px;
+		padding: 10px 40px;
 		border-radius: 30px;
 		border: none;
 		background-color: #ff9933;
 		color: white;
 		font-size: 18px;
-		font-weight: 400;
+		font-weight: 500;
 		font-family: Roboto, sans-serif;
 		cursor: pointer;
 		transition: background-color 0.3s;
@@ -408,6 +447,9 @@
 
 		@media (max-width: 1450px) {
 			padding: 15px 30px;
+		}
+		@media (max-width: 1200px) {
+			padding: 5px 20px;
 		}
 	}
 }

@@ -19,8 +19,8 @@ export default function Hero() {
 									<Image
 										src='/svg/hero/phone.svg'
 										alt='phone'
-										width={50}
-										height={50}
+										width={60}
+										height={60}
 									/>
 									<span>
 										Удаленная техподдержка <br /> по телефону и e-mail
@@ -30,8 +30,8 @@ export default function Hero() {
 									<Image
 										src='/svg/hero/man.svg'
 										alt='man'
-										width={50}
-										height={50}
+										width={60}
+										height={60}
 									/>
 									<span>
 										Техподдержка на месте <br /> с выездом специалиста
@@ -43,8 +43,8 @@ export default function Hero() {
 									<Image
 										src='/svg/hero/protect.svg'
 										alt='protect'
-										width={50}
-										height={50}
+										width={60}
+										height={60}
 									/>
 									<span>
 										Порядок в ИТ-системе <br /> и защита данных
@@ -54,8 +54,8 @@ export default function Hero() {
 									<Image
 										src='/svg/hero/light.svg'
 										alt='light'
-										width={50}
-										height={50}
+										width={60}
+										height={60}
 									/>
 									<span>
 										Эффективные <br /> и удобные решения
@@ -65,7 +65,7 @@ export default function Hero() {
 						</div>
 						<div className={styles.hero_form}>
 							<p>
-								Отправьте заявку на консультацию, <br></br> и мы перезвоним в
+								Отправьте заявку на консультацию, и мы перезвоним в <br />
 								течение 15 минут!
 							</p>
 							<form action=''>
@@ -77,12 +77,13 @@ export default function Hero() {
 						</div>
 					</div>
 					<div className={styles.hero_container__right}>
-						<Image
+						{/* <Image
 							src='/images/hero/hero.png'
 							alt='it-outsorce'
-							width={900}
-							height={750}
-						/>
+							width={100}
+							height={100}
+						/> */}
+						<img src='/images/hero/hero.png' alt='it-outsorce' />
 					</div>
 				</div>
 			</section>
