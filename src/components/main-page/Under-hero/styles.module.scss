@@ -78,17 +78,17 @@
 }
 
 .underhero_image {
-	width: 120px;
-	height: 120px;
+	width: 150px;
+	height: 150px;
 
 	@media (max-width: 768px) {
-		width: 100px;
-		height: 100px;
+		width: 130px;
+		height: 130px;
 	}
 
 	@media (max-width: 480px) {
-		width: 90px;
-		height: 90px;
+		width: 100px;
+		height: 100px;
 	}
 }
 
@@ -121,8 +121,9 @@
 .description {
 	font-family: Roboto, sans-serif;
 	color: #494857;
-	font-size: 16px;
-	line-height: 1.6;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
 	margin: 0;
 
 	/* Десктоп: ограничение ширины текста */

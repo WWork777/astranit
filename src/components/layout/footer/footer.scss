@@ -118,7 +118,7 @@
 	&__button {
 		padding: 15px 75px;
 		border-radius: 30px;
-		border: none;
+		border: 1px solid #ffffff;
 		background-color: #ff9933;
 		color: white;
 		font-size: 18px;
@@ -129,8 +129,10 @@
 		box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
 
 		&:hover {
-			background-color: #e68a29;
-			transform: translateY(-2px);
+			background-color: var(--accent-hover1);
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4),
+				inset 0 1px 0 rgba(255, 255, 255, 0.2);
 		}
 
 		&:active {
@@ -174,6 +176,7 @@
 		font-weight: 400;
 		line-height: 21.6px;
 		resize: none;
+
 		@media (max-width: 1024px) {
 			width: 100%;
 			margin: 0 auto;
@@ -191,6 +194,7 @@
 			gap: 0;
 		}
 		input {
+			outline: none;
 			width: 240px;
 			height: 50px;
 			margin-bottom: 20px;
@@ -206,6 +210,7 @@
 			line-height: 18px;
 			letter-spacing: 0%;
 			text-align: left;
+
 			@media (max-width: 640px) {
 				padding: 10px;
 			}
@@ -350,3 +355,51 @@
 		padding-bottom: 10px;
 	}
 }
+
+/* footer.scss */
+// .form-field {
+// 	margin-bottom: 15px;
+// }
+
+// .form-label {
+// 	display: block;
+// 	margin-bottom: 5px;
+// 	font-size: 16px;
+// }
+// /* footer.scss */
+// .required-field {
+// 	width: 100%;
+// 	padding: 10px;
+// 	box-sizing: border-box;
+// 	background-position: right 10px center;
+// 	background-repeat: no-repeat;
+// 	background-size: 8px 8px;
+// }
+
+// /* footer.scss */
+// .form-group {
+// 	position: relative;
+// }
+
+// .required-field {
+// 	width: 100%;
+
+// 	box-sizing: border-box;
+// }
+
+// .required-star {
+// 	position: absolute;
+// 	right: 65px;
+// 	top: 25%;
+// 	color: #ff0000;
+// 	pointer-events: none;
+// }
+
+// /* Для пустых обязательных полей показываем звездочку */
+// .form-group.required input:placeholder-shown + .required-star {
+// 	display: block;
+// }
+
+// .form-group.required input:not(:placeholder-shown) + .required-star {
+// 	display: none;
+// }

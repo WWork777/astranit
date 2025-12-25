@@ -1,3 +1,16 @@
+export const baseLinks = [
+	{ title: 'ИТ-ПОДДЕРЖКА', link: '/' },
+	{ title: 'ТАРИФЫ', link: '/tariffs' },
+	{ title: 'КОНТАКТЫ', link: '/contacts' },
+]
+export const info = [
+	{ title: 'astranit.ru<br/> (C) ООО "ИТ Спектр", 2009-2025', link: '/' },
+	{
+		title: 'Материалы данного сайта<br/> не являются публичной офертой',
+		link: '/',
+	},
+	{ title: 'Политика конфиденциальности', link: '/privacy' },
+]
 export const services = [
 	{
 		id: 1,

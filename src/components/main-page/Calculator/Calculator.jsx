@@ -187,10 +187,13 @@ export default function Calculator() {
 										/>
 									</div>
 								</li>
+								<button>
+									<span>Рассчитать!</span>
+								</button>
 							</ul>
-							<button>
+							{/* <button>
 								<span>Рассчитать!</span>
-							</button>
+							</button> */}
 						</div>
 					</div>
 					<div className={styles.clipped_box_right}>
