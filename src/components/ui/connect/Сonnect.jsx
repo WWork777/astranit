@@ -1,13 +1,9 @@
 'use client'
-import { useMediaQuery } from '@/hooks/use-media-query'
 import Image from 'next/image'
 import React from 'react'
 import styles from './styles.module.scss'
-
 const Connect = () => {
-	const isMobile = useMediaQuery('(max-width: 1200px)')
 	const [open, setOpen] = React.useState(false)
-
 	// Условные классы для открытия/закрытия
 	const whatsappClass = open ? styles.whatsappOpen : styles.whatsappClosed
 	const telegramClass = open ? styles.telegramOpen : styles.telegramClosed
