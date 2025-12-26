@@ -1,6 +1,6 @@
 'use client'
+import Ranges from '@/components/ui/ranges/Ranges'
 import { FaCheck } from 'react-icons/fa'
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go'
 import { ImCross } from 'react-icons/im'
 import { TiPlus } from 'react-icons/ti'
 import styles from './styles.module.scss'
@@ -8,22 +8,10 @@ import './tariffsMobile.scss'
 
 export default function TariffsMobile({
 	list,
-	computerValue,
-	setComputerValue,
-	serversValue,
-	setServersValue,
-	officesValue,
-	setOfficesValue,
-	updateRangeBackground,
-	handleComputerChange,
-	handleServersChange,
-	handleOfficesChange,
-	handleComputerDecrement,
-	handleComputerIncrement,
-	handleServersDecrement,
-	handleServersIncrement,
-	handleOfficesDecrement,
-	handleOfficesIncrement,
+	totalEconomPrice,
+	totalLitePrice,
+	totalStandartPrice,
+	totalComfortPrice,
 }) {
 	const selectIcon = color => {
 		switch (color) {
@@ -45,109 +33,7 @@ export default function TariffsMobile({
 					<div className='mobile-tariffs-body'>
 						<div className='mobile-tariffs-body__ranges'>
 							<div className='mobile-tariffs-body__ranges_inputs'>
-								<ul className={styles.ranges}>
-									<li className={styles.ranges_box1}>
-										<h2 className={styles.ranges_box1_title}>Компьютеры</h2>
-										<div className={styles.ranges_box1_body}>
-											<div className={styles.range_button}>
-												<GoChevronLeft
-													onClick={handleComputerDecrement}
-													style={{ cursor: 'pointer' }}
-												/>
-												{computerValue}
-												<GoChevronRight
-													onClick={handleComputerIncrement}
-													style={{ cursor: 'pointer' }}
-												/>
-											</div>
-											<input
-												type='range'
-												min='1'
-												max='100'
-												step='1'
-												value={computerValue}
-												onChange={handleComputerChange}
-												className={styles.range_input}
-												style={{
-													background: updateRangeBackground(
-														computerValue,
-														1,
-														100,
-														'#ff9a22'
-													),
-												}}
-											/>
-										</div>
-									</li>
-									<li className={styles.ranges_box2}>
-										<h2 className={styles.ranges_box1_title}>Серверы</h2>
-										<div className={styles.ranges_box1_body}>
-											<div className={styles.range_button}>
-												<GoChevronLeft
-													onClick={handleServersDecrement}
-													style={{ cursor: 'pointer' }}
-												/>
-												{serversValue}
-												<GoChevronRight
-													onClick={handleServersIncrement}
-													style={{ cursor: 'pointer' }}
-												/>
-											</div>
-											<input
-												type='range'
-												min='1'
-												max='100'
-												step='1'
-												value={serversValue}
-												onChange={handleServersChange}
-												className={styles.range_input}
-												style={{
-													background: updateRangeBackground(
-														serversValue,
-														1,
-														100,
-														'#ff9a22'
-													),
-												}}
-											/>
-										</div>
-									</li>
-									<li className={styles.ranges_box3}>
-										<h2 className={styles.ranges_box1_title}>
-											Офисы / магазины / склады /...
-										</h2>
-										<div className={styles.ranges_box1_body}>
-											<div className={styles.range_button}>
-												<GoChevronLeft
-													onClick={handleOfficesDecrement}
-													style={{ cursor: 'pointer' }}
-												/>
-												{officesValue}
-												<GoChevronRight
-													onClick={handleOfficesIncrement}
-													style={{ cursor: 'pointer' }}
-												/>
-											</div>
-											<input
-												type='range'
-												min='1'
-												max='100'
-												step='1'
-												value={officesValue}
-												onChange={handleOfficesChange}
-												className={styles.range_input}
-												style={{
-													background: updateRangeBackground(
-														officesValue,
-														1,
-														100,
-														'#ff9a22'
-													),
-												}}
-											/>
-										</div>
-									</li>
-								</ul>
+								<Ranges styles={styles} />
 							</div>
 						</div>
 						<div className='mobile-tariffs-body__inner'>
@@ -160,7 +46,7 @@ export default function TariffsMobile({
 										<div className='mobile-tariffs-econom'>
 											<p className='mobile-tariffs-econom_title'>Эконом</p>
 											<span className='mobile-tariffs-econom_counter'>
-												8 800 ₽
+												{totalEconomPrice} ₽
 											</span>
 										</div>
 									</div>
@@ -168,7 +54,7 @@ export default function TariffsMobile({
 										<div className='mobile-tariffs-lite'>
 											<p className='mobile-tariffs-lite_title'>Лайт</p>
 											<span className='mobile-tariffs-lite_counter'>
-												8 800 ₽
+												{totalLitePrice} ₽
 											</span>
 										</div>
 									</div>
@@ -176,7 +62,7 @@ export default function TariffsMobile({
 										<div className='mobile-tariffs-standart'>
 											<p className='mobile-tariffs-standart_title'>Стандарт</p>
 											<span className='mobile-tariffs-standart_counter'>
-												8 800 ₽
+												{totalStandartPrice} ₽
 											</span>
 										</div>
 									</div>
@@ -184,7 +70,7 @@ export default function TariffsMobile({
 										<div className='mobile-tariffs-comfort'>
 											<p className='mobile-tariffs-comfort_title'>Комфорт</p>
 											<span className='mobile-tariffs-comfort_counter'>
-												8 800 ₽
+												{totalComfortPrice} ₽
 											</span>
 										</div>
 									</div>
@@ -308,9 +194,6 @@ export default function TariffsMobile({
 					</div>
 				</div>
 				<button className='mobile-tariffs__button'>Получить КП!</button>
-				<button className='mobile-tariffs__message'>
-					<img src='/images/tariffs/message.png' alt='message' />
-				</button>
 			</div>
 		</>
 	)
