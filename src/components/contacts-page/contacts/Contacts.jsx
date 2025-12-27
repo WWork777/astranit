@@ -53,6 +53,7 @@ export default function Contacts() {
 					</div>
 				</div>
 				<div className='contacts-map'>
+					{/* <img src='/images/contacts/map.png' alt='map' /> */}
 					<div className='contacts-map__tooltip1'>
 						<img src='/images/contacts/logotype.png' alt='logotype' />
 						<span>пр. Юрия Гагарина, д.23</span>

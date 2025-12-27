@@ -180,95 +180,97 @@ export default function Header() {
 
 	return (
 		<>
-			<div className={styles.header}>
-				<div className={styles.logo_container}>
-					<Link href='/' onClick={closeMenu}>
-						<Image
-							src='/logo/logo.svg'
-							alt='astrinit logo'
-							width={200}
-							height={50}
-						/>
-					</Link>
-				</div>
-
-				<div className={styles.nav_container}>
-					<Link
-						href='/'
-						className={`${styles.nav_link} ${
-							pathname === '/' ? styles.active : ''
-						}`}
-						onClick={closeMenu}
-					>
-						ИТ-ПОДДЕРЖКА
-					</Link>
-					<Link
-						href='/tariffs'
-						className={`${styles.nav_link} ${
-							pathname === '/tariffs' ? styles.active : ''
-						}`}
-						onClick={closeMenu}
-					>
-						ТАРИФЫ
-					</Link>
-					<Link
-						href='/services'
-						className={`${styles.nav_link} ${
-							pathname === '/services' || pathname.startsWith('/services/')
-								? styles.active
-								: ''
-						}`}
-						onClick={closeMenu}
-					>
-						РЕШЕНИЯ
-					</Link>
-					<Link
-						href='/contacts'
-						className={`${styles.nav_link} ${
-							pathname === '/contacts' ? styles.active : ''
-						}`}
-						onClick={closeMenu}
-					>
-						КОНТАКТЫ
-					</Link>
-				</div>
-
-				<div className={styles.socials_container}>
-					<Link href='tel:+78123363646' className={styles.phone_link}>
-						(812) 336 36 46
-					</Link>
-					<div className={styles.socials_links}>
-						<Link href='#'>
+			<div className={styles.header__container}>
+				<div className={styles.header}>
+					<div className={styles.logo_container}>
+						<Link href='/' onClick={closeMenu}>
 							<Image
-								src='/svg/socials/tg.svg'
-								alt='tg'
-								width={35}
-								height={35}
-							/>
-						</Link>
-						<Link href='#'>
-							<Image
-								src='/svg/socials/wa.svg'
-								alt='wa'
-								width={35}
-								height={35}
+								src='/logo/logo.svg'
+								alt='astrinit logo'
+								width={200}
+								height={50}
 							/>
 						</Link>
 					</div>
-				</div>
 
-				{/* Бургер-кнопка */}
-				<button
-					className={`${styles.burger_button} ${
-						isMenuOpen ? styles.active : ''
-					}`}
-					onClick={toggleMenu}
-					aria-label='Открыть меню'
-				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+					<div className={styles.nav_container}>
+						<Link
+							href='/'
+							className={`${styles.nav_link} ${
+								pathname === '/' ? styles.active : ''
+							}`}
+							onClick={closeMenu}
+						>
+							ИТ-ПОДДЕРЖКА
+						</Link>
+						<Link
+							href='/tariffs'
+							className={`${styles.nav_link} ${
+								pathname === '/tariffs' ? styles.active : ''
+							}`}
+							onClick={closeMenu}
+						>
+							ТАРИФЫ
+						</Link>
+						<Link
+							href='/services'
+							className={`${styles.nav_link} ${
+								pathname === '/services' || pathname.startsWith('/services/')
+									? styles.active
+									: ''
+							}`}
+							onClick={closeMenu}
+						>
+							РЕШЕНИЯ
+						</Link>
+						<Link
+							href='/contacts'
+							className={`${styles.nav_link} ${
+								pathname === '/contacts' ? styles.active : ''
+							}`}
+							onClick={closeMenu}
+						>
+							КОНТАКТЫ
+						</Link>
+					</div>
+
+					<div className={styles.socials_container}>
+						<Link href='tel:+78123363646' className={styles.phone_link}>
+							(812) 336 36 46
+						</Link>
+						<div className={styles.socials_links}>
+							<Link href='#'>
+								<Image
+									src='/svg/socials/tg.svg'
+									alt='tg'
+									width={35}
+									height={35}
+								/>
+							</Link>
+							<Link href='#'>
+								<Image
+									src='/svg/socials/wa.svg'
+									alt='wa'
+									width={35}
+									height={35}
+								/>
+							</Link>
+						</div>
+					</div>
+
+					{/* Бургер-кнопка */}
+					<button
+						className={`${styles.burger_button} ${
+							isMenuOpen ? styles.active : ''
+						}`}
+						onClick={toggleMenu}
+						aria-label='Открыть меню'
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
 			</div>
 
 			{/* Мобильное меню */}

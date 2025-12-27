@@ -382,7 +382,6 @@ const TariffsDesktop = observer(({ tariffs }) => {
 							totalLitePrice={totalLitePrice}
 							totalStandartPrice={totalStandartPrice}
 							totalComfortPrice={totalComfortPrice}
-							onGetQuote={handleGetQuote}
 						/>
 					) : (
 						<div className='tariffs-body'>

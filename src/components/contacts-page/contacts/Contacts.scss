@@ -1,7 +1,11 @@
 .contacts {
-	min-height: 100vh;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
 	position: relative;
+	min-height: 940px;
 	padding-top: 90px;
+
 	// Первыми идут самые широкие условия
 	@media (max-width: 1280px) {
 		padding-left: 10px;
@@ -205,7 +209,8 @@
 }
 
 .contacts-map {
-	background: url('/images/contacts/map.png') center center/cover no-repeat;
+	background: url('/images/contacts/map.png') center center/cover;
+	background-repeat: no-repeat;
 	width: 78%;
 	height: 100%;
 	clip-path: polygon(36% 0, 100% 0, 100% 100%, 19% 100%);

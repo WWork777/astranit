@@ -83,7 +83,7 @@ export default function Hero() {
 							width={100}
 							height={100}
 						/> */}
-						<img src='/images/hero/hero.png' alt='it-outsorce' />
+						<img src='/images/hero/desktop.png' alt='it-outsorce' />
 					</div>
 				</div>
 			</section>
