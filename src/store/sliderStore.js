@@ -101,8 +101,8 @@ class SliderStore {
 	// Сброс к значениям по умолчанию
 	resetToDefaults = action(() => {
 		this.computerValue = 10
-		this.serversValue = 15
-		this.officesValue = 20
+		this.serversValue = 1
+		this.officesValue = 1
 	})
 
 	// Получение всех значений в виде объекта
