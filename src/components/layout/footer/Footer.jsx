@@ -539,9 +539,14 @@ export default function Footer() {
 			return
 		}
 
-		const text = `Запрос из футера\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email}\nСообщение: ${
-			inappropriateCheck.cleanText
-		}\nform_id: form-footer\nuser_id: ${Math.random()}`
+		const text = `Запрос из футера
+Имя: ${name}
+Телефон: ${phone}
+Email: ${email}
+Сообщение: ${inappropriateCheck.cleanText}
+form_id: form-footer
+user_id: ${Math.random()}
+time: ${new Date().toLocaleString('ru-RU')}`
 		alert(text)
 		reset()
 	}
@@ -639,7 +644,7 @@ export default function Footer() {
 								</div>
 							</div>
 						</div>
-						<div className='bunner-inner__img'>
+						<div className='banner-inner__img'>
 							<img src='/images/footer/footer.svg' alt='image' />
 						</div>
 					</div>

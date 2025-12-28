@@ -1,4 +1,4 @@
-// Основные переменные
+// // Основные переменные
 $hexagon-side: 220px;
 $hexagon-width: calc(#{$hexagon-side} * 1.732); // width = side * √3
 $hexagon-height: calc(#{$hexagon-side} * 2);
@@ -72,8 +72,10 @@ $hexagon-margin: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start; // изменено с center на flex-start
 	padding: 20px;
+	padding-top: 15px; // уменьшили верхний отступ
+	padding-bottom: 15px; // уменьшили нижний отступ
 	box-sizing: border-box;
 	clip-path: polygon(
 		4% 4%,
@@ -81,9 +83,7 @@ $hexagon-margin: 30px;
 		96% 4%,
 		// верхний правый угол
 		96% 96%,
-		// // нижний правый угол
-		// 45% 100%,
-		// // "нос" вниз (выступает на 25% ниже)
+		// нижний правый угол
 		4% 96% // нижний левый угол
 	);
 	background-color: var(--layer-color1); // синий фон
@@ -96,7 +96,14 @@ $hexagon-margin: 30px;
 	font-size: 25px;
 	font-weight: 600;
 	line-height: 26px;
-	padding-bottom: 10px;
+	padding-bottom: 8px;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	min-height: 48px; // фиксированная высота для 2 строк
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 // Описание с шестью строками
@@ -110,4 +117,16 @@ $hexagon-margin: 30px;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+// Строки описания
+.description-line {
+	margin: 2px 0;
+	min-height: 18px; // фиксированная высота для каждой строки
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

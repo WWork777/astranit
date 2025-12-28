@@ -13,9 +13,9 @@ export default function Hero() {
 	)
 	const emptyPhoneNotice = (
 		<>
-			Пример ввода:
+			Пожалуйста, укажите
 			<br />
-			+71234567890
+			номер телефона
 		</>
 	)
 	const personalDataNotice = (
@@ -108,7 +108,10 @@ export default function Hero() {
 	const handleSubmit = async e => {
 		// setLoading(true) // Начало загрузки
 		e.preventDefault()
-		const text = `Запрос обратной связи\nТелефон: ${phone}\nform_id: form-hero\nuser_id: ${Math.random()} `
+		const text = `Запрос обратной связи\nТелефон: ${phone}\nform_id: form-hero\nuser_id: ${Math.random()}\ntime: ${new Date().toLocaleString(
+			'ru-RU'
+		)} `
+
 		alert(text)
 		reset()
 		// try {
