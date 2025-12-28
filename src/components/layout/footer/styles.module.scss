@@ -1,0 +1,132 @@
+.button_wrapper {
+	max-width: max-content;
+	position: relative;
+	@media (max-width: 640px) {
+		max-width: 100%;
+	}
+}
+.footer_form__checkbox {
+	min-width: max-content;
+	position: absolute;
+	bottom: 15px;
+	left: 108%;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	@media (max-width: 640px) {
+		bottom: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	input {
+		// Убираем стандартные стили
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		// ФИКСИРУЕМ РАЗМЕРЫ
+		width: 20px !important; // в данном случае можно использовать !important
+		height: 20px !important;
+		min-width: 20px;
+		min-height: 20px;
+		flex: none;
+		flex-shrink: 0;
+
+		// Базовые стили
+		border: 2px solid #ddd;
+		border-radius: 4px;
+		background: white;
+		position: relative;
+		cursor: pointer;
+		box-sizing: border-box;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+
+		&:checked {
+			background-color: var(--accent-color1);
+			border-color: #ffffff;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -60%) rotate(45deg);
+				width: 6px;
+				height: 12px;
+				border: solid white;
+				border-width: 0 2px 2px 0;
+			}
+		}
+	}
+
+	p {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1;
+		font-family: Roboto, sans-serif;
+		color: #494857;
+		@media (max-width: 640px) {
+			font-size: 10px;
+			text-align: center;
+		}
+	}
+
+	span {
+		color: var(--layer-color2);
+	}
+}
+
+.button {
+	padding: 15px 75px;
+	border-radius: 30px;
+	border: 1px solid #ffffff;
+	background-color: #ff9933;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: Roboto, sans-serif;
+
+	transition: background-color 0.3s ease, transform 0.2s ease;
+
+	@media (max-width: 640px) {
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+.button_active {
+	padding: 15px 75px;
+	border-radius: 30px;
+	border: 1px solid #ffffff;
+	background-color: #ff9933;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: Roboto, sans-serif;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+
+	&:hover {
+		background-color: var(--accent-hover1);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4),
+			inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+
+	span {
+		display: inline-block;
+	}
+	@media (max-width: 640px) {
+		display: block;
+		margin: 20px auto;
+	}
+}

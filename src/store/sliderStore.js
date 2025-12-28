@@ -2,9 +2,9 @@ import { action, makeAutoObservable } from 'mobx'
 
 class SliderStore {
 	// Состояние слайдеров
-	computerValue = 10
-	serversValue = 1
-	officesValue = 1
+	computerValue = 0
+	serversValue = 0
+	officesValue = 0
 
 	// Конфигурация слайдеров
 	sliderConfig = {
@@ -100,9 +100,9 @@ class SliderStore {
 
 	// Сброс к значениям по умолчанию
 	resetToDefaults = action(() => {
-		this.computerValue = 10
-		this.serversValue = 1
-		this.officesValue = 1
+		this.computerValue = 0
+		this.serversValue = 0
+		this.officesValue = 0
 	})
 
 	// Получение всех значений в виде объекта

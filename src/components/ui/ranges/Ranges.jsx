@@ -191,6 +191,7 @@
 'use client'
 import sliderStore from '@/store/sliderStore'
 import { observer } from 'mobx-react-lite'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go'
 
@@ -303,9 +304,11 @@ const Ranges = observer(({ styles }) => {
 					</div>
 				</li>
 				{pathname === '/' ? (
-					<button>
-						<span>Рассчитать!</span>
-					</button>
+					<Link href={'/tariffs'}>
+						<button>
+							<span>Рассчитать!</span>
+						</button>
+					</Link>
 				) : null}
 			</ul>
 		</>
