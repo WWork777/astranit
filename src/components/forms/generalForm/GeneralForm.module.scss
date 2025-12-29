@@ -1,0 +1,162 @@
+.AuditForm {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 30px;
+	background-color: #f9f9f9;
+	border: 1px solid #c3bdbd;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+.label {
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: var(--layer-color2);
+}
+
+.input,
+.textarea {
+	padding: 12px 16px;
+	border: 2px solid #ddd;
+	border-radius: 30px;
+	font-size: 16px;
+	transition: border-color 0.3s;
+
+	&:focus {
+		outline: none;
+		border: 1px solid var(--layer-color2);
+	}
+	/* Отключаем автозаполнение браузера */
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0 1000px white inset !important;
+		box-shadow: 0 0 0 1000px white inset !important;
+		-webkit-text-fill-color: #333 !important;
+		transition: background-color 5000s ease-in-out 0s;
+	}
+
+	/* Для Firefox и других браузеров */
+	&:autofill {
+		background-color: white !important;
+		color: #333 !important;
+	}
+
+	/* Современный вариант */
+	&[data-autofilled] {
+		background-color: white !important;
+	}
+}
+
+.input.error,
+.input.error:focus {
+	border-color: #e74c3c;
+}
+
+.textarea {
+	resize: vertical;
+	min-height: 100px;
+	font-family: inherit;
+}
+
+.checkboxContainer {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.checkbox {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	// ФИКСИРУЕМ РАЗМЕРЫ
+	width: 20px !important; // в данном случае можно использовать !important
+	height: 20px !important;
+	min-width: 20px;
+	min-height: 20px;
+	flex: none;
+	flex-shrink: 0;
+
+	// Базовые стили
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	background: white;
+	position: relative;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+
+	&:checked {
+		background-color: var(--accent-color1);
+		border-color: #ffffff;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%) rotate(45deg);
+			width: 6px;
+			height: 12px;
+			border: solid white;
+			border-width: 0 2px 2px 0;
+		}
+	}
+	cursor: pointer;
+}
+
+.checkboxLabel {
+	cursor: pointer;
+	color: #333;
+}
+.personalDataLink {
+	color: var(--layer-color2);
+}
+
+.errorMessage {
+	color: #e74c3c;
+	font-size: 14px;
+	margin-top: 5px;
+	display: block;
+}
+
+.submitButton {
+	background-color: var(--accent-color1);
+	color: white;
+	padding: 14px 20px;
+	border: 1px solid #ffffff;
+	border-radius: 30px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover:not(:disabled) {
+		background-color: #e68a29;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+	}
+
+	&:disabled {
+		background-color: #cccccc;
+		cursor: not-allowed;
+	}
+}
+.display_none {
+	display: none;
+}

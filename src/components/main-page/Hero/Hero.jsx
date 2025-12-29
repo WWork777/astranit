@@ -1,10 +1,13 @@
 'use client'
+import modalStore from '@/store/modalStore'
+import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styles from './styles.module.scss'
 
-export default function Hero() {
+const Hero = observer(() => {
+	const { openModal } = modalStore
 	const baseNotice = (
 		<>
 			Отправьте заявку на консультацию, и мы перезвоним в<br />
@@ -261,7 +264,7 @@ export default function Hero() {
 				</div>
 			</section>
 
-			{/* <section className={styles.hero_container__mobile}>
+			<section className={styles.hero_container__mobile}>
 				<h1>ИТ-ПОДДЕРЖКА БИЗНЕСА</h1>
 				<p>Внимание и готовность помочь - каждый день!</p>
 				<Image
@@ -318,11 +321,17 @@ export default function Hero() {
 						Оставьте заявку на консультацию, и мы перезвоним <br /> в течение 15
 						минут!
 					</p>
-					<button>
+					<button
+						onClick={() =>
+							openModal({ type: 'hero', title: 'Оставить заявку!' })
+						}
+					>
 						<span>Оставить заявку!</span>
 					</button>
 				</div>
-			</section> */}
+			</section>
 		</>
 	)
-}
+})
+
+export default Hero

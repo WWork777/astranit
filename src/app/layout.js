@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/footer/Footer'
 import Header from '@/components/layout/header/Header'
+import GeneralModal from '@/components/modals/GeneralModal'
 import Connect from '@/components/ui/connect/Сonnect'
 import { Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
 				{children}
 				<Footer />
 				<Connect />
+				<GeneralModal />
 			</body>
 		</html>
 	)

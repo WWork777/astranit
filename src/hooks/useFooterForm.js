@@ -1,7 +1,7 @@
 'use client'
 import { useCallback, useEffect, useState } from 'react'
 
-export const useFooterForm = () => {
+export const useFooterForm = (options = {}) => {
 	// Константы для уведомлений
 	const NOTICES = {
 		BASE: (

@@ -265,10 +265,9 @@
 // export default TariffsDesktop
 
 'use client'
-import ModalWindow from '@/components/layout/modal/ModalWindow'
 import Ranges from '@/components/ui/ranges/Ranges'
 import { tariffsList as list } from '@/data'
-import modalStore from '@/store/modalStore' // Импортируем новый store
+import modalStore from '@/store/modalStore'
 import sliderStore from '@/store/sliderStore'
 import { observer } from 'mobx-react-lite'
 import { useEffect, useState } from 'react'
@@ -328,7 +327,8 @@ const TariffsDesktop = observer(({ tariffs }) => {
 		modalStore.openModal({
 			tariffName,
 			totalPrice: price,
-			title: 'Заявка на коммерческое предложение',
+			title: 'Коммерческое предложение',
+			type: 'commercial',
 			customData: {
 				'Тип тарифа': tariffName,
 				'Количество компьютеров': sliderStore.computerValue,
@@ -611,9 +611,6 @@ const TariffsDesktop = observer(({ tariffs }) => {
 					)}
 				</div>
 			</section>
-
-			{/* Глобальное модальное окно */}
-			<ModalWindow onFormSubmit={handleFormSubmit} />
 		</>
 	)
 })
