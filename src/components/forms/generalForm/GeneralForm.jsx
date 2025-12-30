@@ -1,8 +1,19 @@
 import Link from 'next/link'
+import React from 'react'
 import { useForm } from 'react-hook-form'
+import { v4 as uuidv4 } from 'uuid'
 import styles from './GeneralForm.module.scss'
 
-const GeneralForm = ({ order = {}, price = '' }) => {
+const GeneralForm = ({
+	formId = '',
+	customData = {},
+	totalPrice = '',
+	totalEconomPrice = '',
+	totalLitePrice = '',
+	totalStandartPrice = '',
+	totalComfortPrice = '',
+	closeModal,
+}) => {
 	const {
 		register,
 		handleSubmit,
@@ -11,104 +22,103 @@ const GeneralForm = ({ order = {}, price = '' }) => {
 	} = useForm({
 		mode: 'onChange',
 	})
+	const [isLoading, setIsLoading] = React.useState(false)
+	const [status, setStatus] = React.useState({ type: '', message: '' })
+	const timestamp = new Date().toLocaleString('ru-RU')
+	const userId = uuidv4()
 
-	// const formatDataForDisplay = data => {
-	// 	// Определяем тип формы по ключам
-	// 	const isGeneralForm = 'name' in data && 'phone' in data
-	// 	const isTariffForm = 'Тип тарифа' in data
+	// const onSubmit = async data => {
+	// 	console.log('Форма отправлена:', data)
+	// 	const orderData = {}
+	// 	Object.entries(order).map(([key, value]) => (orderData[key] = value))
+	// 	// const merged = Object.assign({}, orderData, data)
+	// 	const message1 = formatDataForDisplay(data)
+	// 	const message2 = formatDataForDisplay(orderData)
+	// 	const message3 = price
+	// 	// Здесь можно добавить отправку данных на сервер
+	// 	// Пример: await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
 
-	// 	if (isGeneralForm) {
-	// 		return `
-	//     👤 Имя: ${data.name || 'не указано'}
-	//     📞 Телефон: ${data.phone || 'не указан'}
-	//     📧 Email: ${data.email || 'не указан'}
-	//     💬 Сообщение: ${data.message || 'не указано'}
-	//     ✅ Согласие: ${data.privacyPolicy ? 'получено' : 'не получено'}
-	//   `
-	// 	}
-
-	// 	if (isTariffForm) {
-	// 		return `
-	//     📊 Тип тарифа: ${data['Тип тарифа'] || 'не указан'}
-	//     💻 Компьютеров: ${data['Количество компьютеров'] || 0}
-	//     🖥️ Серверов: ${data['Количество серверов'] || 0}
-	//     🏢 Офисов: ${data['Количество офисов'] || 0}
-	//   `
-	// 	}
-
-	// 	// Общий случай для любого объекта
-	// 	return Object.entries(data)
-	// 		.map(([key, value]) => `• ${key}: ${value || 'не указано'}`)
-	// 		.join('\n')
+	// 	// Очистка формы после отправки
+	// 	reset()
+	// 	alert(
+	// 		`✅ Форма отправлена!\n${message1}\n${message2}\nСтоимость услуг: ${message3}`
+	// 	)
 	// }
-	const formatDataForDisplay = data => {
-		// Определяем тип формы по ключам
-		const isGeneralForm = 'name' in data && 'phone' in data
-		const isTariffForm = 'Тип тарифа' in data
-
-		// Генерируем ID формы
-		const generateFormId = () => {
-			return (
-				'FORM-' +
-				Date.now() +
-				'-' +
-				Math.random().toString(36).substr(2, 9).toUpperCase()
-			)
-		}
-
-		// Генерируем ID пользователя (если нет в данных)
-		const generateUserId = () => {
-			return 'USER-' + Math.random().toString(36).substr(2, 9).toUpperCase()
-		}
-
-		if (isGeneralForm) {
-			return `
-      📋 ID формы: ${data.formId || generateFormId()}
-      👤 Имя: ${data.name || 'не указано'}
-      📞 Телефон: ${data.phone || 'не указан'}
-      📧 Email: ${data.email || 'не указан'}
-      💬 Сообщение: ${data.message || 'не указано'}
-      ✅ Согласие: ${data.privacyPolicy ? 'получено' : 'не получено'}
-      👤 ID пользователя: ${data.userId || generateUserId()}
-      🕐 Время: ${new Date().toLocaleString('ru-RU')}
-    `
-		}
-
-		if (isTariffForm) {
-			const formId = data.formId || generateFormId()
-			const userId = data.userId || generateUserId()
-			const timestamp = new Date().toLocaleString('ru-RU')
-
-			return `
-      📋 ID формы: ${formId}
-      👤 ID пользователя: ${userId}
-      🕐 Время отправки: ${timestamp}
-      
-      📊 Информация о тарифе:
-      • Тип тарифа: ${data['Тип тарифа'] || 'не указан'}
-      • Компьютеров: ${data['Количество компьютеров'] || 0}
-      • Серверов: ${data['Количество серверов'] || 0}
-      • Офисов: ${data['Количество офисов'] || 0}
-      `
-		}
-	}
 
 	const onSubmit = async data => {
-		console.log('Форма отправлена:', data)
+		setIsLoading(true)
+		setStatus({ type: '', message: '' })
 		const orderData = {}
-		Object.entries(order).map(([key, value]) => (orderData[key] = value))
-		// const merged = Object.assign({}, orderData, data)
-		const message1 = formatDataForDisplay(data)
-		const message2 = formatDataForDisplay(orderData)
-		const message3 = price
-		// Здесь можно добавить отправку данных на сервер
-		// Пример: await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+		Object.entries(customData).map(([key, value]) => (orderData[key] = value))
+		const {
+			'Тип тарифа': tariff,
+			'Количество компьютеров': computer,
+			'Количество серверов': server,
+			'Количество офисов': office,
+		} = orderData
 
-		// Очистка формы после отправки
-		reset()
-		alert(
-			`✅ Форма отправлена!\n${message1}\n${message2}\nСтоимость услуг: ${message3}`
-		)
+		const submitData = {
+			name: data.name,
+			phone: data.phone,
+			email: data.email,
+			message: data.message || 'сообщение не оставлено',
+			computer,
+			server,
+			office,
+			tariff,
+			totalPrice,
+			totalEconomPrice,
+			totalLitePrice,
+			totalStandartPrice,
+			totalComfortPrice,
+			formId,
+			userId,
+			timestamp,
+		}
+
+		try {
+			const response = await fetch('/api/submit-form', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(submitData),
+			})
+
+			const result = await response.json()
+
+			if (!response.ok) {
+				throw new Error(result.error || 'Ошибка отправки')
+			}
+
+			// ✅ ПОКАЗЫВАЕМ ALERT ПРИ УСПЕШНОЙ ОТПРАВКЕ
+			alert(
+				'✅ Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.'
+			)
+
+			// ✅ ЗАКРЫВАЕМ МОДАЛЬНОЕ ОКНО
+			if (closeModal) {
+				closeModal()
+			} else {
+				// Альтернатива: просто ресетим форму
+				reset()
+			}
+
+			// Можно также обновить статус (опционально)
+			setStatus({
+				type: 'success',
+				message: 'Сообщение успешно отправлено!',
+			})
+		} catch (error) {
+			// ❌ ПРИ ОШИБКЕ - alert с ошибкой (но модалку не закрываем)
+			alert(`❌ Ошибка отправки: ${error.message}`)
+			reset()
+			setStatus({
+				type: 'error',
+				message: error.message,
+			})
+		} finally {
+			reset()
+			setIsLoading(false)
+		}
 	}
 
 	return (

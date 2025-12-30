@@ -4,10 +4,11 @@ import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import styles from './styles.module.scss'
 
 const Hero = observer(() => {
-	const { openModal } = modalStore
+	const { openModal, closeModal } = modalStore
 	const baseNotice = (
 		<>
 			Отправьте заявку на консультацию, и мы перезвоним в<br />
@@ -32,11 +33,15 @@ const Hero = observer(() => {
 			корректный номер
 		</>
 	)
+	const timestamp = new Date().toLocaleString('ru-RU')
+	const userId = uuidv4()
 	const [phone, setPhone] = React.useState('')
 	const [checked, setChecked] = React.useState(false)
 	const [checkedError, setCheckedError] = React.useState(true)
 	const [phoneError, setPhoneError] = React.useState(true)
 	const [notice, setNotice] = React.useState(baseNotice)
+	const [isLoading, setIsLoading] = React.useState(false)
+	const [status, setStatus] = React.useState({ type: '', message: '' })
 
 	const [isValidate, setisValidate] = React.useState(false)
 
@@ -108,43 +113,74 @@ const Hero = observer(() => {
 			}
 		}
 	}
+
 	const handleSubmit = async e => {
-		// setLoading(true) // Начало загрузки
 		e.preventDefault()
-		const text = `Запрос обратной связи\nТелефон: ${phone}\nform_id: form-hero\nuser_id: ${Math.random()}\ntime: ${new Date().toLocaleString(
-			'ru-RU'
-		)} `
+		setIsLoading(true)
+		setStatus({ type: '', message: '' })
 
-		alert(text)
-		reset()
-		// try {
-		// 	const response = await fetch('/api/sendMessage', {
-		// 		method: 'POST',
-		// 		headers: {
-		// 			'Content-Type': 'application/json',
-		// 		},
-		// 		body: JSON.stringify({ text }),
-		// 	})
+		const submitData = {
+			name: '',
+			phone: phone,
+			email: '',
+			message: '',
+			computer: '',
+			server: '',
+			office: '',
+			tariff: '',
+			totalPrice: '',
+			economPrice: '',
+			litePrice: '',
+			standartPrice: '',
+			comfortPrice: '',
+			formId: 'hero-desktop',
+			userId,
+			timestamp,
+		}
 
-		// 	if (!response.ok) {
-		// 		alert('Произошла ошибка при отправке сообщения')
-		// 		throw new Error('Ошибка при отправке сообщения')
-		// 	}
+		try {
+			const response = await fetch('/api/submit-form', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(submitData),
+			})
 
-		// 	const result = await response.json() // Если сервер возвращает JSON
-		// 	if (result.message === 'ok') {
-		// 		setLoading(false)
-		// 		setLoaded(true)
-		// 		setTimeout(() => {
-		// 			setLoaded(false)
-		// 		}, 2000)
-		// 	}
-		// 	reset() // Сброс формы только после успешной отправки
-		// } catch (error) {
-		// 	console.error('Ошибка:', error)
-		// 	alert('Произошла ошибка при отправке сообщения')
-		// } finally {
-		// }
+			const result = await response.json()
+
+			if (!response.ok) {
+				throw new Error(result.error || 'Ошибка отправки')
+			}
+
+			// ✅ ПОКАЗЫВАЕМ ALERT ПРИ УСПЕШНОЙ ОТПРАВКЕ
+			alert(
+				'✅ Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.'
+			)
+
+			// ✅ ЗАКРЫВАЕМ МОДАЛЬНОЕ ОКНО
+			if (closeModal) {
+				closeModal()
+			} else {
+				// Альтернатива: просто ресетим форму
+				reset()
+			}
+
+			// Можно также обновить статус (опционально)
+			setStatus({
+				type: 'success',
+				message: 'Сообщение успешно отправлено!',
+			})
+		} catch (error) {
+			// ❌ ПРИ ОШИБКЕ - alert с ошибкой (но модалку не закрываем)
+			alert(`❌ Ошибка отправки: ${error.message}`)
+			reset()
+			setStatus({
+				type: 'error',
+				message: error.message,
+			})
+		} finally {
+			reset()
+			setIsLoading(false)
+		}
 	}
 
 	return (

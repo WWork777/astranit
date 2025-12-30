@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { v4 as uuidv4 } from 'uuid'
 import styles from './HeroForm.module.scss'
 
-const HeroForm = () => {
+const HeroForm = ({ closeModal }) => {
 	const {
 		register,
 		handleSubmit,
@@ -11,51 +13,78 @@ const HeroForm = () => {
 	} = useForm({
 		mode: 'onChange',
 	})
-	const formatDataForDisplay = data => {
-		// Определяем тип формы по ключам
-		const isGeneralForm = 'name' in data && 'phone' in data
-		const isTariffForm = 'Тип тарифа' in data
 
-		if (isGeneralForm) {
-			return `
-      👤 Имя: ${data.name || 'не указано'}
-      📞 Телефон: ${data.phone || 'не указан'}
-      📧 Email: ${data.email || 'не указан'}
-      💬 Сообщение: ${data.message || 'не указано'}
-      ✅ Согласие: ${data.privacyPolicy ? 'получено' : 'не получено'}
-    `
-		}
-
-		if (isTariffForm) {
-			return `
-      📊 Тип тарифа: ${data['Тип тарифа'] || 'не указан'}
-      💻 Компьютеров: ${data['Количество компьютеров'] || 0}
-      🖥️ Серверов: ${data['Количество серверов'] || 0}
-      🏢 Офисов: ${data['Количество офисов'] || 0}
-    `
-		}
-
-		// Общий случай для любого объекта
-		return Object.entries(data)
-			.map(([key, value]) => `• ${key}: ${value || 'не указано'}`)
-			.join('\n')
-	}
+	const [isLoading, setIsLoading] = useState(false)
+	const [status, setStatus] = useState({ type: '', message: '' })
+	const timestamp = new Date().toLocaleString('ru-RU')
+	const userId = uuidv4()
 
 	const onSubmit = async data => {
-		console.log('Форма отправлена:', data)
+		setIsLoading(true)
+		setStatus({ type: '', message: '' })
 
-		const message1 = formatDataForDisplay(data)
+		const submitData = {
+			name: data.name,
+			phone: data.phone,
+			email: '',
+			message: '',
+			computer: '',
+			server: '',
+			office: '',
+			tariff: '',
+			totalPrice: '',
+			economPrice: '',
+			litePrice: '',
+			standartPrice: '',
+			comfortPrice: '',
+			formId: 'hero-mobile',
+			userId,
+			timestamp,
+		}
 
-		// Здесь можно добавить отправку данных на сервер
-		// Пример: await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+		try {
+			const response = await fetch('/api/submit-form', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(submitData),
+			})
 
-		// Очистка формы после отправки
-		reset()
-		alert(
-			`✅ Форма отправлена!\n${message1}\nBремя сообщения: ${new Date().toLocaleString(
-				'ru-RU'
-			)}`
-		)
+			const result = await response.json()
+
+			if (!response.ok) {
+				throw new Error(result.error || 'Ошибка отправки')
+			}
+
+			// ✅ ПОКАЗЫВАЕМ ALERT ПРИ УСПЕШНОЙ ОТПРАВКЕ
+			alert(
+				'✅ Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.'
+			)
+
+			// ✅ ЗАКРЫВАЕМ МОДАЛЬНОЕ ОКНО
+			if (closeModal) {
+				closeModal()
+			} else {
+				// Альтернатива: просто ресетим форму
+				reset()
+			}
+
+			// Можно также обновить статус (опционально)
+			setStatus({
+				type: 'success',
+				message: 'Сообщение успешно отправлено!',
+			})
+		} catch (error) {
+			// ❌ ПРИ ОШИБКЕ - alert с ошибкой (но модалку не закрываем)
+			alert(`❌ Ошибка отправки: ${error.message}`)
+			reset()
+			setStatus({
+				type: 'error',
+				message: error.message,
+			})
+		} finally {
+			reset()
+			setIsLoading(false)
+		}
 	}
 
 	return (

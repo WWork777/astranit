@@ -162,7 +162,13 @@ const SavedData = observer(() => {
 						</div>
 						<button
 							className={styles.button_mobile}
-							onClick={() => openModal('audit', 'Получить аудит!')}
+							onClick={() =>
+								openModal({
+									type: 'general',
+									formId: 'audit-form',
+									title: 'Получить ИТ-аудит!',
+								})
+							}
 						>
 							<span>Получить аудит!</span>
 						</button>
@@ -193,7 +199,11 @@ const SavedData = observer(() => {
 							<button
 								className={styles.button}
 								onClick={() =>
-									openModal({ type: 'audit', title: 'Получить ИТ-аудит!' })
+									openModal({
+										type: 'general',
+										formId: 'audit-form',
+										title: 'Получить ИТ-аудит!',
+									})
 								}
 							>
 								<span>Получить ИТ-аудит!</span>

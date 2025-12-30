@@ -3,6 +3,7 @@ import { baseLinks, info, services as servLink } from '@/data'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import './footer.scss'
 import styles from './styles.module.scss'
 
@@ -211,7 +212,10 @@ export default function Footer() {
 	const [emailError, setEmailError] = React.useState(true)
 	const [checkedError, setCheckedError] = React.useState(true)
 	const [messageError, setMessageError] = React.useState(false)
-	// Убираем messageNotice, все ошибки будут в notice
+	const [isLoading, setIsLoading] = React.useState(false)
+	const [status, setStatus] = React.useState({ type: '', message: '' })
+	const timestamp = new Date().toLocaleString('ru-RU')
+	const userId = uuidv4()
 
 	const [notice, setNotice] = React.useState(baseNotice)
 	const [isValidate, setIsValidate] = React.useState(false)
@@ -524,12 +528,8 @@ export default function Footer() {
 			}
 		}
 	}
-
 	const handleSubmit = async e => {
-		if (e && e.preventDefault) {
-			e.preventDefault()
-		}
-
+		e.preventDefault()
 		// Финальная проверка
 		const inappropriateCheck = checkForInappropriateContent(message)
 		if (inappropriateCheck.hasInappropriate) {
@@ -538,17 +538,66 @@ export default function Footer() {
 			setMessageError(true)
 			return
 		}
+		setIsLoading(true)
+		setStatus({ type: '', message: '' })
 
-		const text = `Запрос из футера
-Имя: ${name}
-Телефон: ${phone}
-Email: ${email}
-Сообщение: ${inappropriateCheck.cleanText}
-form_id: form-footer
-user_id: ${Math.random()}
-time: ${new Date().toLocaleString('ru-RU')}`
-		alert(text)
-		reset()
+		const submitData = {
+			name: name,
+			phone: phone,
+			email: email,
+			message: message || 'сообщение не оставлено',
+			computer: '',
+			server: '',
+			office: '',
+			tariff: '',
+			totalPrice: '',
+			economPrice: '',
+			litePrice: '',
+			standartPrice: '',
+			comfortPrice: '',
+			formId: 'footer-form',
+			userId,
+			timestamp,
+		}
+
+		try {
+			const response = await fetch('/api/submit-form', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(submitData),
+			})
+
+			const result = await response.json()
+
+			if (!response.ok) {
+				throw new Error(result.error || 'Ошибка отправки')
+			}
+
+			// ✅ ПОКАЗЫВАЕМ ALERT ПРИ УСПЕШНОЙ ОТПРАВКЕ
+			alert(
+				'✅ Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.'
+			)
+
+			// ✅ ОЧИЩАЕМ ФОРМУ
+			reset()
+
+			// Можно также обновить статус (опционально)
+			setStatus({
+				type: 'success',
+				message: 'Сообщение успешно отправлено!',
+			})
+		} catch (error) {
+			// ❌ ПРИ ОШИБКЕ - alert с ошибкой (но модалку не закрываем)
+			alert(`❌ Ошибка отправки: ${error.message}`)
+			reset()
+			setStatus({
+				type: 'error',
+				message: error.message,
+			})
+		} finally {
+			reset()
+			setIsLoading(false)
+		}
 	}
 
 	return (

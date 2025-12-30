@@ -1,6 +1,7 @@
 'use client'
 import Ranges from '@/components/ui/ranges/Ranges'
 import modalStore from '@/store/modalStore'
+import sliderStore from '@/store/sliderStore'
 import { observer } from 'mobx-react-lite'
 import { FaCheck } from 'react-icons/fa'
 import { ImCross } from 'react-icons/im'
@@ -202,8 +203,20 @@ const TariffsMobile = observer(
 					<button
 						onClick={() =>
 							openModal({
-								type: 'commercial-mobile',
+								formId: 'tariff-mobile',
+								totalPrice: '',
+								totalEconomPrice,
+								totalLitePrice,
+								totalStandartPrice,
+								totalComfortPrice,
 								title: 'Коммерческое предложение',
+								type: 'general',
+								customData: {
+									'Тип тарифа': 'Тариф не указан',
+									'Количество компьютеров': sliderStore.computerValue,
+									'Количество серверов': sliderStore.serversValue,
+									'Количество офисов': sliderStore.officesValue,
+								},
 							})
 						}
 						className='mobile-tariffs__button'

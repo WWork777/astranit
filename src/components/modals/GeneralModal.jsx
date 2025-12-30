@@ -3,13 +3,12 @@ import modalStore from '@/store/modalStore'
 import { observer } from 'mobx-react-lite'
 import { useEffect } from 'react'
 import { RiCloseLargeFill } from 'react-icons/ri'
-
 import GeneralForm from '../forms/generalForm/GeneralForm'
 import HeroForm from '../forms/heroForm/HeroForm'
 import styles from './GeneralModal.module.scss'
 
 const GeneralModal = observer(() => {
-	const { closeModal, modal } = modalStore
+	const { modal, closeModal } = modalStore
 	// Блокировка скролла при открытии модального окна
 	useEffect(() => {
 		if (modal.isOpen) {
@@ -41,14 +40,21 @@ const GeneralModal = observer(() => {
 		switch (
 			modal?.type // Используем modal.type с optional chaining
 		) {
-			case 'audit':
-				return <GeneralForm />
 			case 'hero':
-				return <HeroForm />
-			case 'commercial':
-				return <GeneralForm order={modal.customData} price={modal.totalPrice} />
-			case 'commercial-mobile':
-				return <GeneralForm order={modal.customData} price={modal.totalPrice} />
+				return <HeroForm closeModal={closeModal} />
+			case 'general':
+				return (
+					<GeneralForm
+						formId={modal.formId}
+						customData={modal.customData}
+						totalPrice={modal.totalPrice}
+						totalEconomPrice={modal.totalEconomPrice}
+						totalLitePrice={modal.totalLitePrice}
+						totalStandartPrice={modal.totalStandartPrice}
+						totalComfortPrice={modal.totalComfortPrice}
+						closeModal={closeModal}
+					/>
+				)
 			default:
 				return (
 					<div>
@@ -76,6 +82,22 @@ const GeneralModal = observer(() => {
 							<p className={styles.modalDisplayPrice}>
 								Cтоимость услуг: <span> {modal.totalPrice}</span>
 							</p>
+							{modal.formId == 'tariff-mobile' && (
+								<div>
+									<p className={styles.modalDisplayPrice}>
+										Тариф ЭКОНОМ: <span> {modal.totalEconomPrice}</span>
+									</p>
+									<p className={styles.modalDisplayPrice}>
+										Тариф ЛАЙТ: <span> {modal.totalLitePrice}</span>
+									</p>
+									<p className={styles.modalDisplayPrice}>
+										Тариф СТАНДАРТ: <span> {modal.totalStandartPrice}</span>
+									</p>
+									<p className={styles.modalDisplayPrice}>
+										Тариф КОМФОРТ: <span> {modal.totalComfortPrice}</span>
+									</p>
+								</div>
+							)}
 						</div>
 					</div>
 				) : null}

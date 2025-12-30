@@ -323,12 +323,17 @@ const TariffsDesktop = observer(({ tariffs }) => {
 		return () => window.removeEventListener('resize', checkScreenSize)
 	}, [])
 
-	const handleGetQuote = (tariffName, price) => {
+	const handleGetQuote = (tariffName = '', price = '') => {
 		modalStore.openModal({
+			formId: 'tariff-desktop',
 			tariffName,
 			totalPrice: price,
+			totalEconomPrice,
+			totalLitePrice,
+			totalStandartPrice,
+			totalComfortPrice,
 			title: 'Коммерческое предложение',
-			type: 'commercial',
+			type: 'general',
 			customData: {
 				'Тип тарифа': tariffName,
 				'Количество компьютеров': sliderStore.computerValue,
@@ -336,37 +341,6 @@ const TariffsDesktop = observer(({ tariffs }) => {
 				'Количество офисов': sliderStore.officesValue,
 			},
 		})
-	}
-
-	const handleFormSubmit = async formData => {
-		try {
-			// Здесь отправка данных на сервер
-			console.log('Отправка данных формы:', formData)
-
-			// Пример отправки через API
-			const response = await fetch('/api/send-quote', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(formData),
-			})
-
-			if (!response.ok) {
-				throw new Error('Ошибка при отправке')
-			}
-
-			const result = await response.json()
-			console.log('Успешный ответ:', result)
-
-			// Можно показать уведомление об успехе
-			alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.')
-
-			return result
-		} catch (error) {
-			console.error('Ошибка:', error)
-			throw error
-		}
 	}
 
 	return (
