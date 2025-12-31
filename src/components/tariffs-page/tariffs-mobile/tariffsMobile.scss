@@ -220,8 +220,8 @@
 	&__button {
 		position: fixed;
 		z-index: 100;
-		bottom: 50px;
-		left: 15px;
+		bottom: 20px;
+		left: 10px;
 		width: 198px;
 		height: 65px;
 		color: rgba(254, 254, 254, 1);
@@ -235,7 +235,8 @@
 		border-radius: 30px;
 		background: rgba(255, 153, 51, 1);
 		cursor: pointer;
-		animation: pulse 2s infinite;
+		-webkit-animation: hde-contact-pulse 2s infinite;
+		animation: hde-contact-pulse 2s infinite;
 		// &:hover {
 		// 	background: var(--hover-color1);
 		// }
@@ -259,12 +260,35 @@
 	// 	align-items: center;
 	// }
 }
-@keyframes pulse {
-	0%,
-	100% {
-		opacity: 1;
+// Animation Keyframes
+@keyframes hde-contact-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+		transform: scale(1.05, 1.05);
 	}
+
 	50% {
-		opacity: 0.7;
+		box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+		transform: scale(1, 1);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@-webkit-keyframes hde-contact-pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+		transform: scale(1.05, 1.05);
+	}
+
+	50% {
+		-webkit-box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+		transform: scale(1, 1);
+	}
+
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }

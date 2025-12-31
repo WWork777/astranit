@@ -205,7 +205,11 @@ const HeroForm = ({ closeModal }) => {
 						/>
 						<label htmlFor='privacyPolicy' className={styles.checkboxLabel}>
 							Я согласен на{' '}
-							<Link className={styles.personalDataLink} href={'/personal'}>
+							<Link
+								onClick={closeModal}
+								className={styles.personalDataLink}
+								href={'/personal'}
+							>
 								обработку персональных данных
 							</Link>{' '}
 							*

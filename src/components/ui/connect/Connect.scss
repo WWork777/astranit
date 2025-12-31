@@ -1,0 +1,215 @@
+.chat-container {
+	height: 550px;
+	width: 400px;
+	padding: 0;
+	visibility: hidden;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+#hde-iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-top-left-radius: 5px;
+}
+
+#hde-container {
+	border-radius: 5px;
+	height: 550px;
+	width: 400px;
+	padding: 0;
+	position: fixed;
+	z-index: 214748364;
+	user-select: none;
+	display: none;
+}
+
+#hde-chat-button {
+	padding: 0;
+	position: absolute;
+	color: #fff;
+	margin: 0;
+	height: 90px;
+	width: 100%;
+	cursor: pointer;
+	user-select: none;
+	display: block;
+}
+
+// @media only screen and (max-device-width: 481px) {
+// 	.hde-container-mobile {
+// 		#hde-iframe {
+// 			border-top-left-radius: 0;
+// 		}
+
+// 		#hde-chat-container {
+// 			border-radius: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+
+// 		&#hde-container {
+// 			margin: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+// 	}
+// }
+
+// Contact Container Styles
+.contact-container {
+	visibility: visible;
+	height: auto;
+	width: auto;
+	position: fixed;
+	z-index: 100;
+	letter-spacing: normal;
+	user-select: none;
+	right: 2%;
+	bottom: 2%;
+}
+
+.contact-container-size {
+	font-size: 32px;
+}
+
+.contact-open-btn {
+	position: relative;
+	z-index: 100;
+	background: var(--accent-color1);
+	width: 1em;
+	height: 1em;
+	padding: 0.5em;
+	line-height: 2em;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 1em;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0.5em 0px;
+
+	-webkit-animation: hde-contact-pulse 2s infinite;
+	animation: hde-contact-pulse 2s infinite;
+}
+
+.contact-icon {
+	opacity: 1.1;
+
+	&.contact-show {
+		display: block;
+		// display: none;
+	}
+
+	&.contact-hide {
+		display: none;
+		// display: block;
+	}
+}
+
+.contact-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	right: 0px;
+}
+
+.contact-item {
+	transition: all 0.3s ease;
+	background: blue;
+	color: #fff;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	display: none;
+	box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+
+	&.chat-item {
+		background: var(--layer-color2);
+		top: auto;
+		display: block;
+		// bottom: 2.5em;
+		// opacity: 1;
+		bottom: 0;
+		opacity: 0;
+	}
+
+	&.telegram-item {
+		background: rgb(23, 156, 222);
+		top: auto;
+		display: block;
+		// bottom: 5em;
+		// opacity: 1;
+		bottom: 0;
+		opacity: 0;
+	}
+
+	&.whatsapp-item {
+		background: #32d951;
+		top: auto;
+		display: block;
+		bottom: 0;
+		opacity: 0;
+		// bottom: 7.5em;
+		// opacity: 1;
+	}
+
+	a,
+	span {
+		padding: 0.475em;
+		line-height: 1em;
+		float: left;
+		padding: 0.5em;
+		font-size: 1em;
+		cursor: pointer;
+	}
+}
+
+// Reset box-sizing for contact container
+.contact-container * {
+	box-sizing: unset !important;
+}
+
+.contact-container svg {
+	max-width: none !important;
+	max-height: none !important;
+	height: auto !important;
+	vertical-align: baseline !important;
+}
+
+// Animation Keyframes
+@keyframes hde-contact-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+		transform: scale(1.05, 1.05);
+	}
+
+	50% {
+		box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+		transform: scale(1, 1);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@-webkit-keyframes hde-contact-pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+		transform: scale(1.05, 1.05);
+	}
+
+	50% {
+		-webkit-box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0);
+		transform: scale(1, 1);
+	}
+
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
