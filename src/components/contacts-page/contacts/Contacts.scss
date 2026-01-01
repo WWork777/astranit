@@ -176,8 +176,8 @@
 		height: 265px;
 		position: absolute;
 		z-index: 22;
-		bottom: 41%;
-		left: 39%;
+		bottom: 44%;
+		left: 37%;
 		@media (max-width: 1600px) {
 			left: 33%;
 		}
@@ -196,7 +196,7 @@
 			line-height: 21.6px;
 			letter-spacing: 0px;
 			text-align: left;
-			padding-bottom: 10px;
+			padding-bottom: 8px;
 		}
 		&-desc {
 			color: rgba(73, 72, 87, 1);
@@ -235,7 +235,7 @@
 		height: 150px;
 		position: absolute;
 		bottom: 59%;
-		right: 33%;
+		right: 34%;
 		@media (max-width: 1440px) {
 			right: 30%;
 		}

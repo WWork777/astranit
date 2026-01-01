@@ -94,12 +94,12 @@
 			font-size: 30px;
 		}
 
-		@media (max-width: 1150px) {
-			display: none;
-		}
 		&.active {
 			border-bottom: 3px solid var(--accent-color1);
 		}
+	}
+	@media (max-width: 1150px) {
+		display: none;
 	}
 }
 
@@ -125,6 +125,30 @@
 		@media (max-width: 1500px) {
 			font-size: 40px;
 		}
+	}
+}
+.phone_link_mobile {
+	display: none;
+	color: #58899f;
+	font-size: 48px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: #3a6a7f;
+	}
+
+	@media (max-width: 1500px) {
+		font-size: 40px;
+	}
+	@media (max-width: 1150px) {
+		display: block;
+	}
+	@media (max-width: 460px) {
+		font-size: 30px;
+	}
+	@media (max-width: 430px) {
+		font-size: 23px;
 	}
 }
 
@@ -196,7 +220,7 @@
 	&_cross {
 		position: absolute;
 		top: 20px;
-		right: 0;
+		right: 10px;
 	}
 
 	@media (max-width: 992px) {
@@ -293,4 +317,26 @@
 	to {
 		opacity: 1;
 	}
+}
+
+.telegram_item,
+.whatsapp_item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	color: #fff;
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 50%;
+	svg {
+		width: 1.5em;
+		height: 1.5em;
+	}
+}
+.telegram_item {
+	background: rgb(23, 156, 222);
+}
+.whatsapp_item {
+	background: #32d951;
 }

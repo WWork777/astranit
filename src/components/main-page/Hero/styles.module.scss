@@ -426,6 +426,27 @@
 			outline: none;
 			box-shadow: 0 0 0 3px rgba(167, 186, 193, 0.2);
 		}
+		/* Отключаем автозаполнение браузера */
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			-webkit-box-shadow: 0 0 0 1000px white inset !important;
+			box-shadow: 0 0 0 1000px white inset !important;
+			-webkit-text-fill-color: #333 !important;
+			transition: background-color 5000s ease-in-out 0s;
+		}
+
+		/* Для Firefox и других браузеров */
+		&:autofill {
+			background-color: white !important;
+			color: #333 !important;
+		}
+
+		/* Современный вариант */
+		&[data-autofilled] {
+			background-color: white !important;
+		}
 		@media (max-width: 1200px) {
 			width: 200px;
 		}

@@ -175,7 +175,7 @@ export default function Connect() {
 								</svg>
 							</a> */}
 							<a
-								href='tel:+79312832211'
+								href='tel:+78123363646'
 								id='hde-chat-init-btn-1'
 								className='contact-link'
 							>

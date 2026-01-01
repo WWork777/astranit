@@ -43,7 +43,7 @@ export default function Contacts() {
 
 						<div className='contacts-info__tooltip2'>
 							<h3 className='contacts-info__tooltip2-title'>
-								Приедем быстро, где бы вы ни находились!
+								Приедем быстро, <br /> где бы вы ни находились!
 							</h3>
 							<p className='contacts-info__tooltip2-desc'>
 								Специалисты, работающие в выездном режиме, распределены по

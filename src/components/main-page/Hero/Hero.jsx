@@ -1,11 +1,22 @@
 'use client'
+import Spinner from '@/components/ui/spinner/Spinner'
 import modalStore from '@/store/modalStore'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 import styles from './styles.module.scss'
+
+const StyledButton = styled.button`
+	padding-left: 106px !important;
+	padding-right: 106px !important;
+	@media (max-width: 1200px) {
+		padding-left: 93px !important;
+		padding-right: 93px !important;
+	}
+`
 
 const Hero = observer(() => {
 	const { openModal, closeModal } = modalStore
@@ -42,7 +53,6 @@ const Hero = observer(() => {
 	const [notice, setNotice] = React.useState(baseNotice)
 	const [isLoading, setIsLoading] = React.useState(false)
 	const [status, setStatus] = React.useState({ type: '', message: '' })
-
 	const [isValidate, setisValidate] = React.useState(false)
 
 	React.useEffect(() => {
@@ -118,6 +128,7 @@ const Hero = observer(() => {
 		e.preventDefault()
 		setIsLoading(true)
 		setStatus({ type: '', message: '' })
+		setisValidate(false)
 
 		const submitData = {
 			name: '',
@@ -248,7 +259,6 @@ const Hero = observer(() => {
 							<p>{notice}</p>
 							<form onSubmit={handleSubmit}>
 								<input
-									autoComplete='off'
 									type='tel'
 									id='phone'
 									name='phone'
@@ -263,8 +273,12 @@ const Hero = observer(() => {
 									>
 										<span>Перезвоните мне!</span>
 									</button>
+								) : isLoading ? (
+									<StyledButton disabled={!isValidate}>
+										<Spinner />
+									</StyledButton>
 								) : (
-									<button disabled={!isValidate}>
+									<button className={styles.button} disabled={!isValidate}>
 										<span>Перезвоните мне!</span>
 									</button>
 								)}

@@ -31,7 +31,7 @@ export default function OneService({ link }) {
 			case 6:
 				return <BlockTelephony data={service} />
 			default:
-				return <p>Стандартное описание</p>
+				return <p>Очень скоро здесь будет описание решения</p>
 		}
 	}
 

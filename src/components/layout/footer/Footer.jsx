@@ -1,4 +1,5 @@
 'use client'
+import Spinner from '@/components/ui/spinner/Spinner'
 import { baseLinks, info, services as servLink } from '@/data'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -538,6 +539,7 @@ export default function Footer() {
 			setMessageError(true)
 			return
 		}
+		setIsValidate(false)
 		setIsLoading(true)
 		setStatus({ type: '', message: '' })
 
@@ -621,7 +623,6 @@ export default function Footer() {
 								<div className='inner-form__inputs'>
 									<input
 										autoFocus={false}
-										autoComplete='off'
 										id='name'
 										name='name'
 										type='text'
@@ -630,7 +631,6 @@ export default function Footer() {
 										onChange={e => nameHandler(e)}
 									/>
 									<input
-										autoComplete='off'
 										id='phone'
 										name='phone'
 										type='text'
@@ -639,7 +639,6 @@ export default function Footer() {
 										onChange={e => phoneHandler(e)}
 									/>
 									<input
-										autoComplete='off'
 										type='email'
 										name='email'
 										placeholder='name@company *'
@@ -663,17 +662,62 @@ export default function Footer() {
 							<div className={styles.button_wrapper}>
 								{isValidate ? (
 									<button
+										disabled={!isValidate}
 										type='submit'
 										onClick={handleSubmit}
 										className={styles.button_active}
 									>
 										Отправить
 									</button>
+								) : isLoading ? (
+									<button
+										style={{
+											paddingLeft: '106px',
+											paddingRight: '106px',
+											paddingTop: '13px',
+											paddingBottom: '13px',
+										}}
+										disabled={!isValidate}
+										type='submit'
+										onClick={handleSubmit}
+										className={styles.button}
+									>
+										{<Spinner />}
+									</button>
 								) : (
-									<button className={styles.button} disabled>
+									<button
+										disabled={!isValidate}
+										type='submit'
+										onClick={handleSubmit}
+										className={styles.button}
+									>
 										Отправить
 									</button>
 								)}
+
+								{/* {isValidate ? (
+									<button
+										className={styles.button_active}
+										disabled={!isValidate}
+									>
+										<span>Перезвоните мне!</span>
+									</button>
+								) : (
+									<button disabled={!isValidate}>
+										{isLoading ? (
+											<span
+												style={{
+													display: 'flex',
+													gap: '30px',
+												}}
+											>
+												Отправка ... <Spinner />
+											</span>
+										) : (
+											<span>Перезвоните мне!</span>
+										)}
+									</button>
+								)} */}
 								<div className={styles.footer_form__checkbox}>
 									<input
 										type='checkbox'

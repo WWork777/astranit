@@ -28,7 +28,6 @@
 	position: relative;
 	background: white;
 	border-radius: 30px;
-
 	max-width: 500px;
 	width: 100%;
 	max-height: 90vh;
@@ -48,6 +47,9 @@
 
 .modalContentBody {
 	padding: 32px 32px 0;
+	@media (max-width: 576px) {
+		padding: 32px 10px 0;
+	}
 }
 .modalDisplayData {
 	background-color: #f9f9f9;
@@ -78,6 +80,9 @@
 }
 .modalContentForm {
 	padding: 32px;
+	@media (max-width: 576px) {
+		padding: 32px 10px 32px;
+	}
 }
 
 .spinner {
