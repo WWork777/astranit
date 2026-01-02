@@ -22,7 +22,7 @@ const Hero = observer(() => {
 	const { openModal, closeModal } = modalStore
 	const baseNotice = (
 		<>
-			Отправьте заявку на консультацию, и мы перезвоним в<br />
+			Отправьте заявку на консультацию, и мы перезвоним вам в<br />
 			течение 15 минут!
 		</>
 	)
@@ -368,8 +368,8 @@ const Hero = observer(() => {
 				</div>
 				<div className={styles.hero_container_form_mobile}>
 					<p>
-						Оставьте заявку на консультацию, и мы перезвоним <br /> в течение 15
-						минут!
+						Оставьте заявку на консультацию, и мы перезвоним вам <br /> в
+						течение 15 минут!
 					</p>
 					<button
 						onClick={() =>

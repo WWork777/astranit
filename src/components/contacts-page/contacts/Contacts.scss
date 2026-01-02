@@ -48,6 +48,20 @@
 	font-size: 56px;
 	font-weight: 700;
 	line-height: 56px;
+	@media (max-width: 1200px) {
+		font-size: 48px;
+		padding: 52px 0 25px;
+	}
+
+	@media (max-width: 1024px) {
+		font-size: 42px;
+		padding: 40px 0 10px;
+	}
+
+	@media (max-width: 400px) {
+		padding: 20px 0 10px;
+		font-size: 33px;
+	}
 }
 .contacts-info {
 	// .contacts-info__box

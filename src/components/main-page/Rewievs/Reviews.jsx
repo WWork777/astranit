@@ -192,7 +192,7 @@ export default function Reviews() {
 	return (
 		<>
 			<section className={styles.reviews}>
-				<div className={`container ${styles.mb_0}`}>
+				<div className={styles.container}>
 					<h1 className={styles.title}>ОТЗЫВЫ О НАШЕЙ РАБОТЕ</h1>
 
 					<div className={styles.swiperContainer}>
@@ -210,6 +210,7 @@ export default function Reviews() {
 							centeredSlides={false}
 							pagination={false}
 							navigation={false}
+							spaceBetween={50}
 							autoplay={{
 								delay: 4000,
 								disableOnInteraction: false,

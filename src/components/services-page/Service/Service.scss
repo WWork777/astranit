@@ -13,35 +13,24 @@
 	margin: 0 auto;
 }
 .service-title {
-	padding: 52px 0;
+	padding: 52px 0 40px;
 	color: rgba(73, 72, 87, 1);
 	font-size: 56px;
 	font-weight: 700;
 	line-height: 56px;
-	// @media (max-width: 1280px) {
-	// 	padding-left: 5%;
-	// }
-	@media (max-width: 1280px) {
+	@media (max-width: 1200px) {
 		font-size: 48px;
+		padding: 52px 0 25px;
 	}
 
 	@media (max-width: 1024px) {
 		font-size: 42px;
+		padding: 40px 0 10px;
 	}
 
-	@media (max-width: 992px) {
-		font-size: 36px;
-		padding-bottom: 30px;
-	}
-
-	@media (max-width: 768px) {
-		font-size: 32px;
-		padding-bottom: 25px;
-	}
-
-	@media (max-width: 480px) {
-		font-size: 28px;
-		padding-bottom: 20px;
+	@media (max-width: 400px) {
+		padding: 20px 0 10px;
+		font-size: 33px;
 	}
 }
 .service-body {

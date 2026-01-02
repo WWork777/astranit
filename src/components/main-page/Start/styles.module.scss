@@ -1,6 +1,6 @@
 // Основные стили
 .start {
-	padding: 60px 0;
+	padding: 50px 0;
 
 	@media (max-width: 992px) {
 		padding: 40px 0;
@@ -167,7 +167,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	height: 100%;
 	width: 100%;
 
@@ -199,32 +199,36 @@
 
 // Общие стили текста
 .item_title {
+	padding-bottom: 25px;
 	font-size: 25px;
-	font-weight: 700;
+	font-weight: 600;
 	color: #494857;
 	display: block;
 
-	@media (max-width: 1280px) {
-		font-size: 19px;
+	@media (max-width: 1200px) {
+		font-size: 23px;
+	}
+	@media (max-width: 1120px) {
+		font-size: 20px;
+	}
+	@media (max-width: 1200px) {
+		font-size: 23px;
+	}
+
+	@media (max-width: 1120px) {
+		font-size: 20px;
 	}
 
 	@media (max-width: 992px) {
-		color: rgba(73, 72, 87, 1);
-		font-family: Roboto;
-		font-size: 25px;
-		font-weight: 700;
-		line-height: 100%;
-		letter-spacing: 0px;
-		text-align: left;
+		font-size: 23px;
 	}
 
 	@media (max-width: 640px) {
-		padding-left: 60px;
+		padding-left: 0;
 		padding-top: 10px;
 	}
 	@media (max-width: 480px) {
 		font-size: 17px;
-		padding-left: 45px;
 	}
 
 	@media (max-width: 360px) {
@@ -233,27 +237,28 @@
 }
 
 .item_description {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 400;
 	color: #494857;
-	line-height: 1.5;
+	line-height: 1.2;
 	margin: 0;
 
 	@media (max-width: 1280px) {
+		font-size: 16px;
+	}
+	@media (max-width: 1200px) {
 		font-size: 15.5px;
 	}
 
 	@media (max-width: 992px) {
-		padding-top: 25px;
 		color: rgba(73, 72, 87, 1);
 		font-family: Roboto;
 		font-size: 18px;
 		font-weight: 400;
-		line-height: 100%;
 	}
 
 	@media (max-width: 768px) {
-		font-size: 15px;
+		font-size: 16px;
 		line-height: 1.45;
 	}
 	@media (max-width: 640px) {
@@ -262,12 +267,11 @@
 
 	@media (max-width: 480px) {
 		font-size: 14px;
-		line-height: 1.4;
+		text-align: center;
 	}
 
 	@media (max-width: 360px) {
 		font-size: 13.5px;
-		line-height: 1.35;
 	}
 }
 

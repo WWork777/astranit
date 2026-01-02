@@ -13,6 +13,23 @@
 // .mb_0 {
 // 	margin-bottom: 0;
 // }
+
+.container {
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 80px 0 0;
+
+	@media (max-width: 1300px) {
+		padding: 60px 40px 0;
+	}
+	@media (max-width: 992px) {
+		padding: 40px 40px 0;
+	}
+	@media (max-width: 640px) {
+		padding: 20px 40px 0;
+	}
+}
 .reviews {
 	position: relative;
 	width: 100%;
@@ -37,17 +54,21 @@
 
 		@media (max-width: 992px) {
 			font-size: 36px;
-			margin-bottom: 30px;
+			padding: 0 0 40px;
 		}
 
 		@media (max-width: 768px) {
 			font-size: 32px;
-			margin-bottom: 25px;
+			padding: 0 0 30px;
+		}
+		@media (max-width: 640px) {
+			font-size: 32px;
+			padding: 0 0 20px;
 		}
 
 		@media (max-width: 480px) {
 			font-size: 28px;
-			margin-bottom: 20px;
+
 			text-align: left;
 		}
 	}
@@ -63,9 +84,10 @@
 	.reviewsSwiper {
 		width: 100%;
 		max-width: 1200px;
+		margin: 0 auto;
 		position: relative;
 		z-index: 1;
-		@media (max-width: 640px) {
+		@media (max-width: 360px) {
 			max-width: 300px;
 		}
 	}
@@ -90,47 +112,49 @@
 	}
 
 	.navButtonPrev {
-		left: 80px;
-		@media (max-width: 1920px) {
-			left: 80px;
-		}
-		@media (max-width: 1860px) {
-			left: -20px;
-		}
-		@media (max-width: 1800px) {
-			left: -100px;
-		}
-		@media (max-width: 1025px) {
-			left: -70px;
-		}
-		@media (max-width: 768px) {
-			left: -50px;
-		}
-		@media (max-width: 640px) {
-			left: -20px;
-		}
+		left: -55px;
+		// left: 0;
+		// @media (max-width: 1920px) {
+		// 	left: 80px;
+		// }
+		// @media (max-width: 1860px) {
+		// 	left: -20px;
+		// }
+		// @media (max-width: 1800px) {
+		// 	left: -100px;
+		// }
+		// @media (max-width: 1025px) {
+		// 	left: -70px;
+		// }
+		// @media (max-width: 768px) {
+		// 	left: -50px;
+		// }
+		// @media (max-width: 640px) {
+		// 	left: -20px;
+		// }
 	}
 
 	.navButtonNext {
-		right: 80px;
-		@media (max-width: 1920px) {
-			right: 80px;
-		}
-		@media (max-width: 1860px) {
-			right: -20px;
-		}
-		@media (max-width: 1800px) {
-			right: -100px;
-		}
-		@media (max-width: 1025px) {
-			right: -70px;
-		}
-		@media (max-width: 768px) {
-			right: -50px;
-		}
-		@media (max-width: 640px) {
-			right: -20px;
-		}
+		right: -55px;
+		// right: -300px;
+		// @media (max-width: 1920px) {
+		// 	right: 80px;
+		// }
+		// @media (max-width: 1860px) {
+		// 	right: -20px;
+		// }
+		// @media (max-width: 1800px) {
+		// 	right: -100px;
+		// }
+		// @media (max-width: 1025px) {
+		// 	right: -70px;
+		// }
+		// @media (max-width: 768px) {
+		// 	right: -50px;
+		// }
+		// @media (max-width: 640px) {
+		// 	right: -20px;
+		// }
 	}
 	.slideWrapper {
 		cursor: pointer;
@@ -140,10 +164,6 @@
 			transform: scale(1.02);
 		}
 	}
-}
-
-.mb_0 {
-	margin-bottom: 0;
 }
 
 /* Модальное окно */

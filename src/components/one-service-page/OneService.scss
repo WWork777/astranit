@@ -18,14 +18,28 @@
 	color: rgba(73, 72, 87, 1);
 	font-size: 56px;
 	font-weight: 700;
-	line-height: 56px;
+	line-height: 1;
+	// @media (max-width: 1200px) {
+	// 	padding-bottom: 25px;
+	// }
+	// @media (max-width: 640px) {
+	// 	font-size: 33px;
+	// 	line-height: 33px;
+	// 	padding-bottom: 15px;
+	// }
 	@media (max-width: 1200px) {
-		padding-bottom: 25px;
+		font-size: 48px;
+		padding: 52px 0 25px;
 	}
-	@media (max-width: 640px) {
+
+	@media (max-width: 1024px) {
+		font-size: 42px;
+		padding: 40px 0 10px;
+	}
+
+	@media (max-width: 400px) {
+		padding: 20px 0 10px;
 		font-size: 33px;
-		line-height: 33px;
-		padding-bottom: 15px;
 	}
 }
 .one-service-img {
@@ -39,9 +53,9 @@
 	// 	border-radius: 0%;
 	// }
 	img {
-		// width: 100%;
-		// height: 100%;
-		// object-fit: cover;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 .one-service-description {
