@@ -132,7 +132,6 @@
 'use client'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 import { MdClose } from 'react-icons/md'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
@@ -200,7 +199,12 @@ export default function Reviews() {
 							className={`${styles.navButton} ${styles.navButtonPrev}`}
 							onClick={handlePrev}
 						>
-							<BsChevronCompactLeft color='#ff9a22' size={80} />
+							{/* <RiArrowLeftWideFill color='#ff9a22' size={80} /> */}
+							<img
+								className={styles.left_button}
+								src='/images/reviews/leftArrow.png'
+								alt='arrow'
+							/>
 						</button>
 
 						<Swiper
@@ -210,7 +214,6 @@ export default function Reviews() {
 							centeredSlides={false}
 							pagination={false}
 							navigation={false}
-							spaceBetween={50}
 							autoplay={{
 								delay: 4000,
 								disableOnInteraction: false,
@@ -224,25 +227,25 @@ export default function Reviews() {
 								320: {
 									slidesPerView: 1,
 								},
-								640: {
-									slidesPerView: 1,
-									spaceBetween: 10,
-								},
 								768: {
 									slidesPerView: 2,
-									spaceBetween: 5,
+									spaceBetween: 25,
+								},
+								992: {
+									slidesPerView: 2,
+									spaceBetween: 20,
 								},
 								1024: {
-									slidesPerView: 3,
-									spaceBetween: 10,
+									slidesPerView: 2,
+									spaceBetween: 20,
 								},
-								1280: {
+								1080: {
 									slidesPerView: 3,
 									spaceBetween: 20,
 								},
-								1520: {
+								1240: {
 									slidesPerView: 3,
-									spaceBetween: 20,
+									spaceBetween: 60,
 								},
 							}}
 						>
@@ -253,6 +256,7 @@ export default function Reviews() {
 										onClick={() => handleImageClick(src)}
 									>
 										<Image
+											className={styles.slideImage}
 											width={1000}
 											height={1000}
 											src={src}
@@ -273,7 +277,12 @@ export default function Reviews() {
 							className={`${styles.navButton} ${styles.navButtonNext}`}
 							onClick={handleNext}
 						>
-							<BsChevronCompactRight color='#ff9a22' size={80} />
+							{/* <RiArrowRightWideFill color='#ff9a22' size={80} /> */}
+							<img
+								className={styles.right_button}
+								src='/images/reviews/rightArrow.png'
+								alt='arrow'
+							/>
 						</button>
 					</div>
 				</div>

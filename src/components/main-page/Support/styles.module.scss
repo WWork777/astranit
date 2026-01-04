@@ -18,26 +18,26 @@
 	width: 100%;
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 20px;
 
-	@media (max-width: 1200px) {
-		padding: 0 4%;
-	}
+	// @media (max-width: 1200px) {
+	// 	padding: 0 4%;
+	// }
 
-	@media (max-width: 992px) {
-		padding: 0 20px;
-	}
+	// @media (max-width: 992px) {
+	// 	padding: 0 20px;
+	// }
 
-	@media (max-width: 480px) {
-		padding: 0 15px;
-	}
+	// @media (max-width: 480px) {
+	// 	padding: 0 15px;
+	// }
 }
 
 .title {
 	color: rgba(73, 72, 87, 1);
 	font-size: 56px;
 	font-weight: 700;
-	line-height: 1.2;
+	line-height: 1;
 	letter-spacing: 0%;
 	text-align: center;
 	padding-bottom: 20px;
@@ -224,7 +224,7 @@
 		padding-bottom: 10px;
 		color: rgba(73, 72, 87, 1);
 		font-family: Roboto, sans-serif;
-		font-size: 24px;
+		font-size: 25px;
 		font-weight: 700;
 		line-height: 1.2;
 		margin: 0;

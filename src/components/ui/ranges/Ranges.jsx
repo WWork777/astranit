@@ -201,115 +201,120 @@ const Ranges = observer(({ styles }) => {
 		<>
 			<ul className={styles.ranges}>
 				{/* Компьютеры */}
-				<li className={styles.ranges_box1}>
-					<h2 className={styles.ranges_box1_title}>Компьютеры</h2>
-					<div className={styles.ranges_box1_body}>
-						<div className={styles.range_button}>
-							<GoChevronLeft
-								onClick={sliderStore.decrementComputer}
-								style={{ cursor: 'pointer' }}
-							/>
-							{sliderStore.computerValue}
-							<GoChevronRight
-								onClick={sliderStore.incrementComputer}
-								style={{ cursor: 'pointer' }}
+				<div className={styles.ranges_mobile_left}>
+					<li className={styles.ranges_box1}>
+						<h2 className={styles.ranges_box1_title}>Компьютеры</h2>
+						<div className={styles.ranges_box1_body}>
+							<div className={styles.range_button}>
+								<GoChevronLeft
+									onClick={sliderStore.decrementComputer}
+									style={{ cursor: 'pointer' }}
+								/>
+								{sliderStore.computerValue}
+								<GoChevronRight
+									onClick={sliderStore.incrementComputer}
+									style={{ cursor: 'pointer' }}
+								/>
+							</div>
+							<input
+								type='range'
+								min={sliderStore.sliderConfig.min}
+								max={sliderStore.sliderConfig.max}
+								step={sliderStore.sliderConfig.step}
+								value={sliderStore.computerValue}
+								onChange={e =>
+									sliderStore.setComputerValue(parseInt(e.target.value))
+								}
+								className={styles.range_input}
+								style={{
+									background: sliderStore.getRangeBackground(
+										sliderStore.computerValue
+									),
+								}}
 							/>
 						</div>
-						<input
-							type='range'
-							min={sliderStore.sliderConfig.min}
-							max={sliderStore.sliderConfig.max}
-							step={sliderStore.sliderConfig.step}
-							value={sliderStore.computerValue}
-							onChange={e =>
-								sliderStore.setComputerValue(parseInt(e.target.value))
-							}
-							className={styles.range_input}
-							style={{
-								background: sliderStore.getRangeBackground(
-									sliderStore.computerValue
-								),
-							}}
-						/>
-					</div>
-				</li>
+					</li>
 
-				{/* Серверы */}
-				<li className={styles.ranges_box2}>
-					<h2 className={styles.ranges_box1_title}>Серверы</h2>
-					<div className={styles.ranges_box1_body}>
-						<div className={styles.range_button}>
-							<GoChevronLeft
-								onClick={sliderStore.decrementServers}
-								style={{ cursor: 'pointer' }}
-							/>
-							{sliderStore.serversValue}
-							<GoChevronRight
-								onClick={sliderStore.incrementServers}
-								style={{ cursor: 'pointer' }}
+					{/* Серверы */}
+					<li className={styles.ranges_box2}>
+						<h2 className={styles.ranges_box1_title}>Серверы</h2>
+						<div className={styles.ranges_box1_body}>
+							<div className={styles.range_button}>
+								<GoChevronLeft
+									onClick={sliderStore.decrementServers}
+									style={{ cursor: 'pointer' }}
+								/>
+								{sliderStore.serversValue}
+								<GoChevronRight
+									onClick={sliderStore.incrementServers}
+									style={{ cursor: 'pointer' }}
+								/>
+							</div>
+							<input
+								type='range'
+								min={sliderStore.sliderConfig.min}
+								max={sliderStore.sliderConfig.max}
+								step={sliderStore.sliderConfig.step}
+								value={sliderStore.serversValue}
+								onChange={e =>
+									sliderStore.setServersValue(parseInt(e.target.value))
+								}
+								className={styles.range_input}
+								style={{
+									background: sliderStore.getRangeBackground(
+										sliderStore.serversValue
+									),
+								}}
 							/>
 						</div>
-						<input
-							type='range'
-							min={sliderStore.sliderConfig.min}
-							max={sliderStore.sliderConfig.max}
-							step={sliderStore.sliderConfig.step}
-							value={sliderStore.serversValue}
-							onChange={e =>
-								sliderStore.setServersValue(parseInt(e.target.value))
-							}
-							className={styles.range_input}
-							style={{
-								background: sliderStore.getRangeBackground(
-									sliderStore.serversValue
-								),
-							}}
-						/>
-					</div>
-				</li>
+					</li>
+				</div>
 
 				{/* Офисы */}
-				<li className={styles.ranges_box3}>
-					<h2 className={styles.ranges_box1_title}>
-						Офисы / магазины / склады /...
-					</h2>
-					<div className={styles.ranges_box1_body}>
-						<div className={styles.range_button}>
-							<GoChevronLeft
-								onClick={sliderStore.decrementOffices}
-								style={{ cursor: 'pointer' }}
-							/>
-							{sliderStore.officesValue}
-							<GoChevronRight
-								onClick={sliderStore.incrementOffices}
-								style={{ cursor: 'pointer' }}
+				<div className={styles.ranges_mobile_right}>
+					{' '}
+					<li className={styles.ranges_box3}>
+						<h2 className={styles.ranges_box1_title}>
+							Офисы / магазины / склады /...
+						</h2>
+						<div className={styles.ranges_box1_body}>
+							<div className={styles.range_button}>
+								<GoChevronLeft
+									onClick={sliderStore.decrementOffices}
+									style={{ cursor: 'pointer' }}
+								/>
+								{sliderStore.officesValue}
+								<GoChevronRight
+									onClick={sliderStore.incrementOffices}
+									style={{ cursor: 'pointer' }}
+								/>
+							</div>
+							<input
+								type='range'
+								min={sliderStore.sliderConfig.min}
+								max={sliderStore.sliderConfig.max}
+								step={sliderStore.sliderConfig.step}
+								value={sliderStore.officesValue}
+								onChange={e =>
+									sliderStore.setOfficesValue(parseInt(e.target.value))
+								}
+								className={styles.range_input}
+								style={{
+									background: sliderStore.getRangeBackground(
+										sliderStore.officesValue
+									),
+								}}
 							/>
 						</div>
-						<input
-							type='range'
-							min={sliderStore.sliderConfig.min}
-							max={sliderStore.sliderConfig.max}
-							step={sliderStore.sliderConfig.step}
-							value={sliderStore.officesValue}
-							onChange={e =>
-								sliderStore.setOfficesValue(parseInt(e.target.value))
-							}
-							className={styles.range_input}
-							style={{
-								background: sliderStore.getRangeBackground(
-									sliderStore.officesValue
-								),
-							}}
-						/>
-					</div>
-				</li>
-				{pathname === '/' ? (
-					<Link href={'/tariffs'}>
-						<button>
-							<span>Рассчитать!</span>
-						</button>
-					</Link>
-				) : null}
+					</li>
+					{pathname === '/' ? (
+						<Link href={'/tariffs'}>
+							<button className={styles.button_mobile_mod}>
+								<span>Рассчитать!</span>
+							</button>
+						</Link>
+					) : null}
+				</div>
 			</ul>
 		</>
 	)

@@ -13,6 +13,9 @@ export default function Calculator() {
 								РАССЧИТАЙТЕ СТОИМОСТЬ <br />
 								ит-поддержки!
 							</h1>
+							<div className={styles.clipped_box_left_inner_image}>
+								<img src='/images/calc/tablet.png' alt='calc' />
+							</div>
 							<Ranges styles={styles} />
 						</div>
 					</div>

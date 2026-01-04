@@ -170,7 +170,7 @@ const SavedData = observer(() => {
 								})
 							}
 						>
-							<span>Получить аудит!</span>
+							Получить аудит!
 						</button>
 					</div>
 				</div>
@@ -184,6 +184,7 @@ const SavedData = observer(() => {
 					</div>
 					<div className={styles.clipped_right}>
 						<div className={styles.clipped_right_inner}>
+							{/* <div className={styles.clipped_right_inner_wrapper}> */}
 							<h1 className={styles.title}>
 								БЕСПОКОИТЕСЬ <br /> ЗА СОХРАННОСТЬ ДАННЫХ?
 							</h1>
@@ -208,6 +209,7 @@ const SavedData = observer(() => {
 							>
 								<span>Получить ИТ-аудит!</span>
 							</button>
+							{/* </div> */}
 						</div>
 					</div>
 				</div>

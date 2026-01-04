@@ -5,7 +5,9 @@ export default function ProtectionRing() {
 	return (
 		<section className={styles.protection_ring}>
 			<div className={styles.container}>
-				<h1 className={styles.mobile_title}>ТРИ КОЛЬЦА ЗАЩИТЫ ДАННЫХ!</h1>
+				<h1 className={styles.mobile_title}>
+					ТРИ КОЛЬЦА <br className={styles.mobile_title_br} /> ЗАЩИТЫ ДАННЫХ!
+				</h1>
 				<div className={styles.grid}>
 					<div className={styles.grid_cols_1}>
 						<h1 className={styles.desktop_title}>ТРИ КОЛЬЦА ЗАЩИТЫ ДАННЫХ !</h1>
@@ -34,7 +36,10 @@ export default function ProtectionRing() {
 							</li>
 							<li>
 								<div className={styles.ring_info}>
-									<h2>#3. Репликация резервных копий</h2>
+									<h2>
+										#3. Репликация <br className={styles.ring_info_br} />
+										резервных копий
+									</h2>
 									<p>
 										Создадим облачное хранилище реплик резервных копий. Настроим
 										репликацию, обеспечим мониторинг и поддержку ее непрерывной

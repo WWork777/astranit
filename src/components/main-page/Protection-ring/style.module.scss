@@ -38,7 +38,7 @@
 	color: rgba(73, 72, 87, 1);
 	font-size: 36px;
 	font-weight: 700;
-	line-height: 1.2;
+	line-height: 1;
 	letter-spacing: 0%;
 	text-align: left;
 	margin-bottom: 30px;
@@ -59,6 +59,7 @@
 	@media (max-width: 768px) {
 		font-size: 32px;
 		margin-bottom: 25px;
+		text-align: center;
 	}
 
 	@media (max-width: 480px) {
@@ -126,18 +127,18 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 0;
+	gap: 20px;
 	align-items: start;
 
 	@media (max-width: 992px) {
 		grid-template-columns: 1fr;
-		// gap: 40px;
+		gap: 40px;
 	}
 
-	// @media (max-width: 768px) {
-	// 	gap: 30px;
-	// 	grid-template-columns: 1fr;
-	// }
+	@media (max-width: 768px) {
+		gap: 30px;
+		grid-template-columns: 1fr;
+	}
 }
 
 .grid_cols_1 {
@@ -191,7 +192,18 @@
 		}
 	}
 }
-
+.ring_info_br {
+	display: none;
+	@media (max-width: 700px) {
+		display: block;
+	}
+}
+.mobile_title_br {
+	display: none;
+	@media (max-width: 480px) {
+		display: block;
+	}
+}
 .ring_info {
 	padding-top: 45px;
 	max-width: 560px;
@@ -216,17 +228,11 @@
 	h2 {
 		color: rgba(73, 72, 87, 1);
 		font-family: Roboto, sans-serif;
-		font-size: 24px;
+		font-size: 25px;
 		font-weight: 700;
 		padding-bottom: 10px;
 		margin: 0;
 
-		@media (max-width: 1200px) {
-			font-size: 23px;
-		}
-		@media (max-width: 1120px) {
-			font-size: 20px;
-		}
 		@media (max-width: 1200px) {
 			font-size: 23px;
 		}
@@ -272,13 +278,13 @@
 			font-family: Roboto;
 			font-size: 18px;
 			font-weight: 400;
-			text-align: justify;
 		}
 
 		@media (max-width: 768px) {
 			font-size: 15px;
 		}
 		@media (max-width: 640px) {
+			text-align: justify;
 		}
 
 		@media (max-width: 480px) {
@@ -509,12 +515,12 @@
 	}
 
 	@media (max-width: 768px) {
-		width: 30%;
+		width: 25%;
 		max-width: 90px;
 	}
 
 	@media (max-width: 360px) {
-		width: 28%;
+		width: 30%;
 		max-width: 80px;
 	}
 }

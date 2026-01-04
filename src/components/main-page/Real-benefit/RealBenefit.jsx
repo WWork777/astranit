@@ -6,7 +6,9 @@ export default function RealBenefit() {
 	return (
 		<section className={styles.benefit}>
 			<div className={styles.container}>
-				<h1 className={styles.title}>РЕАЛЬНАЯ ПОЛЬЗА - С ПЕРВЫХ ДНЕЙ!</h1>
+				<h1 className={styles.title}>
+					РЕАЛЬНАЯ ПОЛЬЗА - <br className={styles.title_br} /> С ПЕРВЫХ ДНЕЙ!
+				</h1>
 				<ul className={styles.grid}>
 					{data.map((item, index) => (
 						<li key={item.title} className={styles.grid_item}>

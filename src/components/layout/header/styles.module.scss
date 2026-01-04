@@ -30,7 +30,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px 15px;
+	padding: 20px 0;
 	align-items: center;
 	background-color: #fafafa;
 	z-index: 100;
@@ -52,13 +52,14 @@
 	// 	padding: 10px 5%;
 	// }
 
-	@media (max-width: 400px) {
-		padding: 10px 2%;
-	}
+	// @media (max-width: 400px) {
+	// 	padding: 10px 2%;
+	// }
 
 	.header {
 		width: 100%;
 		max-width: 1280px;
+		padding: 0 20px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
