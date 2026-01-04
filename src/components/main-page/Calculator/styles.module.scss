@@ -632,9 +632,7 @@
 						max-width: 180px;
 					}
 					@media (max-width: 992px) {
-						width: 300px !important;
-						margin-top: 15%;
-						transform: translateX(45%);
+						margin: 30px 0 0;
 					}
 
 					// @media (max-width: 768px) {
@@ -644,7 +642,6 @@
 					// }
 					@media (max-width: 640px) {
 						margin: 20px auto;
-						transform: translateX(0);
 					}
 
 					@media (max-width: 480px) {
@@ -702,21 +699,17 @@
 // 		gap: 30px;
 // 	}
 // }
-.ranges_mobile_left,
-.ranges_mobile_right {
+.ranges_mobile_top,
+.ranges_mobile_bottom {
 	@media (max-width: 992px) {
-		li {
-			width: 50%;
-		}
-
 		display: flex;
 		align-items: center;
-		gap: 30px;
-	}
-	@media (max-width: 640px) {
+		gap: 35px;
 		li {
 			width: 100%;
 		}
+	}
+	@media (max-width: 640px) {
 		display: block;
 	}
 }
