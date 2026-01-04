@@ -4,10 +4,20 @@
 	margin: 0 auto;
 }
 .footer-top {
-	height: 400px;
+	height: 380px;
 	width: 100%;
 	background-color: #f5f5f5;
-	@media (max-width: 768px) {
+	@media (max-width: 1280px) {
+		height: 350px;
+	}
+
+	@media (max-width: 1024px) {
+		height: 340px;
+	}
+	@media (max-width: 640px) {
+		height: 440px;
+	}
+	@media (max-width: 480px) {
 		height: 400px;
 	}
 }
@@ -17,11 +27,20 @@
 	background-color: var(--footer-color);
 	position: relative;
 	padding-bottom: 50px;
+	@media (max-width: 1280px) {
+		height: 650px;
+	}
+	@media (max-width: 1200px) {
+		height: 600px;
+	}
 	@media (max-width: 1024px) {
 		height: 600px;
 	}
 	@media (max-width: 640px) {
-		height: 930px;
+		height: 900px;
+	}
+	@media (max-width: 480px) {
+		height: 870px;
 	}
 
 	&__banner {
@@ -286,16 +305,15 @@
 		grid-template-columns: repeat(3, 1fr);
 		color: #ffffff;
 		justify-content: space-around;
-
 		@media (max-width: 1200px) {
 			max-width: 1024px;
 		}
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
-			padding: 0 50px;
+			padding: 0 20px;
 		}
 		@media (max-width: 640px) {
-			margin: 0 30px;
+			margin: 0 20px;
 			grid-template-columns: repeat(1, 1fr);
 			padding: 0;
 		}
@@ -307,12 +325,50 @@
 	&__box1 {
 		list-style: none;
 		li {
-			color: rgba(245, 245, 245, 1);
-			font-family: Roboto;
-			font-size: 18px;
-			font-weight: 700;
-			line-height: 21.6px;
-			padding-bottom: 20px;
+			display: block;
+			min-width: 100%;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 1;
+			color: #ffffff;
+			padding-bottom: 10px;
+
+			@media (max-width: 1200px) {
+				font-size: 23px;
+			}
+			@media (max-width: 1120px) {
+				font-size: 20px;
+			}
+			@media (max-width: 1200px) {
+				font-size: 23px;
+			}
+
+			@media (max-width: 1120px) {
+				font-size: 20px;
+			}
+
+			@media (max-width: 992px) {
+				font-size: 23px;
+			}
+
+			@media (max-width: 640px) {
+				padding-left: 0;
+				// padding-top: 10px;
+			}
+			@media (max-width: 480px) {
+				font-size: 17px;
+			}
+
+			@media (max-width: 360px) {
+				font-size: 16px;
+			}
+			// color: rgba(245, 245, 245, 1);
+			// font-family: Roboto;
+			// font-size: 18px;
+			// font-weight: 700;
+			// line-height: 21.6px;
+			// padding-bottom: 20px;
 		}
 	}
 
@@ -331,19 +387,94 @@
 		}
 
 		li {
-			color: rgba(245, 245, 245, 1);
-			font-family: Roboto;
-			font-size: 16px;
+			font-family: 'Roboto', sans-serif;
 			font-weight: 400;
-			line-height: 23.6px;
+			font-size: 18px;
+			color: #ffffff;
+			/* line-height: 22px; */
+			line-height: 1;
+			padding-bottom: 5px;
 			&:nth-child(1) {
-				color: rgba(245, 245, 245, 1);
+				display: block;
+				min-width: 100%;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 500;
+				font-size: 25px;
+				line-height: 1;
+				color: #ffffff;
+				padding-bottom: 10px;
+
+				@media (max-width: 1200px) {
+					font-size: 23px;
+				}
+				@media (max-width: 1120px) {
+					font-size: 20px;
+				}
+				@media (max-width: 1200px) {
+					font-size: 23px;
+				}
+
+				@media (max-width: 1120px) {
+					font-size: 20px;
+				}
+
+				@media (max-width: 992px) {
+					font-size: 23px;
+				}
+
+				@media (max-width: 640px) {
+					padding-left: 0;
+					// padding-top: 10px;
+				}
+				@media (max-width: 480px) {
+					font-size: 17px;
+				}
+
+				@media (max-width: 360px) {
+					font-size: 16px;
+				}
+			}
+			@media (max-width: 1280px) {
+				font-size: 16px;
+			}
+			@media (max-width: 1200px) {
+				font-size: 15.5px;
+			}
+
+			@media (max-width: 992px) {
+				// padding: 5px 0;
 				font-family: Roboto;
 				font-size: 18px;
-				font-weight: 700;
-				line-height: 21.6px;
-				padding-bottom: 10px;
+				font-weight: 400;
 			}
+
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
+			@media (max-width: 640px) {
+				text-align: left;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 360px) {
+				font-size: 13.5px;
+			}
+			// color: rgba(245, 245, 245, 1);
+			// font-family: Roboto;
+			// font-size: 16px;
+			// font-weight: 400;
+			// line-height: 23.6px;
+			// &:nth-child(1) {
+			// 	color: rgba(245, 245, 245, 1);
+			// 	font-family: Roboto;
+			// 	font-size: 18px;
+			// 	font-weight: 700;
+			// 	line-height: 21.6px;
+			// 	padding-bottom: 10px;
+			// }
 		}
 	}
 
@@ -360,13 +491,49 @@
 		}
 
 		li {
-			list-style: none;
-			color: rgba(245, 245, 245, 1);
-			font-family: Roboto;
-			font-size: 15px;
+			font-family: 'Roboto', sans-serif;
 			font-weight: 400;
-			line-height: 17.6px;
+			font-size: 18px;
+			color: #ffffff;
+			/* line-height: 22px; */
+			line-height: 1;
 			padding-bottom: 10px;
+
+			@media (max-width: 1280px) {
+				font-size: 16px;
+			}
+			@media (max-width: 1200px) {
+				font-size: 15.5px;
+			}
+
+			@media (max-width: 992px) {
+				padding: 5px 0;
+				font-family: Roboto;
+				font-size: 18px;
+				font-weight: 400;
+			}
+
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
+			@media (max-width: 640px) {
+				text-align: left;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 360px) {
+				font-size: 13.5px;
+			}
+			// list-style: none;
+			// color: rgba(245, 245, 245, 1);
+			// font-family: Roboto;
+			// font-size: 15px;
+			// font-weight: 400;
+			// line-height: 17.6px;
+			// padding-bottom: 10px;
 		}
 	}
 }
@@ -391,51 +558,3 @@
 		padding-bottom: 10px;
 	}
 }
-
-/* footer.scss */
-// .form-field {
-// 	margin-bottom: 15px;
-// }
-
-// .form-label {
-// 	display: block;
-// 	margin-bottom: 5px;
-// 	font-size: 16px;
-// }
-// /* footer.scss */
-// .required-field {
-// 	width: 100%;
-// 	padding: 10px;
-// 	box-sizing: border-box;
-// 	background-position: right 10px center;
-// 	background-repeat: no-repeat;
-// 	background-size: 8px 8px;
-// }
-
-// /* footer.scss */
-// .form-group {
-// 	position: relative;
-// }
-
-// .required-field {
-// 	width: 100%;
-
-// 	box-sizing: border-box;
-// }
-
-// .required-star {
-// 	position: absolute;
-// 	right: 65px;
-// 	top: 25%;
-// 	color: #ff0000;
-// 	pointer-events: none;
-// }
-
-// /* Для пустых обязательных полей показываем звездочку */
-// .form-group.required input:placeholder-shown + .required-star {
-// 	display: block;
-// }
-
-// .form-group.required input:not(:placeholder-shown) + .required-star {
-// 	display: none;
-// }

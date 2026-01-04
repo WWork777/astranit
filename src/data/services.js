@@ -4,7 +4,11 @@ export const baseLinks = [
 	{ title: 'КОНТАКТЫ', link: '/contacts' },
 ]
 export const info = [
-	{ title: 'astranit.ru<br/> (C) ООО "ИТ Спектр", 2009-2025', link: '/' },
+	{
+		title:
+			'astranit.ru<br/> (C) ООО "ИТ Спектр", 2009-' + new Date().getFullYear(),
+		link: '/',
+	},
 	{
 		title: 'Материалы данного сайта<br/> не являются публичной офертой',
 		link: '/',

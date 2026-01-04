@@ -31,19 +31,26 @@ export default function Contacts() {
 							<p className='contacts-info__box-title-email'>
 								пр. Юрия Гагарина, д.23, офис 303
 							</p>
+						</div>
+						<div className='contacts-info__box_text'>
+							<h3 className='contacts-info__box_text-title'>
+								Приедем быстро, где бы вы ни находились!
+							</h3>
+							<p className='contacts-info___box_text-desc'>
+								Специалисты, работающие в выездном режиме, распределены по
+								городу и стартуют к заказчику с ближайшего адреса.
+							</p>
+						</div>
+						<div className='contacts-info__box_map-image'>
 							<div className='contacts-info__tooltip0'>
 								<img src='/images/contacts/logotype.png' alt='logotype' />
 								<span>пр. Юрия Гагарина, д.23</span>
 							</div>
 						</div>
-						<div className='contacts-info__tooltip1'>
-							<img src='/images/contacts/logotype.png' alt='logotype' />
-							<span>пр. Юрия Гагарина, д.23</span>
-						</div>
 
 						<div className='contacts-info__tooltip2'>
 							<h3 className='contacts-info__tooltip2-title'>
-								Приедем быстро, <br /> где бы вы ни находились!
+								Приедем быстро, где бы вы ни находились!
 							</h3>
 							<p className='contacts-info__tooltip2-desc'>
 								Специалисты, работающие в выездном режиме, распределены по
