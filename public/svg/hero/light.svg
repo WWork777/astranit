@@ -1,9 +1,24 @@
-<svg width="36" height="41" viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="36" height="41" fill="url(#pattern0_813_22)"/>
-<defs>
-<pattern id="pattern0_813_22" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_813_22" transform="scale(0.0277778 0.0243902)"/>
-</pattern>
-<image id="image0_813_22" width="36" height="41" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAApCAQAAAD3l0PNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpDAIQJhxZn7l7AAAC+UlEQVRIx52WW0hUQRjHf+e0aoKyklqGlRQpURpUYCYkJvRSFhRYD9kFCgKpKChCCol66MGUguq1KLSXbqQbdDPCSpRuFnlpK1ByE7Mb+omp7enB3ePZ3TNntW/gcOY///mdOTPDN6MJUWI691lAAZ+dbXo0DltYTTq7o9mig2Itz0mDYqikIszht+23k9vMtwqukOYyDgMGpyyaZoMp5DKgs1E1okEATlJg0ToBaLMoCdQC8MvaVQtbtTqKgQ4WY5haEUnctHiusB3oZRG/1aAEOkgHivEoZjWNbmKAQp6o5wgG2cUDumgO1BeyktlAP69pBaCXOjZTHoqJHBFAHH5GgR2cCFmZPk5zFtCJZTi8k6bY2RnUk22j91DMG7sO9qBc89dG8RMX1rqZW5FddPYzwkP2kGYZzSMAOsghlh0RfW6ywnxPoZR6/nIc+SRGoNQKgiCPxRBDbggyV6rkvdk+UdoDzgum8gU5ZjHkCbJVDDGkR5CjNohgKRMky1I/gyBu2SvPxZBW0QS5I4YYsksyHTCGNAqCeMSQV3JAUsQy2W7+MEwi3SQBsyjhPOoYIwMfMSTyI3xDjm/3TJIAOEgeTuFiAT5Gg5jInR1cu3KixYzw5Q8NIyogGH5nkG/SIJ89SCeXOYCX/klhfuIFksknfgJUwEW6aKadmQwFdnW0aGQAFy08o4erbAJNqjlkNufTxDplJrJGCdfJ5INZr9NZFnj9wT6agLsh2dA+PFwHvGzja0DJ0qSIczzlEi2mLZk2Zjpg+llCn1lbTilrqbBPI+updwBtsGu1PyA9VCoxVfYf0ZRn/1tybNR3LLW3q4/so7bqEZVdc7iNtEZ8vYl8ldnpEjESoQyrzU6gaZNQzHA5gK7RyHd0NPyATjIv1WanOXKzChhj/EZiEE8H3v8BNbAmTBliHt+n/ms1jPDNkurcdE6k1qmMKJVsBtAJ5s1EPtKtMjuNKIOGMKWUGpXZaflfUB1Sv6fGOP8aQDYNpAJ+NnHHyfgPXPhY4StiHLoAAAAASUVORK5CYII="/>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 11080 11080"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#3289A1}
+    .fil1 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_977563072">
+   <circle class="fil0" cx="5540" cy="5540" r="5540"/>
+   <g>
+    <path class="fil1" d="M4065 6218l0 0 638 930 0 625 837 0 837 0 0 -625 637 -930 0 0c226,-305 360,-683 360,-1092 0,-1013 -821,-1834 -1834,-1834 -1013,0 -1835,821 -1835,1834 0,409 134,787 360,1092zm227 -1358c0,-3 0,-6 0,-8 0,-486 394,-880 880,-881l0 0c61,0 111,50 111,111 0,61 -50,110 -111,110l0 1c-363,0 -658,295 -658,659 0,2 0,5 0,8l-1 0c0,61 -49,110 -110,110 -61,0 -110,-49 -110,-110l-1 0zm4379 1337l0 0c41,-129 -30,-269 -160,-311l-581 -187c-130,-41 -270,31 -311,160l0 0c-42,130 30,270 159,311l582 187c129,42 269,-30 311,-160zm7 -2047l0 0c-40,-129 -180,-202 -309,-162l-583 183c-130,40 -203,180 -162,309l0 0c40,130 180,203 309,162l583 -182c130,-41 203,-180 162,-310zm-1224 -1675l0 0c-110,-79 -265,-54 -345,57l-356 496c-79,111 -54,266 57,345l0 0c110,79 266,54 345,-57l356 -496c79,-110 54,-266 -57,-345zm-1914 477c136,0 247,-111 247,-247l0 -611c0,-136 -111,-247 -247,-247l0 0 0 1105c-136,0 -247,-111 -247,-247l0 -611c0,-136 111,-247 247,-247l0 1105zm641 4988l-641 0 -641 0c-108,0 -196,89 -196,197l0 0c0,108 88,196 196,196l641 0 641 0c108,0 196,-88 196,-196l0 0c0,-108 -88,-197 -196,-197zm-641 1293c160,0 291,-130 291,-291l75 0c219,0 399,-196 399,-436l-765 0 -765 0c0,240 179,436 398,436l76 0c0,161 130,291 291,291zm-3131 -3036l0 0c-42,-129 30,-269 159,-311l582 -187c129,-41 269,31 311,160l0 0c41,130 -30,270 -160,311l-581 187c-130,42 -270,-30 -311,-160zm-8 -2047l0 0c41,-129 180,-202 310,-162l583 183c130,40 203,180 162,309l0 0c-41,130 -180,203 -310,162l-583 -182c-129,-41 -202,-180 -162,-310zm1224 -1675l0 0c111,-79 266,-54 345,57l356 496c80,111 54,266 -56,345l0 0c-111,79 -266,54 -345,-57l-356 -496c-80,-110 -54,-266 56,-345zm1915 477l0 0z"/>
+   </g>
+  </g>
+ </g>
 </svg>

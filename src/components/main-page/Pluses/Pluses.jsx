@@ -23,7 +23,7 @@ export default function Pluses() {
 							</div>
 
 							<Image
-								src='/images/pluses/image.png'
+								src='/svg/socials/lamp-cut.svg'
 								alt='pluses'
 								width={100}
 								height={100}

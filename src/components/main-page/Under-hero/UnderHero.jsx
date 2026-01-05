@@ -8,7 +8,7 @@ export default function UnderHero() {
 				<div className={styles.underhero_item}>
 					<div className={styles.image_container}>
 						<Image
-							src='/svg/underhero/first.png'
+							src='/svg/underhero/first.svg'
 							alt='specialists'
 							width={100}
 							height={100}
@@ -28,10 +28,10 @@ export default function UnderHero() {
 				<div className={styles.underhero_item}>
 					<div className={styles.image_container}>
 						<Image
-							src='/svg/underhero/second.png'
+							src='/svg/underhero/second.svg'
 							alt='reaction'
-							width={140}
-							height={140}
+							width={100}
+							height={100}
 							className={styles.underhero_image}
 						/>
 					</div>
@@ -47,10 +47,10 @@ export default function UnderHero() {
 				<div className={styles.underhero_item}>
 					<div className={styles.image_container}>
 						<Image
-							src='/svg/underhero/third.png'
+							src='/svg/underhero/three.svg'
 							alt='service'
-							width={140}
-							height={140}
+							width={100}
+							height={100}
 							className={styles.underhero_image}
 						/>
 					</div>

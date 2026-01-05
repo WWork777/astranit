@@ -1,9 +1,22 @@
-<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="34" height="33.5374" fill="url(#pattern0_813_10)"/>
-<defs>
-<pattern id="pattern0_813_10" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_813_10" transform="scale(0.0294118)"/>
-</pattern>
-<image id="image0_813_10" width="34" height="34" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAQAAACQTsNJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpDAIQJRULblIcAAACw0lEQVRIx5XVbYhUVRwG8N/MYr60LYUmqCmUsBItuPmyrhSZHyqKsoKEkMQvfpNIIrXcD0VUpmRBBEFUH4SCQiEhiFoqjNadxY3ViPWtknbAwDfcl0utoduHOTNz752ZO/o/cO/5P+fhuc85557/yUUyY4H9FhtTdNLPvvd3PVKuicheL8aySQd8oD9NymdrOJbIptvgsM/NuzEnrLfM7e7UYW4FG7PJV7UiLfa5z6CN/mkgNsNaGzxXyXu8lRSZpt9ycNwq4xm+OuzyeOhv805VpEXBigrtuJWqc5zuebc5Z9ghVwL2sl2h94jvQNQSDURTiTYczYqE9lEFPRvtjuYGdHPAJqPWSCTvdV0py3cbNCv0OyvoPNud8iz42GvgJp+WnIykfJTaN+GbXVFfNBJdjY1sCyOFkC+N5KJxrXWX8BYT5cW3wBpbrA75Mw5gkb/AQU/lorPpXwf8ptPVFNbjDTBljkvYZyOYk/dHHYlx62okeNOO4OxdCE+ezuurIU9Y7kzdKe5xGGzShqNGwNq8L1LEi1Y6rVHsDO9HwU+gPW/IiRjpmu5Eno5DLoNuMAzm57E3Rso12KtqFMFCMFkV+SSol0S+bCJyEcIRKHkebemBC9ZVSLNN80OGyK9W+NNWl3DamDNeKJeC3y2OER/W6waiLNJpKIZOWZKxQzVRLo9HvZ1Y3n531OXPzBLhFYUYPtug9hS3XZ+iz+QaTQdaFd0aG/vXk6HowBK/uBkUKkexxgkT7k+MzfCtVysSR4IE3QpJN+lq/6AfU16HbHXOgLYEOhD+2boiPBSbQlb0W+O/2umUoleX0esQWe3Dxk5gof01lbc2RsvbUP8aLVrl/aYiB7OdlFfnPfc0HB30QPm2zLrQe3XYEU5tOo7orl64zS/0NltsdlcCO2aZa9W0uQjkPOEx91pkpvO+9lKyjP8PS1wM24wIABYAAAAASUVORK5CYII="/>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 9812 9812"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#3289A1}
+    .fil1 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_977603040">
+   <circle class="fil0" cx="4906" cy="4906" r="4906"/>
+   <path class="fil1" d="M7166 4755l602 0c0,-1545 -1167,-2711 -2714,-2711l0 603c1223,0 2112,886 2112,2108zm-2109 -903c633,0 904,270 904,904l602 -1c0,-971 -535,-1506 -1506,-1506l0 603zm1031 1639c-56,-50 -128,-78 -203,-78 -82,0 -160,33 -216,91l-721 742c-174,-34 -523,-142 -882,-500 -359,-360 -468,-710 -500,-882l741 -721c59,-57 92,-135 92,-216 0,-75 -28,-148 -79,-203l-1113 -1224c-57,-63 -138,-99 -223,-99 -72,0 -142,26 -196,73l-654 560c-52,53 -83,122 -87,196 -5,75 -91,1859 1292,3243 1207,1207 2719,1295 3135,1295 61,0 98,-2 108,-2 74,-5 144,-36 195,-88l561 -654c47,-55 72,-125 72,-197 0,-84 -35,-165 -98,-222l-1224 -1114 0 0z"/>
+  </g>
+ </g>
 </svg>

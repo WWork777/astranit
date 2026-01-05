@@ -5,6 +5,7 @@
 	padding-top: 80px;
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 60px;
 
 	@media (max-width: 992px) {
 		padding-top: 40px;
@@ -391,27 +392,35 @@
 	justify-content: center;
 	transform: translateX(-5%);
 	gap: 45px;
-	@media (max-width: 1700px) {
-		transform: translateX(0);
+	@media (max-width: 1800px) {
+		gap: 20px;
+	}
+	@media (max-width: 1600px) {
+		transform: translateY(-1%);
 		gap: 20px;
 	}
 	@media (max-width: 1440px) {
 		margin-left: 100px;
+		transform: translateY(-3%);
 	}
 	@media (max-width: 1360px) {
 		transform: translateY(-5%);
 	}
+	@media (max-width: 1280px) {
+		transform: translateY(-2%);
+	}
 	@media (max-width: 1200px) {
+		transform: translateY(-5%);
 		gap: 15px;
 	}
 	@media (max-width: 1150px) {
 		transform: translateY(-8%);
 	}
 	@media (max-width: 1080px) {
-		transform: translateY(-11%);
+		transform: translateY(-11.5%);
 	}
 	@media (max-width: 1024px) {
-		transform: translateY(-15%);
+		transform: translateY(-14%);
 	}
 
 	// padding: 55px 0 60px 260px;
