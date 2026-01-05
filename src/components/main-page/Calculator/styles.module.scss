@@ -23,7 +23,7 @@
 			box-shadow: 4px 4px 5px 0px rgba(204, 204, 204, 1);
 			position: absolute;
 			top: -60px;
-			left: 10px;
+			left: 0;
 			width: 62%;
 			height: 100%;
 			clip-path: polygon(0 0, 89% 0, 73% 100%, 0 100%);
@@ -47,7 +47,7 @@
 				flex-direction: column;
 				width: 43.5%;
 				gap: 45px;
-				transform: translateX(-1%);
+				transform: translateX(0%);
 				@media (max-width: 1800px) {
 					width: 47%;
 					gap: 10px;

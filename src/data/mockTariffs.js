@@ -1,7 +1,7 @@
-export const tariffsList = [
+export const mockTariffsList = [
 	{
 		title: 'НАЧАЛО СОТРУДНИЧЕСТВА',
-		body: [
+		items: [
 			{
 				title: 'Первичный ИТ-аудит',
 				econom: '#cccccc',
@@ -20,7 +20,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'РАБОТЫ ПО ЗАЯВКАМ ПОЛЬЗОВАТЕЛЕЙ',
-		body: [
+		items: [
 			{
 				title: 'Удаленное выполнение базовых заявок',
 				econom: '#63a663',
@@ -39,7 +39,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'ОРГАНИЗУЮЩИЕ СЕРВИСЫ',
-		body: [
+		items: [
 			{
 				title: 'Ведение заявок в системе Service Desk',
 				econom: '#63a663',
@@ -72,7 +72,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'ИНФОРМАЦИОННАЯ БЕЗОПАСНОСТЬ',
-		body: [
+		items: [
 			{
 				title: 'Базовые меры информационной безопасности',
 				econom: '#63a663',
@@ -121,7 +121,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'УПРАВЛЕНИЕ ОБОРУДОВАНИЕМ',
-		body: [
+		items: [
 			{
 				title: 'Подбор оптимального оборудования к закупке',
 				econom: '#63a663',
@@ -154,7 +154,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'РАБОТА СО СМЕЖНЫМИ ПОДРЯДЧИКАМИ',
-		body: [
+		items: [
 			{
 				title: 'Работа с Интернет-провайдерами',
 				econom: '#63a663',
@@ -180,7 +180,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'РАБОТА С ОБЛАЧНЫМИ СЕРВИСАМИ',
-		body: [
+		items: [
 			{
 				title: 'Управление конфигурацией облачных сервисов',
 				econom: '#cccccc',
@@ -213,7 +213,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'РАБОТА С ИНТЕРНЕТ-ДОМЕНАМИ И ХОСТЕРАМИ',
-		body: [
+		items: [
 			{
 				title: 'Управление Интернет-доменами',
 				econom: '#cccccc',
@@ -239,7 +239,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'СЕТЕВЫЕ КОММУНИКАЦИИ ',
-		body: [
+		items: [
 			{
 				title: 'Объединение локальных сетей',
 				econom: '#cccccc',
@@ -258,7 +258,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'РАБОТА ЗА ПРЕДЕЛАМИ РАБОЧЕГО ВРЕМЕНИ',
-		body: [
+		items: [
 			{
 				title:
 					'Удаленное выполнение работ, требующих остановку сервера, в нерабочее 	время',
@@ -293,7 +293,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'ПРОЕКТЫ ',
-		body: [
+		items: [
 			{
 				title: 'Проект “Ревизия и оптимизация хранилища”',
 				econom: '#cccccc',
@@ -319,7 +319,7 @@ export const tariffsList = [
 	},
 	{
 		title: 'ПРОЧЕЕ',
-		body: [
+		items: [
 			{
 				title: 'Чистка системных блоков от пыли',
 				econom: '#cccccc',

@@ -93,7 +93,7 @@ const TariffsMobile = observer(
 												<h2 className='mobile-tariffs-list__item_title'>
 													{item.title}
 												</h2>
-												{item.body.map(list => (
+												{item.items.map(list => (
 													<div
 														key={list.title}
 														className='mobile-tariffs-list__item_body'

@@ -1,4 +1,5 @@
 export { benefitList } from './benefit'
+export { mockPrices } from './mockPrices'
+export { mockTariffsList } from './mockTariffs'
 export { baseLinks, info, services } from './services'
 export { supportList } from './support'
-export { tariffsList } from './tariffs'
