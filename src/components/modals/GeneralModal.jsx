@@ -104,7 +104,7 @@ const GeneralModal = observer(() => {
 				<div className={styles.modalContentForm}>{toSelectForm(modal)}</div>
 
 				<RiCloseLargeFill
-					size={20}
+					size={25}
 					color='#ff9a22'
 					className={styles.modalClose}
 					onClick={() => closeModal()}

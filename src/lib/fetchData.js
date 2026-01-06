@@ -1,7 +1,7 @@
 import { mockPrices, mockTariffsList } from '@/data'
 export async function fetchPrices() {
 	try {
-		const res = await fetch('http://localhost:3000/api/prices', {
+		const res = await fetch(process.env.FETCH_URL_PRICE, {
 			cache: 'no-store',
 		})
 		if (!res.ok) throw new Error('Ошибка загрузки')
@@ -12,7 +12,7 @@ export async function fetchPrices() {
 }
 export async function fetchTariffsList() {
 	try {
-		const res = await fetch('http://localhost:3000/api/tariffs', {
+		const res = await fetch(process.env.FETCH_URL_TARIFFS, {
 			cache: 'no-store',
 		})
 		if (!res.ok) throw new Error('Ошибка загрузки')
