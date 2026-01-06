@@ -22,6 +22,7 @@ export const services = [
 		title: '1С: внедрение и сопровождение',
 		src: '/images/services/img1.png',
 		src2: '/images/services/img12.png',
+		src3: '/images/services/img123.png',
 		box1: {
 			title: 'Поставка программ 1С',
 			desc: 'У нас вы можете приобрести любой программный продукт 1С',
@@ -99,6 +100,7 @@ export const services = [
 		title: 'Размещение сервера в датацентре',
 		src: '/images/services/img2.png',
 		src2: '/images/services/img22.png',
+		src3: '/images/services/img223.png',
 		box1: {
 			title: 'В чем преимущество размещения сервера в датацентре?',
 
@@ -174,6 +176,7 @@ export const services = [
 		title: 'Монтаж слаботочных сетей',
 		src: '/images/services/img3.png',
 		src2: '/images/services/img32.png',
+		src3: '/images/services/img323.png',
 		box1: {
 			title: 'Монтаж кабельной сети: 4 шага',
 			block1: {
@@ -255,6 +258,7 @@ export const services = [
 		title: 'Видеонаблюдение',
 		src: '/images/services/img4.png',
 		src2: '/images/services/img42.png',
+		src3: '/images/services/img423.png',
 		box1: {
 			title: 'Видеонаблюдение: правильный старт',
 			desc1:
@@ -344,6 +348,7 @@ export const services = [
 		title: 'СКУД и учет рабочего времени',
 		src: '/images/services/img5.png',
 		src2: '/images/services/img52.png',
+		src3: '/images/services/img5.png',
 		box1: {
 			title: 'Внедрение СКУД: как мы работаем?',
 			desc1:
@@ -432,6 +437,7 @@ export const services = [
 		title: 'Офисная телефония',
 		src: '/images/services/img6.png',
 		src2: '/images/services/img62.png',
+		src3: '/images/services/img6.png',
 		box1: {
 			title: 'Офисная телефония: варианты решений',
 			desc1:
@@ -501,6 +507,7 @@ export const services = [
 		title: 'Подключение удаленщиков',
 		src: '/images/services/img7.png',
 		src2: '/images/services/img72.png',
+		src3: '/images/services/img7.png',
 	},
 	{
 		id: 8,
@@ -508,6 +515,7 @@ export const services = [
 		title: 'Разграничение доступа к файлам',
 		src: '/images/services/img8.png',
 		src2: '/images/services/img82.png',
+		src3: '/images/services/img8.png',
 	},
 	{
 		id: 9,
@@ -515,5 +523,6 @@ export const services = [
 		title: 'Дублирование Интернет-канала',
 		src: '/images/services/img9.png',
 		src2: '/images/services/img92.png',
+		src3: '/images/services/img9.png',
 	},
 ]

@@ -58,7 +58,7 @@ export default function Services() {
 									<Link href={`/services/${item.link}`}>
 										<div className={styles.cart}>
 											<div className={styles.cart_img}>
-												<img src={item.src} alt={item.desc} />
+												<img src={item.src3} alt={item.desc} />
 											</div>
 											<div className={styles.cart_desc}>
 												<p>{item.title}</p>

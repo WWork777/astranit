@@ -269,30 +269,22 @@
 	height: 91%;
 	position: absolute;
 	top: 0;
-	left: 10px;
+	left: 0;
 	z-index: 1;
 	clip-path: polygon(0 0, 96% 0, 76% 100%, 0 100%);
-	padding: 70px;
+	padding: 70px 70px 70px 79px;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
 	gap: 50px;
 
-	@media (max-width: 1600px) {
-		// padding: 50px;
-	}
-
-	@media (max-width: 1450px) {
-		padding: 40px;
-	}
 	@media (max-width: 1440px) {
-		left: 40px;
 	}
 	@media (max-width: 1280px) {
-		left: 20px;
+		padding: 20px;
+		gap: 40px;
 	}
 	@media (max-width: 1120px) {
-		padding: 20px;
 		gap: 40px;
 	}
 	@media (max-width: 1024px) {
