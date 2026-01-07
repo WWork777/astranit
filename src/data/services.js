@@ -348,7 +348,7 @@ export const services = [
 		title: 'СКУД и учет рабочего времени',
 		src: '/images/services/img5.png',
 		src2: '/images/services/img52.png',
-		src3: '/images/services/img5.png',
+		src3: '/images/services/img523.png',
 		box1: {
 			title: 'Внедрение СКУД: как мы работаем?',
 			desc1:
@@ -437,7 +437,7 @@ export const services = [
 		title: 'Офисная телефония',
 		src: '/images/services/img6.png',
 		src2: '/images/services/img62.png',
-		src3: '/images/services/img6.png',
+		src3: '/images/services/img623.png',
 		box1: {
 			title: 'Офисная телефония: варианты решений',
 			desc1:
@@ -507,7 +507,7 @@ export const services = [
 		title: 'Подключение удаленщиков',
 		src: '/images/services/img7.png',
 		src2: '/images/services/img72.png',
-		src3: '/images/services/img7.png',
+		src3: '/images/services/img723.png',
 	},
 	{
 		id: 8,
@@ -515,7 +515,7 @@ export const services = [
 		title: 'Разграничение доступа к файлам',
 		src: '/images/services/img8.png',
 		src2: '/images/services/img82.png',
-		src3: '/images/services/img8.png',
+		src3: '/images/services/img823.png',
 	},
 	{
 		id: 9,
@@ -523,6 +523,6 @@ export const services = [
 		title: 'Дублирование Интернет-канала',
 		src: '/images/services/img9.png',
 		src2: '/images/services/img92.png',
-		src3: '/images/services/img9.png',
+		src3: '/images/services/img923.png',
 	},
 ]

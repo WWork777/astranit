@@ -160,3 +160,19 @@
 .display_none {
 	display: none;
 }
+
+.error {
+	border-color: #ff4444 !important;
+	border-width: 1px !important;
+}
+
+.errorCheckbox {
+	outline: 1px solid #ff4444 !important;
+}
+
+.errorMessage {
+	color: #ff4444;
+	font-size: 12px;
+	margin-top: 4px;
+	display: block;
+}

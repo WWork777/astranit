@@ -563,3 +563,12 @@
 		padding: 5px 20px;
 	}
 }
+
+.error {
+	border-color: #ff4444 !important;
+	border-width: 1px !important;
+}
+
+.errorCheckbox {
+	outline: 1px solid #ff4444 !important;
+}
