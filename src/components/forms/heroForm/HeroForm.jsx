@@ -435,12 +435,13 @@ const HeroForm = ({ closeModal }) => {
 			>
 				{/* Поле Имя */}
 				<div className={styles.formGroup}>
-					<label htmlFor='name' className={styles.label}>
+					{/* <label htmlFor='name' className={styles.label}>
 						Имя *
-					</label>
+					</label> */}
 					<input
 						id='name'
 						type='text'
+						maxLength={500}
 						className={`${styles.input} ${
 							shouldShowError('name') && errors.name ? styles.error : ''
 						}`}
@@ -465,9 +466,9 @@ const HeroForm = ({ closeModal }) => {
 
 				{/* Поле Телефон с маской */}
 				<div className={styles.formGroup}>
-					<label htmlFor='phone' className={styles.label}>
+					{/* <label htmlFor='phone' className={styles.label}>
 						Телефон *
-					</label>
+					</label> */}
 					<input
 						ref={phoneInputRef}
 						id='phone'

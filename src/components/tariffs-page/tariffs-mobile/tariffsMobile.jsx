@@ -11,6 +11,7 @@ import './tariffsMobile.scss'
 
 const TariffsMobile = observer(
 	({
+		tariffName,
 		list,
 		totalEconomPrice,
 		totalLitePrice,
@@ -209,13 +210,19 @@ const TariffsMobile = observer(
 								totalLitePrice,
 								totalStandartPrice,
 								totalComfortPrice,
-								title: 'Коммерческое предложение',
+								title: 'Получить предложение!',
 								type: 'general',
+								// customData: {
+								// 	'Тип тарифа': 'Тариф не указан',
+								// 	'Количество компьютеров': sliderStore.computerValue,
+								// 	'Количество серверов': sliderStore.serversValue,
+								// 	'Количество офисов': sliderStore.officesValue,
+								// },
 								customData: {
-									'Тип тарифа': 'Тариф не указан',
-									'Количество компьютеров': sliderStore.computerValue,
-									'Количество серверов': sliderStore.serversValue,
-									'Количество офисов': sliderStore.officesValue,
+									'ПК ': sliderStore.computerValue,
+									' серверов ': sliderStore.serversValue,
+									' локаций': sliderStore.officesValue,
+									Тариф: tariffName || 'не указан',
 								},
 							})
 						}

@@ -1,9 +1,12 @@
 .modalClose {
 	position: absolute;
-	top: 15px;
+	top: 10px;
 	right: 20px;
 	cursor: pointer;
 	transition: transform 0.2s;
+	@media (max-width: 360px) {
+		right: 11px;
+	}
 	&:hover {
 		transform: scale(1.2);
 	}
@@ -90,28 +93,25 @@
 	}
 }
 .modalContentHeader {
-	padding: 35px 10px 15px;
+	padding: 10px 10px 10px;
 	background-color: var(--layer-color2);
-	@media (max-width: 460px) {
-		padding: 35px 10px 15px;
-	}
-	@media (max-width: 420px) {
-	}
+	// @media (max-width: 460px) {
+	// 	padding: 35px 10px 15px;
+	// }
+	// @media (max-width: 420px) {
+	// }
 }
 
 .modalContentBody {
-	padding: 32px 32px 0;
+	padding: 10px 32px 0;
 	@media (max-width: 576px) {
 		padding: 32px 10px 0;
 	}
 }
 .modalDisplayData {
-	background-color: #f9f9f9;
-	border: 1px solid #c3bdbd;
-	border-radius: 10px;
 	color: #333;
 	font-size: 16px;
-	padding: 30px;
+
 	span {
 		&:nth-child(1) {
 			font-size: 16px;
@@ -122,8 +122,24 @@
 		}
 	}
 }
-.modalDisplayDataItem {
-	padding-bottom: 0;
+.modalDisplayDataTop {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modalDisplayDataBottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modalDisplayDataItemTop {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	padding-bottom: 10px 0;
+	span {
+		padding-right: 3px;
+	}
 }
 .modalDisplayPrice {
 	font-size: 16px;
@@ -133,7 +149,7 @@
 	}
 }
 .modalContentForm {
-	padding: 32px;
+	padding: 10px 32px;
 	@media (max-width: 576px) {
 		padding: 32px 10px 32px;
 	}

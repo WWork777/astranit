@@ -121,7 +121,15 @@
 
 .checkboxLabel {
 	cursor: pointer;
-	color: #333;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1;
+	font-family: Roboto, sans-serif;
+	color: #494857;
+	@media (max-width: 640px) {
+		font-size: 10px;
+		text-align: center;
+	}
 }
 .personalDataLink {
 	color: var(--layer-color2);
@@ -162,9 +170,9 @@
 
 .error {
 	border-color: #ff4444 !important;
-	border-width: 1px !important;
+	border-width: 2px !important;
 }
 
 .errorCheckbox {
-	outline: 1px solid #ff4444 !important;
+	border: 2px solid #ff4444;
 }

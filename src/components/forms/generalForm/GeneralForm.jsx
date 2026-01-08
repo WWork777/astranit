@@ -1190,12 +1190,13 @@ const GeneralForm = ({
 			>
 				{/* Поле Имя */}
 				<div className={styles.formGroup}>
-					<label htmlFor='name' className={styles.label}>
+					{/* <label htmlFor='name' className={styles.label}>
 						Имя *
-					</label>
+					</label> */}
 					<input
 						id='name'
 						type='text'
+						maxLength={50}
 						className={`${styles.input} ${
 							shouldShowError('name') && errors.name ? styles.error : ''
 						}`}
@@ -1220,9 +1221,9 @@ const GeneralForm = ({
 
 				{/* Поле Телефон с маской */}
 				<div className={styles.formGroup}>
-					<label htmlFor='phone' className={styles.label}>
+					{/* <label htmlFor='phone' className={styles.label}>
 						Телефон *
-					</label>
+					</label> */}
 					<input
 						ref={phoneInputRef}
 						id='phone'
@@ -1247,13 +1248,14 @@ const GeneralForm = ({
 
 				{/* Поле Email с маской */}
 				<div className={styles.formGroup}>
-					<label htmlFor='email' className={styles.label}>
+					{/* <label htmlFor='email' className={styles.label}>
 						Email *
-					</label>
+					</label> */}
 					<input
 						ref={emailInputRef}
 						id='email'
 						type='email'
+						maxLength={50}
 						className={`${styles.input} ${
 							shouldShowError('email') && errors.email ? styles.error : ''
 						}`}
@@ -1271,12 +1273,13 @@ const GeneralForm = ({
 				</div>
 
 				{/* Поле Сообщение */}
-				<div className={styles.formGroup}>
+				{/* <div className={styles.formGroup}>
 					<label htmlFor='message' className={styles.label}>
 						Сообщение
 					</label>
 					<textarea
 						id='message'
+						maxLength={500}
 						className={`${styles.textarea} ${
 							shouldShowError('message') && errors.message ? styles.error : ''
 						}`}
@@ -1295,7 +1298,7 @@ const GeneralForm = ({
 						}}
 						onBlur={() => trigger('message')}
 					/>
-				</div>
+				</div> */}
 
 				{/* Чекбокс согласия */}
 				<div className={styles.formGroup}>

@@ -20,8 +20,17 @@
 	margin: 0 auto;
 	padding: 0 20px;
 	padding-top: 30px;
+	@media (max-width: 1280px) {
+		padding-bottom: 70px;
+	}
+	@media (max-width: 992px) {
+		padding-bottom: 20px;
+	}
 	@media (max-width: 768px) {
 		padding-top: 0;
+	}
+	@media (max-width: 640px) {
+		padding-bottom: 0;
 	}
 
 	// @media (max-width: 1200px) {

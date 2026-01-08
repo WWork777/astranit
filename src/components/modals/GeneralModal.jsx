@@ -73,18 +73,60 @@ const GeneralModal = observer(() => {
 				{modal.customData ? (
 					<div className={styles.modalContentBody}>
 						<div className={styles.modalDisplayData}>
-							{Object.entries(modal.customData).map(([key, value]) => (
-								<div key={key} className={styles.modalDisplayDataItem}>
-									<span className='data-key'>{key}: </span>
-									<span className='data-value'>{value}</span>
-								</div>
-							))}
-							<p className={styles.modalDisplayPrice}>
-								Cтоимость услуг: <span> {modal.totalPrice}</span>
-							</p>
+							<div className={styles.modalDisplayDataTop}>
+								{/* {Object.entries(modal.customData).map(
+									([key, value], index) =>
+										index < 3 && (
+											<div key={key} className={styles.modalDisplayDataItemTop}>
+												<span className='data-key'>{key} </span>
+												<span className='data-value'>
+													{value}
+													{index <
+														Math.min(
+															Object.entries(modal.customData).length,
+															3
+														) -
+															1 && ' |'}
+												</span>
+											</div>
+										)
+								)} */}
+								{Object.entries(modal.customData).map(
+									([key, value], index) =>
+										index < 3 && (
+											<div key={key} className={styles.modalDisplayDataItemTop}>
+												<span className='data-key'>
+													{key}
+													{index <
+														Math.min(
+															Object.entries(modal.customData).length,
+															3
+														) -
+															1 && ' | '}
+												</span>
+												<span className='data-value'>{value}</span>
+											</div>
+										)
+								)}
+							</div>
+							<div className={styles.modalDisplayDataBottom}>
+								{Object.entries(modal.customData).map(
+									([key, value], index) =>
+										index == 3 && (
+											<div key={key} className={styles.modalDisplayDataItem}>
+												<span className='data-key'>{key} </span>
+												<span className='data-value'>{value}:</span>
+											</div>
+										)
+								)}
+								<p className={styles.modalDisplayPrice}>
+									<span> {`${modal.totalPrice}`} р/мес</span>
+								</p>
+							</div>
+
 							{modal.formId == 'tariff-mobile' && (
 								<div>
-									<p className={styles.modalDisplayPrice}>
+									{/* <p className={styles.modalDisplayPrice}>
 										Тариф ЭКОНОМ: <span> {modal.totalEconomPrice}</span>
 									</p>
 									<p className={styles.modalDisplayPrice}>
@@ -95,7 +137,7 @@ const GeneralModal = observer(() => {
 									</p>
 									<p className={styles.modalDisplayPrice}>
 										Тариф КОМФОРТ: <span> {modal.totalComfortPrice}</span>
-									</p>
+									</p> */}
 								</div>
 							)}
 						</div>

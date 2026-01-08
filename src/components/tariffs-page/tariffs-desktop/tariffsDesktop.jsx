@@ -65,13 +65,13 @@ const TariffsDesktop = observer(({ tariffs, list }) => {
 			totalLitePrice,
 			totalStandartPrice,
 			totalComfortPrice,
-			title: 'Коммерческое предложение',
+			title: 'Получить предложение!',
 			type: 'general',
 			customData: {
-				'Тип тарифа': tariffName,
-				'Количество компьютеров': sliderStore.computerValue,
-				'Количество серверов': sliderStore.serversValue,
-				'Количество офисов': sliderStore.officesValue,
+				'ПК ': sliderStore.computerValue,
+				' серверов ': sliderStore.serversValue,
+				' локаций': sliderStore.officesValue,
+				Тариф: tariffName,
 			},
 		})
 	}
