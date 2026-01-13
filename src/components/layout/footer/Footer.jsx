@@ -1908,7 +1908,7 @@ export default function Footer() {
 										}
 									}}
 									onBlur={() => trigger('message')}
-									maxLength={300}
+									maxLength={500}
 									rows={4}
 									value={getValues('message')}
 								/>
@@ -1916,8 +1916,8 @@ export default function Footer() {
 									type='hidden'
 									{...register('message', {
 										maxLength: {
-											value: 300,
-											message: 'Сообщение не должно превышать 300 символов',
+											value: 500,
+											message: 'Сообщение не должно превышать 500 символов',
 										},
 									})}
 								/>

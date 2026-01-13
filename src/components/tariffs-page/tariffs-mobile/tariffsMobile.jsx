@@ -219,9 +219,9 @@ const TariffsMobile = observer(
 								// 	'Количество офисов': sliderStore.officesValue,
 								// },
 								customData: {
-									'ПК ': sliderStore.computerValue,
-									' серверов ': sliderStore.serversValue,
-									' локаций': sliderStore.officesValue,
+									Компьютеров: sliderStore.computerValue,
+									серверов: sliderStore.serversValue,
+									локаций: sliderStore.officesValue,
 									Тариф: tariffName || 'не указан',
 								},
 							})

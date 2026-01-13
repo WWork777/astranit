@@ -320,7 +320,7 @@ export async function POST(request) {
 		const dataGeneration = () => {
 			const configs = {
 				'hero-mobile': {
-					dataToSend: { name, phone, userId, formId, timestamp },
+					dataToSend: { name, phone, email, userId, formId, timestamp },
 					results: {},
 					errors: [],
 				},

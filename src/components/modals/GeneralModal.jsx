@@ -4,7 +4,6 @@ import { observer } from 'mobx-react-lite'
 import { useEffect } from 'react'
 import { RiCloseLargeFill } from 'react-icons/ri'
 import GeneralForm from '../forms/generalForm/GeneralForm'
-import HeroForm from '../forms/heroForm/HeroForm'
 import styles from './GeneralModal.module.scss'
 
 const GeneralModal = observer(() => {
@@ -40,8 +39,8 @@ const GeneralModal = observer(() => {
 		switch (
 			modal?.type // Используем modal.type с optional chaining
 		) {
-			case 'hero':
-				return <HeroForm closeModal={closeModal} />
+			// case 'hero':
+			// 	return <HeroForm closeModal={closeModal} />
 			case 'general':
 				return (
 					<GeneralForm
@@ -74,7 +73,7 @@ const GeneralModal = observer(() => {
 					<div className={styles.modalContentBody}>
 						<div className={styles.modalDisplayData}>
 							<div className={styles.modalDisplayDataTop}>
-								{/* {Object.entries(modal.customData).map(
+								{Object.entries(modal.customData).map(
 									([key, value], index) =>
 										index < 3 && (
 											<div key={key} className={styles.modalDisplayDataItemTop}>
@@ -86,12 +85,12 @@ const GeneralModal = observer(() => {
 															Object.entries(modal.customData).length,
 															3
 														) -
-															1 && ' |'}
+															1 && ','}
 												</span>
 											</div>
 										)
-								)} */}
-								{Object.entries(modal.customData).map(
+								)}
+								{/* {Object.entries(modal.customData).map(
 									([key, value], index) =>
 										index < 3 && (
 											<div key={key} className={styles.modalDisplayDataItemTop}>
@@ -107,7 +106,7 @@ const GeneralModal = observer(() => {
 												<span className='data-value'>{value}</span>
 											</div>
 										)
-								)}
+								)} */}
 							</div>
 							<div className={styles.modalDisplayDataBottom}>
 								{Object.entries(modal.customData).map(
@@ -115,18 +114,28 @@ const GeneralModal = observer(() => {
 										index == 3 && (
 											<div key={key} className={styles.modalDisplayDataItem}>
 												<span className='data-key'>{key} </span>
-												<span className='data-value'>{value}:</span>
+												<span className='data-value'>
+													{value}
+													{modal.formId == 'tariff-desktop' ? ',' : null}
+												</span>
 											</div>
 										)
 								)}
 								<p className={styles.modalDisplayPrice}>
-									<span> {`${modal.totalPrice}`} р/мес</span>
+									<span className={styles.totalPrice}>
+										{' '}
+										{`${modal.totalPrice}`}{' '}
+										<span style={{ color: '#333' }}>
+											{' '}
+											{modal.formId == 'tariff-desktop' ? 'р/мес' : null}
+										</span>
+									</span>
 								</p>
 							</div>
 
-							{modal.formId == 'tariff-mobile' && (
+							{/* {modal.formId == 'tariff-mobile' && (
 								<div>
-									{/* <p className={styles.modalDisplayPrice}>
+									<p className={styles.modalDisplayPrice}>
 										Тариф ЭКОНОМ: <span> {modal.totalEconomPrice}</span>
 									</p>
 									<p className={styles.modalDisplayPrice}>
@@ -137,12 +146,29 @@ const GeneralModal = observer(() => {
 									</p>
 									<p className={styles.modalDisplayPrice}>
 										Тариф КОМФОРТ: <span> {modal.totalComfortPrice}</span>
-									</p> */}
+									</p>
+								</div>
+							)} */}
+						</div>
+					</div>
+				) : (
+					<div className={styles.modalContentBody}>
+						<div className={styles.modalDisplayMessage}>
+							{modal.formId == 'audit-form' && (
+								<div className={styles.modalDisplayMessageAudit}>
+									Оставте заявку на проведение <br /> бесплатного аудита вашей
+									ИТ-ифраструктуры!
+								</div>
+							)}
+							{modal.formId == 'hero-mobile' && (
+								<div className={styles.modalDisplayMessageHero}>
+									Отправьте заявку на консультацию, и мы перезвоним вам в
+									течение 15 минут!
 								</div>
 							)}
 						</div>
 					</div>
-				) : null}
+				)}
 				<div className={styles.modalContentForm}>{toSelectForm(modal)}</div>
 
 				<RiCloseLargeFill

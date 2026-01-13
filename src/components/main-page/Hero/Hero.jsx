@@ -792,12 +792,16 @@ const Hero = observer(() => {
 				</div>
 				<div className={styles.hero_container_form_mobile}>
 					<p>
-						Оставьте заявку на консультацию, и мы перезвоним вам <br /> в
+						Оставьте заявку на консультацию, <br /> и мы перезвоним вам в
 						течение 15 минут!
 					</p>
 					<button
 						onClick={() =>
-							openModal({ type: 'hero', title: 'Оставить заявку!' })
+							openModal({
+								type: 'general',
+								formId: 'hero-mobile',
+								title: 'Оставить заявку!',
+							})
 						}
 					>
 						<span>Оставить заявку!</span>

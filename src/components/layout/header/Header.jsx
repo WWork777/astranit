@@ -234,10 +234,6 @@ export default function Header() {
 						</Link>
 					</div>
 
-					<Link href='tel:+78123363646' className={styles.phone_link_mobile}>
-						(812) 336 36 46
-					</Link>
-
 					<div className={styles.socials_container}>
 						<Link href='tel:+78123363646' className={styles.phone_link}>
 							(812) 336 36 46
@@ -287,19 +283,23 @@ export default function Header() {
 							</Link>
 						</div>
 					</div>
-
-					{/* Бургер-кнопка */}
-					<button
-						className={`${styles.burger_button} ${
-							isMenuOpen ? styles.active : ''
-						}`}
-						onClick={toggleMenu}
-						aria-label='Открыть меню'
-					>
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
+					<div className={styles.burger_wrapper}>
+						<Link href='tel:+78123363646' className={styles.phone_link_mobile}>
+							(812) 336 36 46
+						</Link>
+						{/* Бургер-кнопка */}
+						<button
+							className={`${styles.burger_button} ${
+								isMenuOpen ? styles.active : ''
+							}`}
+							onClick={toggleMenu}
+							aria-label='Открыть меню'
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
 				</div>
 			</div>
 
