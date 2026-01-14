@@ -23,7 +23,7 @@ export default function Start() {
 								</div>
 								<div className={styles.image_wrapper}>
 									<Image
-										src='/svg/start/first.png'
+										src='/svg/start/first.svg'
 										alt='Отчет о состоянии дел'
 										width={130}
 										height={10}
@@ -49,7 +49,7 @@ export default function Start() {
 								</div>
 								<div className={styles.image_wrapper}>
 									<Image
-										src='/svg/start/second.png'
+										src='/svg/start/second.svg'
 										alt='План действий'
 										width={130}
 										height={100}
@@ -74,7 +74,7 @@ export default function Start() {
 								</div>
 								<div className={styles.image_wrapper}>
 									<Image
-										src='/svg/start/three.png'
+										src='/svg/start/three.svg'
 										alt='Техподдержка'
 										width={130}
 										height={100}

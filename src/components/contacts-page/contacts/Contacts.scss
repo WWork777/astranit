@@ -63,7 +63,7 @@
 	}
 	@media (max-width: 400px) {
 		padding: 20px 0 10px 20px;
-		font-size: 33px;
+		font-size: 30px;
 	}
 }
 .contacts-info {
@@ -117,12 +117,14 @@
 			padding-top: 10px;
 		}
 		@media (max-width: 480px) {
-			font-size: 17px;
+			font-size: 20px;
+			padding-bottom: 0;
+			padding-top: 0;
 		}
 
-		@media (max-width: 360px) {
-			font-size: 16px;
-		}
+		// @media (max-width: 360px) {
+		// 	font-size: 16px;
+		// }
 	}
 
 	// .contacts-info__box-title-phone
@@ -158,12 +160,12 @@
 		}
 
 		@media (max-width: 480px) {
-			font-size: 14px;
+			font-size: 16px;
 		}
 
-		@media (max-width: 360px) {
-			font-size: 13.5px;
-		}
+		// @media (max-width: 360px) {
+		// 	font-size: 13.5px;
+		// }
 	}
 
 	// .contacts-info__box-title-email
@@ -199,12 +201,13 @@
 		}
 
 		@media (max-width: 480px) {
-			font-size: 14px;
+			font-size: 16px;
+			padding: 0;
 		}
 
-		@media (max-width: 360px) {
-			font-size: 13.5px;
-		}
+		// @media (max-width: 360px) {
+		// 	font-size: 13.5px;
+		// }
 	}
 	&__tooltip0 {
 		position: relative;
