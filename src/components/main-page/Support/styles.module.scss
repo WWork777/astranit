@@ -9,9 +9,9 @@
 	// 	padding: 40px 0;
 	// }
 
-	// @media (max-width: 480px) {
-	// 	padding: 30px 0;
-	// }
+	@media (max-width: 640px) {
+		padding: 40px 0 20px;
+	}
 }
 
 .container {
@@ -302,7 +302,7 @@
 			font-family: Roboto;
 			font-size: 18px;
 			font-weight: 400;
-			text-align: justify;
+			text-align: left;
 		}
 
 		@media (max-width: 768px) {

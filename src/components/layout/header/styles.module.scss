@@ -40,6 +40,9 @@
 	@media (max-width: 768) {
 		padding: 10px 20px;
 	}
+	@media (max-width: 640px) {
+		padding: 0 20px;
+	}
 	.header {
 		width: 100%;
 		max-width: 1240px;

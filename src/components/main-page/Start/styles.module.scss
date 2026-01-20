@@ -7,9 +7,12 @@
 		padding: 40px 0;
 	}
 
-	@media (max-width: 480px) {
-		padding: 30px 0;
+	@media (max-width: 640px) {
+		padding: 60px 0;
 	}
+	// @media (max-width: 480px) {
+	// 	padding: 30px 0;
+	// }
 }
 
 .container {
@@ -103,7 +106,12 @@
 	font-family: Roboto, sans-serif;
 	justify-content: space-around;
 	height: 100%;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+	// @media (max-width: 640px) {
+	// 	justify-content: end;
+	// }
 
 	// Стрелки-соединители
 	&::before,
@@ -180,9 +188,8 @@
 	}
 
 	@media (max-width: 640px) {
-		flex-direction: column;
 		text-align: center;
-		gap: 20px;
+		gap: 10px;
 	}
 }
 
@@ -226,11 +233,12 @@
 
 	@media (max-width: 640px) {
 		text-align: left;
-		padding-top: 10px;
+		padding-top: 0;
 		padding-left: 60px;
 	}
 	@media (max-width: 480px) {
-		padding-top: 0;
+		padding-top: 7px;
+		padding-bottom: 0;
 		padding-left: 45px;
 		font-size: 20px;
 	}
@@ -267,7 +275,7 @@
 		line-height: 1.1;
 	}
 	@media (max-width: 640px) {
-		padding-top: 10px;
+		padding-top: 25px;
 		text-align: left;
 	}
 
@@ -294,8 +302,8 @@
 		width: 50px;
 		height: auto;
 		position: absolute;
-		top: 15px;
-		left: 10px;
+		top: 20px;
+		left: 21px;
 	}
 	@media (max-width: 480px) {
 		width: 35px;

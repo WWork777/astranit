@@ -45,7 +45,7 @@ const TariffsMobile = observer(
 							<div className='mobile-tariffs-body__inner'>
 								<div className='mobile-tariffs-body__header'>
 									<div className='mobile-tariffs-body__header_title'>
-										Тариф / 1 месяц:
+										Стоимость 1 месяца ИТ-поддержки:
 									</div>
 									<div className='mobile-tariffs-body__header_body'>
 										<div className='mobile-tariffs-body__header_econom'>
@@ -108,8 +108,8 @@ const TariffsMobile = observer(
 																<div
 																	style={{
 																		margin: 'auto',
-																		width: '30px',
-																		height: '30px',
+																		width: '24px',
+																		height: '24px',
 																		borderRadius: '100%',
 																		backgroundColor: `${list.econom}`,
 																		display: 'flex',
@@ -122,8 +122,8 @@ const TariffsMobile = observer(
 																<div
 																	style={{
 																		margin: 'auto',
-																		width: '30px',
-																		height: '30px',
+																		width: '24px',
+																		height: '24px',
 																		borderRadius: '100%',
 																		backgroundColor: `${list.lite}`,
 																		display: 'flex',
@@ -137,8 +137,8 @@ const TariffsMobile = observer(
 																<div
 																	style={{
 																		margin: 'auto',
-																		width: '30px',
-																		height: '30px',
+																		width: '24px',
+																		height: '24px',
 																		borderRadius: '100%',
 																		backgroundColor: `${list.standart}`,
 																		display: 'flex',
@@ -152,8 +152,8 @@ const TariffsMobile = observer(
 																<div
 																	style={{
 																		margin: 'auto',
-																		width: '30px',
-																		height: '30px',
+																		width: '24px',
+																		height: '24px',
 																		borderRadius: '100%',
 																		backgroundColor: `${list.comfort}`,
 																		display: 'flex',
@@ -233,6 +233,6 @@ const TariffsMobile = observer(
 				</div>
 			</>
 		)
-	}
+	},
 )
 export default TariffsMobile

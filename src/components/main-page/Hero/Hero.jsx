@@ -518,13 +518,13 @@ const Hero = observer(() => {
 			if (rawPhone.length === 10) {
 				formattedPhone = `+7 (${rawPhone.substring(0, 3)}) ${rawPhone.substring(
 					3,
-					6
+					6,
 				)}-${rawPhone.substring(6, 8)}-${rawPhone.substring(8, 10)}`
 			} else if (rawPhone.length === 11) {
 				const digits = rawPhone.substring(rawPhone.length - 10)
 				formattedPhone = `+7 (${digits.substring(0, 3)}) ${digits.substring(
 					3,
-					6
+					6,
 				)}-${digits.substring(6, 8)}-${digits.substring(8, 10)}`
 			}
 		}
@@ -562,7 +562,7 @@ const Hero = observer(() => {
 			}
 
 			alert(
-				'✅ Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.'
+				'✅ Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.',
 			)
 
 			// Сброс формы
@@ -655,7 +655,7 @@ const Hero = observer(() => {
 						</div>
 						<div className={styles.hero_form}>
 							<p>
-								Отправьте заявку на консультацию, и мы перезвоним вам в<br />
+								Отправьте заявку на консультацию, и мы перезвоним <br /> в
 								течение 15 минут!
 							</p>
 							<form
@@ -792,8 +792,8 @@ const Hero = observer(() => {
 				</div>
 				<div className={styles.hero_container_form_mobile}>
 					<p>
-						Оставьте заявку на консультацию, <br /> и мы перезвоним вам в
-						течение 15 минут!
+						Оставьте заявку на консультацию, <br /> и мы перезвоним в течение 15
+						минут!
 					</p>
 					<button
 						onClick={() =>

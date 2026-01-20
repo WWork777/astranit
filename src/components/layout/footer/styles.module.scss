@@ -90,11 +90,15 @@
 	font-weight: 500;
 	font-family: Roboto, sans-serif;
 
-	transition: background-color 0.3s ease, transform 0.2s ease;
+	transition:
+		background-color 0.3s ease,
+		transform 0.2s ease;
 
 	@media (max-width: 640px) {
 		display: block;
 		margin: 20px auto;
+		font-size: 16px;
+		font-weight: 900;
 	}
 }
 
@@ -104,17 +108,24 @@
 	border: 1px solid #ffffff;
 	background-color: #ff9933;
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 500;
 	font-family: Roboto, sans-serif;
 	cursor: pointer;
-	transition: background-color 0.3s ease, transform 0.2s ease;
+	transition:
+		background-color 0.3s ease,
+		transform 0.2s ease;
 	box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+	@media (max-width: 768px) {
+		font-size: 16px;
+		font-weight: 900;
+	}
 
 	&:hover {
 		background-color: var(--accent-hover1);
 		transform: translateY(-3px);
-		box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4),
+		box-shadow:
+			0 6px 20px rgba(255, 153, 51, 0.4),
 			inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	}
 

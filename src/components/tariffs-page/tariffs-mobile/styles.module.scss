@@ -13,7 +13,7 @@
 			font-weight: 400;
 			margin-bottom: 5px;
 			@media (max-width: 1280px) {
-				font-size: 14px;
+				font-size: 16px;
 			}
 		}
 
@@ -90,7 +90,8 @@
 					border-radius: 50%;
 					border: 3px solid #ff9a22;
 					cursor: pointer;
-					box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
+					box-shadow:
+						0 4px 8px rgba(255, 153, 51, 0.3),
 						0 0 0 2px rgba(255, 255, 255, 0.8);
 					transform: translateY(-7px);
 					transition: all 0.2s ease;
@@ -99,7 +100,8 @@
 
 					&:hover {
 						transform: translateY(-6px) scale(1.1);
-						box-shadow: 0 6px 12px rgba(255, 153, 51, 0.4),
+						box-shadow:
+							0 6px 12px rgba(255, 153, 51, 0.4),
 							0 0 0 2px rgba(255, 255, 255, 1);
 					}
 				}
@@ -111,13 +113,15 @@
 					border-radius: 50%;
 					border: 3px solid #ff9a22;
 					cursor: pointer;
-					box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
+					box-shadow:
+						0 4px 8px rgba(255, 153, 51, 0.3),
 						0 0 0 2px rgba(255, 255, 255, 0.8);
 					transition: all 0.2s ease;
 
 					&:hover {
 						transform: scale(1.1);
-						box-shadow: 0 6px 12px rgba(255, 153, 51, 0.4),
+						box-shadow:
+							0 6px 12px rgba(255, 153, 51, 0.4),
 							0 0 0 2px rgba(255, 255, 255, 1);
 					}
 				}
@@ -126,7 +130,8 @@
 					border-color: rgba(255, 153, 51, 0.8);
 
 					&::-webkit-slider-thumb {
-						box-shadow: 0 4px 12px rgba(255, 153, 51, 0.5),
+						box-shadow:
+							0 4px 12px rgba(255, 153, 51, 0.5),
 							0 0 0 4px rgba(255, 153, 51, 0.2);
 					}
 				}
@@ -222,7 +227,8 @@
 					border-radius: 50%;
 					border: 3px solid #ff9a22;
 					cursor: pointer;
-					box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
+					box-shadow:
+						0 4px 8px rgba(255, 153, 51, 0.3),
 						0 0 0 2px rgba(255, 255, 255, 0.8);
 					transform: translateY(-8px);
 					transition: all 0.2s ease;
@@ -231,7 +237,8 @@
 
 					&:hover {
 						transform: translateY(-7px) scale(1.1);
-						box-shadow: 0 6px 12px rgba(255, 153, 51, 0.4),
+						box-shadow:
+							0 6px 12px rgba(255, 153, 51, 0.4),
 							0 0 0 2px rgba(255, 255, 255, 1);
 					}
 				}
@@ -243,13 +250,15 @@
 					border-radius: 50%;
 					border: 3px solid #ff9a22;
 					cursor: pointer;
-					box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
+					box-shadow:
+						0 4px 8px rgba(255, 153, 51, 0.3),
 						0 0 0 2px rgba(255, 255, 255, 0.8);
 					transition: all 0.2s ease;
 
 					&:hover {
 						transform: scale(1.1);
-						box-shadow: 0 6px 12px rgba(255, 153, 51, 0.4),
+						box-shadow:
+							0 6px 12px rgba(255, 153, 51, 0.4),
 							0 0 0 2px rgba(255, 255, 255, 1);
 					}
 				}
@@ -258,7 +267,8 @@
 					border-color: rgba(255, 153, 51, 0.8);
 
 					&::-webkit-slider-thumb {
-						box-shadow: 0 4px 12px rgba(255, 153, 51, 0.5),
+						box-shadow:
+							0 4px 12px rgba(255, 153, 51, 0.5),
 							0 0 0 4px rgba(255, 153, 51, 0.2);
 					}
 				}
@@ -354,7 +364,8 @@
 					border-radius: 50%;
 					border: 3px solid #ff9a22;
 					cursor: pointer;
-					box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
+					box-shadow:
+						0 4px 8px rgba(255, 153, 51, 0.3),
 						0 0 0 2px rgba(255, 255, 255, 0.8);
 					transform: translateY(-7px);
 					transition: all 0.2s ease;
@@ -363,7 +374,8 @@
 
 					&:hover {
 						transform: translateY(-7px) scale(1.1);
-						box-shadow: 0 6px 12px rgba(255, 153, 51, 0.4),
+						box-shadow:
+							0 6px 12px rgba(255, 153, 51, 0.4),
 							0 0 0 2px rgba(255, 255, 255, 1);
 					}
 				}
@@ -375,13 +387,15 @@
 					border-radius: 50%;
 					border: 3px solid #ff9a22;
 					cursor: pointer;
-					box-shadow: 0 4px 8px rgba(255, 153, 51, 0.3),
+					box-shadow:
+						0 4px 8px rgba(255, 153, 51, 0.3),
 						0 0 0 2px rgba(255, 255, 255, 0.8);
 					transition: all 0.2s ease;
 
 					&:hover {
 						transform: scale(1.1);
-						box-shadow: 0 6px 12px rgba(255, 153, 51, 0.4),
+						box-shadow:
+							0 6px 12px rgba(255, 153, 51, 0.4),
 							0 0 0 2px rgba(255, 255, 255, 1);
 					}
 				}
@@ -390,7 +404,8 @@
 					border-color: rgba(255, 153, 51, 0.8);
 
 					&::-webkit-slider-thumb {
-						box-shadow: 0 4px 12px rgba(255, 153, 51, 0.5),
+						box-shadow:
+							0 4px 12px rgba(255, 153, 51, 0.5),
 							0 0 0 4px rgba(255, 153, 51, 0.2);
 					}
 				}
