@@ -12,7 +12,7 @@ export default function UnderHero() {
 							alt='specialists'
 							width={100}
 							height={100}
-							className={styles.underhero_image}
+							className={`${styles.underhero_image} ${styles.gram}`}
 						/>
 					</div>
 					<div className={styles.text_container}>

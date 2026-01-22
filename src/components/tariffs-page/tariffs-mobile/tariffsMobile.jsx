@@ -22,11 +22,11 @@ const TariffsMobile = observer(
 		const selectIcon = color => {
 			switch (color) {
 				case '#cccccc':
-					return <TiPlus color='#ffffff' size={23} />
+					return <TiPlus color='#ffffff' size={20} />
 				case '#63a663':
-					return <FaCheck color='#ffffff' />
+					return <FaCheck color='#ffffff' size={13} />
 				case '#d84f47':
-					return <ImCross color='#ffffff' size={13} />
+					return <ImCross color='#ffffff' size={11} />
 				default:
 					return <TiPlus color='#ffffff' size={23} />
 			}
@@ -183,7 +183,7 @@ const TariffsMobile = observer(
 									</div>
 									<div className='mobile-tariffs-body__reference-box mobile-reference-box'>
 										<div className='mobile-reference-box__marker mobile-reference-box__marker_2'>
-											<TiPlus color='#fff' />
+											<TiPlus color='#fff' size={25} />
 										</div>
 										<span className='mobile-reference-box__title'>
 											возможен заказ услуги за дополнительную плату

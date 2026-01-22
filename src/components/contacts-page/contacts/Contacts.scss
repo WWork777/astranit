@@ -218,7 +218,8 @@
 		display: none;
 		@media (max-width: 640px) {
 			display: block;
-			padding-bottom: 550px;
+			visibility: hidden;
+			padding-bottom: 380px;
 		}
 
 		img {

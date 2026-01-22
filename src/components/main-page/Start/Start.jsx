@@ -39,7 +39,9 @@ export default function Start() {
 						<div className={styles.start_item}>
 							<div className={styles.item_content}>
 								<div className={styles.text_wrapper}>
-									<span className={styles.item_title}>План действий</span>
+									<span className={`${styles.item_title} ${styles.plan}`}>
+										План действий
+									</span>
 									<p className={styles.item_description}>
 										Составим и согласуем с вами дорожную карту отладки вашей
 										ИТ-инфраструктуры и решения накопившихся вопросов: как тех,
