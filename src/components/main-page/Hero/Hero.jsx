@@ -789,7 +789,7 @@ const Hero = observer(() => {
 							</span>
 						</div>
 					</div>
-				</div>
+				</div>{' '}
 				<div className={styles.hero_container_form_mobile}>
 					<p>
 						Оставьте заявку на консультацию, <br /> и мы перезвоним в течение 15
