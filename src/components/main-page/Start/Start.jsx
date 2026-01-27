@@ -12,7 +12,7 @@ export default function Start() {
 						<div className={styles.start_item}>
 							<div className={styles.item_content}>
 								<div className={styles.text_wrapper}>
-									<span className={styles.item_title}>
+									<span className={`${styles.item_title} ${styles.plan}`}>
 										Отчет о состоянии дел
 									</span>
 									<p className={styles.item_description}>
@@ -67,7 +67,9 @@ export default function Start() {
 						<div className={styles.start_item}>
 							<div className={styles.item_content}>
 								<div className={styles.text_wrapper}>
-									<span className={styles.item_title}>Техподдержка</span>
+									<span className={`${styles.item_title} ${styles.plan}`}>
+										Техподдержка
+									</span>
 									<p className={styles.item_description}>
 										Ваши сотрудники получат доступ к горячей линии ИТ-поддержки.
 										Мы будем решать вопросы пользователей удаленно и на выездах,
