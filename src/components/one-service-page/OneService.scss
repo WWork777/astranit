@@ -36,9 +36,14 @@
 		font-size: 42px;
 		padding: 40px 0 10px;
 	}
+	@media (max-width: 768px) {
+		padding: 20px 0 10px;
+	}
+	@media (max-width: 640px) {
+		padding: 0 0 10px;
+	}
 
 	@media (max-width: 400px) {
-		padding: 20px 0 10px;
 		font-size: 30px;
 	}
 }

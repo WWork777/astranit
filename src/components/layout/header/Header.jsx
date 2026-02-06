@@ -182,16 +182,14 @@ export default function Header() {
 		<>
 			<div className={styles.header__container}>
 				<div className={styles.header}>
-					<div className={styles.logo_container}>
-						<Link href='/' onClick={closeMenu}>
-							<Image
-								src='/logo/logos.svg'
-								alt='astrinit logo'
-								width={200}
-								height={50}
-							/>
-						</Link>
-					</div>
+					<Link href='/' className={styles.logo_container} onClick={closeMenu}>
+						<Image
+							src='/logo/logos.svg'
+							alt='astrinit logo'
+							width={200}
+							height={50}
+						/>
+					</Link>
 
 					<div className={styles.nav_container}>
 						<Link

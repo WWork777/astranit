@@ -92,8 +92,7 @@
 	width: 100%;
 	max-width: 1240px;
 	@media (max-width: 1280px) {
-		// width: calc(100% - 40px);
-		// padding: 20px 10px;
+		width: calc(100% - 40px);
 	}
 	@media (max-width: 1200px) {
 		width: calc(100% - 40px);

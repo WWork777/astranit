@@ -11,6 +11,7 @@ import './tariffsMobile.scss'
 
 const TariffsMobile = observer(
 	({
+		handleGetQuote,
 		tariffName,
 		list,
 		totalEconomPrice,
@@ -54,6 +55,14 @@ const TariffsMobile = observer(
 												<span className='mobile-tariffs-econom_counter'>
 													{totalEconomPrice} ₽
 												</span>
+												<button
+													className='tariffs-econom_button mobile-tariff-button'
+													onClick={() =>
+														handleGetQuote('Эконом', totalEconomPrice)
+													}
+												>
+													Получить КП!
+												</button>
 											</div>
 										</div>
 										<div className='mobile-tariffs-body__header_lite'>
@@ -62,6 +71,12 @@ const TariffsMobile = observer(
 												<span className='mobile-tariffs-lite_counter'>
 													{totalLitePrice} ₽
 												</span>
+												<button
+													className='tariffs-econom_button mobile-tariff-button'
+													onClick={() => handleGetQuote('Лайт', totalLitePrice)}
+												>
+													Получить КП!
+												</button>
 											</div>
 										</div>
 										<div className='mobile-tariffs-body__header_standart'>
@@ -72,6 +87,14 @@ const TariffsMobile = observer(
 												<span className='mobile-tariffs-standart_counter'>
 													{totalStandartPrice} ₽
 												</span>
+												<button
+													className='tariffs-econom_button mobile-tariff-button'
+													onClick={() =>
+														handleGetQuote('Стандарт', totalStandartPrice)
+													}
+												>
+													Получить КП!
+												</button>
 											</div>
 										</div>
 										<div className='mobile-tariffs-body__header_comfort'>
@@ -80,6 +103,14 @@ const TariffsMobile = observer(
 												<span className='mobile-tariffs-comfort_counter'>
 													{totalComfortPrice} ₽
 												</span>
+												<button
+													className='tariffs-econom_button mobile-tariff-button'
+													onClick={() =>
+														handleGetQuote('Комфорт', totalComfortPrice)
+													}
+												>
+													Получить КП!
+												</button>
 											</div>
 										</div>
 									</div>

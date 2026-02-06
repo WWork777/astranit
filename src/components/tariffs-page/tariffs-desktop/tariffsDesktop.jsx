@@ -22,16 +22,16 @@ const TariffsDesktop = observer(({ tariffs, list }) => {
 	}
 
 	const [totalEconomPrice, setTotalEconomPrice] = useState(
-		calculateTotalPrice('econom')
+		calculateTotalPrice('econom'),
 	)
 	const [totalLitePrice, setTotalLitePrice] = useState(
-		calculateTotalPrice('lite')
+		calculateTotalPrice('lite'),
 	)
 	const [totalStandartPrice, setTotalStandartPrice] = useState(
-		calculateTotalPrice('standart')
+		calculateTotalPrice('standart'),
 	)
 	const [totalComfortPrice, setTotalComfortPrice] = useState(
-		calculateTotalPrice('comfort')
+		calculateTotalPrice('comfort'),
 	)
 
 	useEffect(() => {
@@ -84,6 +84,7 @@ const TariffsDesktop = observer(({ tariffs, list }) => {
 
 					{isMobile ? (
 						<TariffsMobile
+							handleGetQuote={handleGetQuote}
 							list={list}
 							totalEconomPrice={totalEconomPrice}
 							totalLitePrice={totalLitePrice}

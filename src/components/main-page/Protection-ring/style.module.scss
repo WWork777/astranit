@@ -49,17 +49,20 @@
 	}
 
 	@media (max-width: 992px) {
-		font-size: 36px;
+		font-size: 42px;
 		margin-bottom: 30px;
 	}
 
 	@media (max-width: 768px) {
-		font-size: 32px;
+		font-size: 42px;
 		margin-bottom: 20px;
 		text-align: center;
 	}
 	@media (max-width: 640px) {
 		text-align: left;
+	}
+	@media (max-width: 576px) {
+		font-size: 36px;
 	}
 
 	@media (max-width: 480px) {
@@ -154,7 +157,7 @@
 		right: 0;
 	}
 	@media (max-width: 800px) {
-		right: -10px;
+		// right: -10px;
 	}
 	@media (max-width: 640px) {
 		display: none;
@@ -167,6 +170,7 @@
 		&:nth-child(3) .ring_info p {
 			@media (max-width: 992px) {
 				width: 55%;
+				padding-right: 5px;
 			}
 			@media (max-width: 640px) {
 				width: 100%;
@@ -385,7 +389,7 @@
 	box-shadow: inset -4px 4px 5px 0px rgba(0, 0, 0, 0.45);
 	background: var(--layer-color2);
 	border-radius: 50%;
-	transform: scaleY(1.03);
+	transform: scaleY(1.02);
 
 	@media (max-width: 1600px) {
 		top: 133px;
@@ -488,22 +492,22 @@
 }
 
 .ring_image {
-	width: 40%;
+	width: 45%;
 	height: auto;
 	max-width: 120px;
 
 	@media (max-width: 1600px) {
-		width: 35%;
+		// width: 35%;
 	}
 
 	@media (max-width: 768px) {
-		width: 25%;
-		max-width: 90px;
+		// width: 25%;
+		// max-width: 90px;
 	}
 
 	@media (max-width: 360px) {
-		width: 30%;
-		max-width: 80px;
+		// width: 30%;
+		// max-width: 80px;
 	}
 }
 

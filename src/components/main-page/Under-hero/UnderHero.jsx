@@ -32,7 +32,7 @@ export default function UnderHero() {
 							alt='reaction'
 							width={100}
 							height={100}
-							className={styles.underhero_image}
+							className={`${styles.underhero_image} ${styles.reaction}`}
 						/>
 					</div>
 					<div className={styles.text_container}>
@@ -51,7 +51,7 @@ export default function UnderHero() {
 							alt='service'
 							width={100}
 							height={100}
-							className={styles.underhero_image}
+							className={`${styles.underhero_image} ${styles.service}`}
 						/>
 					</div>
 					<div className={styles.text_container}>

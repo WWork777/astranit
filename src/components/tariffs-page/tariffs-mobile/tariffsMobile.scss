@@ -16,12 +16,15 @@
 .mobile-tariffs-body__header_title {
 	color: rgba(73, 72, 87, 1);
 	font-family: Roboto;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 100%;
 	letter-spacing: 0px;
 	text-align: center;
 	padding: 30px 20px 10px;
+	@media (max-width: 767px) {
+		font-size: 16px;
+	}
 }
 .mobile-tariffs-body__header_body {
 	display: grid;
@@ -96,7 +99,7 @@
 .mobile-tariffs-list__item_title {
 	color: rgba(73, 72, 87, 1);
 	font-family: Roboto;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 900;
 	line-height: 100%;
 	letter-spacing: 0%;
@@ -104,6 +107,9 @@
 	text-transform: uppercase;
 	padding: 10px;
 	background-color: var(--layer-color1);
+	@media (max-width: 767px) {
+		font-size: 14px;
+	}
 }
 .mobile-tariffs-list__item_body {
 	// Добавить границу только если следующий элемент ТОЖЕ .mobile-tariffs-list__item_body
@@ -120,12 +126,15 @@
 .mobile-tariffs-list__item_body__inner-title {
 	color: rgba(73, 72, 87, 1);
 	font-family: Roboto;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 110%;
 	letter-spacing: 0%;
 	text-align: center;
 	padding: 10px 0 0;
+	@media (max-width: 767px) {
+		font-size: 14px;
+	}
 }
 .mobile-tariffs-list__item_body__inner-circles {
 	display: grid;
@@ -145,18 +154,24 @@
 	&_title {
 		color: rgba(73, 72, 87, 1);
 		font-family: Roboto;
-		font-size: 14px;
-		font-weight: 400;
+		font-size: 16px;
+		font-weight: 600;
 		line-height: 18.8px;
 		letter-spacing: 0px;
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
 	}
 	&_counter {
 		color: var(--layer-color2);
 		font-family: Roboto;
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 700;
 		line-height: 18.8px;
 		letter-spacing: 0px;
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -246,6 +261,10 @@
 		cursor: pointer;
 		-webkit-animation: hde-contact-pulse 2s infinite;
 		animation: hde-contact-pulse 2s infinite;
+		display: none;
+		@media (max-width: 767px) {
+			display: block;
+		}
 		// &:hover {
 		// 	background: var(--hover-color1);
 		// }
@@ -299,5 +318,10 @@
 
 	100% {
 		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+.mobile-tariff-button {
+	@media (max-width: 767px) {
+		display: none;
 	}
 }

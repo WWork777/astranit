@@ -109,7 +109,8 @@ const SavedData = observer(() => {
 				<div className={styles.mobile_saved__data}>
 					<div className={styles.mobile_title}>
 						<h2>
-							БЕСПОКОИТЕСЬ <br /> ЗА СОХРАННОСТЬ ДАННЫХ?
+							БЕСПОКОИТЕСЬ <br className={styles.mobile_title_br} /> ЗА
+							СОХРАННОСТЬ ДАННЫХ?
 						</h2>
 					</div>
 

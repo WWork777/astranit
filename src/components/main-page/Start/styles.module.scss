@@ -51,18 +51,22 @@
 	}
 
 	@media (max-width: 992px) {
-		font-size: 36px;
+		font-size: 42px;
 		margin-bottom: 30px;
 	}
 
 	@media (max-width: 768px) {
-		font-size: 32px;
+		font-size: 42px;
 		margin-bottom: 25px;
 	}
 
+	@media (max-width: 576px) {
+		font-size: 36px;
+	}
 	@media (max-width: 480px) {
 		font-size: 30px;
 		margin-bottom: 20px;
+		text-align: left;
 	}
 }
 
@@ -229,6 +233,7 @@
 
 	@media (max-width: 992px) {
 		font-size: 23px;
+		margin-bottom: 10px;
 	}
 
 	@media (max-width: 640px) {

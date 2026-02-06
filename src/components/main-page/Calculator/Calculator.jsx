@@ -10,7 +10,7 @@ export default function Calculator() {
 					<div className={styles.clipped_box_left}>
 						<div className={styles.clipped_box_left_inner}>
 							<h1>
-								РАССЧИТАЙТЕ СТОИМОСТЬ <br />
+								РАССЧИТАЙТЕ СТОИМОСТЬ <br className={styles.title_br} />
 								ит-поддержки!
 							</h1>
 							<div className={styles.clipped_box_left_inner_image}>
