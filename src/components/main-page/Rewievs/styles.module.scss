@@ -56,7 +56,8 @@
 
 	.swiperContainer {
 		position: relative;
-		width: 100%;
+		max-width: max-content;
+		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -129,72 +130,72 @@
 		}
 	}
 	.navButtonPrev {
-		left: -50px;
-		@media (max-width: 1240px) {
-			left: -35px;
-		}
-		@media (max-width: 1200px) {
-			left: 0;
-		}
-		@media (max-width: 1080px) {
-			left: 70px;
-		}
-		@media (max-width: 1024px) {
-			left: 50px;
-		}
-		@media (max-width: 992px) {
-			left: 100px;
-		}
-		@media (max-width: 875px) {
-			left: 30px;
-		}
-		@media (max-width: 800px) {
-			left: 10px;
-		}
-		@media (max-width: 768px) {
-			left: 80px;
-		}
-		@media (max-width: 640px) {
-			left: 15px;
-		}
-		@media (max-width: 480px) {
-			left: 0;
-		}
+		left: -35px;
+		// @media (max-width: 1240px) {
+		// 	left: -35px;
+		// }
+		// @media (max-width: 1200px) {
+		// 	left: 0;
+		// }
+		// @media (max-width: 1080px) {
+		// 	left: 70px;
+		// }
+		// @media (max-width: 1024px) {
+		// 	left: 50px;
+		// }
+		// @media (max-width: 992px) {
+		// 	left: 100px;
+		// }
+		// @media (max-width: 875px) {
+		// 	left: 30px;
+		// }
+		// @media (max-width: 800px) {
+		// 	left: 10px;
+		// }
+		// @media (max-width: 768px) {
+		// 	left: 80px;
+		// }
+		// @media (max-width: 640px) {
+		// 	left: 15px;
+		// }
+		// @media (max-width: 480px) {
+		// 	left: 0;
+		// }
 	}
 
 	.navButtonNext {
-		right: -50px;
+		right: -30px;
 
-		@media (max-width: 1240px) {
-			right: -35px;
-		}
-		@media (max-width: 1200px) {
-			right: 0;
-		}
-		@media (max-width: 1080px) {
-			right: 70px;
-		}
-		@media (max-width: 1024px) {
-			right: 50px;
-		}
-		@media (max-width: 992px) {
-			right: 100px;
-		}
-		@media (max-width: 875px) {
-			right: 30px;
-		}
-		@media (max-width: 800px) {
-			right: 10px;
-		}
-		@media (max-width: 768px) {
-			right: 80px;
-		}
-		@media (max-width: 640px) {
-			right: 15px;
-		}
-		@media (max-width: 480px) {
-			right: 0;
-		}
+		// @media (max-width: 1240px) {
+		// 	right: -35px;
+		// }
+		// @media (max-width: 1200px) {
+		// 	right: 0;
+		// }
+		// @media (max-width: 1080px) {
+		// 	right: 70px;
+		// }
+		// @media (max-width: 1024px) {
+		// 	right: 50px;
+		// }
+		// @media (max-width: 992px) {
+		// 	right: 100px;
+		// }
+		// @media (max-width: 875px) {
+		// 	right: 30px;
+		// }
+		// @media (max-width: 800px) {
+		// 	right: 10px;
+		// }
+		// @media (max-width: 768px) {
+		// 	right: 80px;
+		// }
+		// @media (max-width: 640px) {
+		// 	right: 15px;
+		// }
+		// @media (max-width: 480px) {
+		// 	right: 0;
+		// }
 	}
 	.slideImage {
 		-webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);

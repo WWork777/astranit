@@ -741,12 +741,14 @@ const Hero = observer(() => {
 			<section className={styles.hero_container__mobile}>
 				<h1>ИТ-ПОДДЕРЖКА БИЗНЕСА</h1>
 				<p>Внимание и готовность помочь - каждый день!</p>
-				<Image
-					src='/images/hero/hero.png'
-					width={1920}
-					height={1080}
-					alt='it-outsorce'
-				/>
+				<div className={styles.hero_image_container__mobile}>
+					<Image
+						src='/images/hero/hero.png'
+						width={1920}
+						height={1080}
+						alt='it-outsorce'
+					/>
+				</div>
 				<div className={styles.hero_content_mobile}>
 					<div className={styles.hero_content_container__mobile}>
 						<div className={styles.hero_content__item__mobile}>
@@ -808,6 +810,75 @@ const Hero = observer(() => {
 					</button>
 				</div>
 			</section>
+			{/* <section className='hero-container_mobile'>
+				<h1 className='hero-title_mobile'>ИТ-ПОДДЕРЖКА БИЗНЕСА</h1>
+				<p className='hero-description_mobile'>
+					Внимание и готовность помочь - каждый день!
+				</p>
+				<div className='hero-image-container_mobile'>
+					<img src='/images/hero/hero.png' alt='image' />
+				</div>
+				<div className='hero-content-container_mobile'>
+					<div className='hero-content_mobile'>
+						<div className='hero-content-item_mobile'>
+							<Image
+								src='/svg/hero/phone.svg'
+								alt='phone'
+								width={50}
+								height={50}
+							/>
+							<span>
+								Удаленная техподдержка <br /> по телефону и e-mail
+							</span>
+						</div>
+						<div className='hero-content-item_mobile'>
+							<Image src='/svg/hero/man.svg' alt='man' width={50} height={50} />
+							<span>
+								Техподдержка на месте <br /> с выездом специалиста
+							</span>
+						</div>
+						<div className='hero-content-item_mobile'>
+							<Image
+								src='/svg/hero/protect.svg'
+								alt='protect'
+								width={50}
+								height={50}
+							/>
+							<span>
+								Порядок в ИТ-системе <br /> и защита данных
+							</span>
+						</div>
+						<div className='hero-content-item_mobile'>
+							<Image
+								src='/svg/hero/light.svg'
+								alt='light'
+								width={50}
+								height={50}
+							/>
+							<span>
+								Эффективные <br /> и удобные решения
+							</span>
+						</div>
+					</div>
+				</div>{' '}
+				<div className={styles.hero_container_form_mobile}>
+					<p>
+						Оставьте заявку на консультацию, <br /> и мы перезвоним в течение 15
+						минут!
+					</p>
+					<button
+						onClick={() =>
+							openModal({
+								type: 'general',
+								formId: 'hero-mobile',
+								title: 'Оставить заявку!',
+							})
+						}
+					>
+						<span>Оставить заявку!</span>
+					</button>
+				</div>
+			</section> */}
 		</>
 	)
 })
