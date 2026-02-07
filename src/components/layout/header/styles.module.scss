@@ -34,13 +34,13 @@
 	background-color: #fafafa;
 	z-index: 100;
 	box-shadow: 0 0px 15px #cccccc;
-	@media (max-width: 1280) {
+	@media (max-width: 1280px) {
 		padding: 20px;
 	}
-	@media (max-width: 1240) {
+	@media (max-width: 1240px) {
 		padding: 20px;
 	}
-	@media (max-width: 768) {
+	@media (max-width: 992px) {
 		padding: 10px 20px;
 	}
 	@media (max-width: 640px) {
@@ -132,11 +132,10 @@
 .burger_wrapper {
 	display: none;
 	@media (max-width: 1150px) {
-		height: 54px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 10px;
+		column-gap: 10px;
 		// margin-bottom: 2px;
 	}
 	// @media (max-width: 500px) {
@@ -156,9 +155,7 @@
 	font-size: 48px;
 	text-decoration: none;
 	transition: color 0.3s ease;
-	// @media (max-width: 640px) {
-	// 	transform: translateY(3px);
-	// }
+	transform: translateY(4px);
 
 	&:hover {
 		color: #3a6a7f;

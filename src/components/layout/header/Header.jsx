@@ -282,9 +282,9 @@ export default function Header() {
 						</div>
 					</div>
 					<div className={styles.burger_wrapper}>
-						<Link href='tel:+78123363646' className={styles.phone_link_mobile}>
+						<a href='tel:+78123363646' className={styles.phone_link_mobile}>
 							(812) 336 36 46
-						</Link>
+						</a>
 						{/* Бургер-кнопка */}
 						<button
 							className={`${styles.burger_button} ${
