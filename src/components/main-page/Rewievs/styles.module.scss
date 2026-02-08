@@ -130,10 +130,10 @@
 		}
 	}
 	.navButtonPrev {
-		left: -35px;
-		// @media (max-width: 1240px) {
-		// 	left: -35px;
-		// }
+		left: -30px;
+		@media (max-width: 768px) {
+			left: -45px;
+		}
 		// @media (max-width: 1200px) {
 		// 	left: 0;
 		// }
@@ -166,9 +166,9 @@
 	.navButtonNext {
 		right: -30px;
 
-		// @media (max-width: 1240px) {
-		// 	right: -35px;
-		// }
+		@media (max-width: 768px) {
+			right: -45px;
+		}
 		// @media (max-width: 1200px) {
 		// 	right: 0;
 		// }
