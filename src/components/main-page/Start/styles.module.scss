@@ -4,7 +4,7 @@
 	padding-bottom: 80px;
 
 	@media (max-width: 992px) {
-		padding: 40px 0;
+		padding: 100px 0 40px;
 	}
 
 	@media (max-width: 640px) {
@@ -211,7 +211,7 @@
 
 // Общие стили текста
 .item_title {
-	padding-bottom: 10px;
+	padding-bottom: 18px;
 	font-size: 25px;
 	font-weight: 700;
 	color: #494857;

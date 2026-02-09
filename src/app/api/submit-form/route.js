@@ -282,6 +282,10 @@ export async function POST(request) {
 			server,
 			office,
 			tariff,
+			computerCount,
+			serverCount,
+			officeCount,
+			tariffName,
 			totalPrice,
 			totalEconomPrice,
 			totalLitePrice,
@@ -303,18 +307,18 @@ export async function POST(request) {
 					success: false,
 					error: `Обязательные поля отсутствуют: ${missingFields.join(', ')}`,
 				},
-				{ status: 400 }
+				{ status: 400 },
 			)
 		}
 
 		// 2. Проверка дубликатов (опционально)
-		const duplicateCheck = await DatabaseService.checkDuplicate(phone, formId)
-		if (duplicateCheck.isDuplicate) {
-			console.log(
-				`⚠️ Найдена дублирующая заявка от ${phone} для формы ${formId}`
-			)
-			// Можно либо прервать выполнение, либо продолжить с предупреждением
-		}
+		// const duplicateCheck = await DatabaseService.checkDuplicate(phone, formId)
+		// if (duplicateCheck.isDuplicate) {
+		// 	console.log(
+		// 		`⚠️ Найдена дублирующая заявка от ${phone} для формы ${formId}`,
+		// 	)
+		// 	// Можно либо прервать выполнение, либо продолжить с предупреждением
+		// }
 
 		// 3. Подготавливаем данные для отправки
 		const dataGeneration = () => {
@@ -348,10 +352,10 @@ export async function POST(request) {
 						phone,
 						email,
 						message,
-						tariff,
-						computer,
-						server,
-						office,
+						tariffName,
+						computerCount,
+						serverCount,
+						officeCount,
 						totalPrice,
 						userId,
 						formId,
@@ -366,9 +370,10 @@ export async function POST(request) {
 						phone,
 						email,
 						message,
-						computer,
-						server,
-						office,
+						tariffName,
+						computerCount,
+						serverCount,
+						officeCount,
 						totalEconomPrice,
 						totalLitePrice,
 						totalStandartPrice,
@@ -507,7 +512,7 @@ export async function POST(request) {
 
 		// 9. Формируем ответ
 		const successfulServices = Object.values(results).filter(
-			r => r.success === true
+			r => r.success === true,
 		)
 
 		// Общий успех, если хотя бы одно сохранение или отправка удалась
@@ -529,10 +534,10 @@ export async function POST(request) {
 			},
 		}
 
-		if (duplicateCheck.isDuplicate) {
-			responseData.warning = 'Найдена дублирующая заявка'
-			responseData.duplicateId = duplicateCheck.duplicateData?.id
-		}
+		// if (duplicateCheck.isDuplicate) {
+		// 	responseData.warning = 'Найдена дублирующая заявка'
+		// 	responseData.duplicateId = duplicateCheck.duplicateData?.id
+		// }
 
 		if (errors.length > 0) {
 			responseData.errors = errors
@@ -566,7 +571,7 @@ export async function POST(request) {
 						: undefined,
 				timestamp: new Date().toISOString(),
 			},
-			{ status: 500 }
+			{ status: 500 },
 		)
 	}
 }

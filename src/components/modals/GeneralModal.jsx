@@ -1,5 +1,6 @@
 'use client'
 import modalStore from '@/store/modalStore'
+import sliderStore from '@/store/sliderStore'
 import { observer } from 'mobx-react-lite'
 import { useEffect } from 'react'
 import { RiCloseLargeFill } from 'react-icons/ri'
@@ -44,6 +45,10 @@ const GeneralModal = observer(() => {
 			case 'general':
 				return (
 					<GeneralForm
+						tariffName={modal.tariffName}
+						computerCount={sliderStore.computerValue}
+						serverCount={sliderStore.serversValue}
+						officeCount={sliderStore.officesValue}
 						formId={modal.formId}
 						customData={modal.customData}
 						totalPrice={modal.totalPrice}
@@ -83,12 +88,12 @@ const GeneralModal = observer(() => {
 													{index <
 														Math.min(
 															Object.entries(modal.customData).length,
-															3
+															3,
 														) -
 															1 && ','}
 												</span>
 											</div>
-										)
+										),
 								)}
 								{/* {Object.entries(modal.customData).map(
 									([key, value], index) =>
@@ -119,7 +124,7 @@ const GeneralModal = observer(() => {
 													{modal.formId == 'tariff-desktop' ? ',' : null}
 												</span>
 											</div>
-										)
+										),
 								)}
 								<p className={styles.modalDisplayPrice}>
 									<span className={styles.totalPrice}>

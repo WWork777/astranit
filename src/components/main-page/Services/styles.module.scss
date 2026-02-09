@@ -178,7 +178,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				object-position: center 30%;
+				object-position: center 30%; /* центр по горизонтали, 70% вниз по вертикали */
 			}
 		}
 
@@ -209,17 +209,23 @@
 					line-height: 1;
 				}
 				@media (max-width: 1080px) {
-					font-size: 14px;
+					font-size: 15.5px;
 					text-align: center;
 					line-height: 1;
 				}
 				@media (max-width: 992px) {
+					font-size: 18px;
+					text-align: center;
+					line-height: 1;
+				}
+				@media (max-width: 768px) {
 					font-size: 16px;
 					text-align: center;
 					line-height: 1;
 				}
+
 				@media (max-width: 640px) {
-					font-size: 15px;
+					font-size: 16px;
 					text-align: center;
 					line-height: 1;
 				}

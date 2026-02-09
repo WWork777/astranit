@@ -23,6 +23,10 @@ export async function sendEmail(formData) {
 		server,
 		office,
 		tariff,
+		computerCount,
+		serverCount,
+		officeCount,
+		tariffName,
 		totalPrice,
 		totalEconomPrice,
 		totalLitePrice,
@@ -64,10 +68,10 @@ export async function sendEmail(formData) {
 	htmlContent += formatField(message, 'Сообщение')
 	htmlContent += formatField(userId, 'ID пользователя')
 	htmlContent += formatField(new Date().toLocaleString(), 'Время обработки')
-	htmlContent += formatField(tariff, 'Выбранный тариф')
+	htmlContent += formatField(tariffName, 'Выбранный тариф')
 	htmlContent += formatField(
 		totalPrice ? `${totalPrice} руб.` : null,
-		'Итоговая цена'
+		'Итоговая цена',
 	)
 
 	// Обрабатываем поля с ценами для тарифов
@@ -88,11 +92,11 @@ export async function sendEmail(formData) {
 	}
 
 	// Обрабатываем поля для оборудования
-	if (computer || server || office) {
+	if (computerCount || serverCount || officeCount) {
 		htmlContent += `<p><strong>Оборудование:</strong></p>`
-		if (computer) htmlContent += `<p> - Компьютеры: ${computer}</p>`
-		if (server) htmlContent += `<p> - Серверы: ${server}</p>`
-		if (office) htmlContent += `<p> - Офис: ${office}</p>`
+		if (computerCount) htmlContent += `<p> - Компьютеры: ${computerCount}</p>`
+		if (serverCount) htmlContent += `<p> - Серверы: ${serverCount}</p>`
+		if (officeCount) htmlContent += `<p> - Офис: ${officeCount}</p>`
 	}
 
 	// Закрывающая часть

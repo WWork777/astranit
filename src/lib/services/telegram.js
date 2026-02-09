@@ -9,6 +9,10 @@ export async function sendTelegramMessage(formData) {
 		server,
 		office,
 		tariff,
+		computerCount,
+		serverCount,
+		officeCount,
+		tariffName,
 		totalPrice,
 		totalEconomPrice,
 		totalLitePrice,
@@ -23,7 +27,7 @@ export async function sendTelegramMessage(formData) {
 
 	if (!botToken || !chatId) {
 		throw new Error(
-			'Конфигурация Telegram не настроена (BOT_TOKEN или CHAT_ID)'
+			'Конфигурация Telegram не настроена (BOT_TOKEN или CHAT_ID)',
 		)
 	}
 	const url = `https://api.telegram.org/bot${botToken}/sendMessage`
@@ -43,7 +47,7 @@ export async function sendTelegramMessage(formData) {
 		throw new Error(
 			`Telegram: ${response.status} - ${
 				errorData.description || 'Неизвестная ошибка'
-			}`
+			}`,
 		)
 	}
 

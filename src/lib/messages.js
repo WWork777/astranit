@@ -18,20 +18,24 @@ export const generateFormMessage = formData => {
 		hasValue(fields.email) ? `📧 *Email:* ${fields.email}` : null,
 
 		// Технические параметры (если есть хотя бы одно)
-		hasValue(fields.computer) ||
-		hasValue(fields.server) ||
-		hasValue(fields.office)
+		hasValue(fields.computerCount) ||
+		hasValue(fields.serverCount) ||
+		hasValue(fields.officeCount)
 			? '\n💻 *ТЕХНИЧЕСКИЕ ПАРАМЕТРЫ*'
 			: null,
-		hasValue(fields.computer) ||
-		hasValue(fields.server) ||
-		hasValue(fields.office)
+		hasValue(fields.computerCount) ||
+		hasValue(fields.serverCount) ||
+		hasValue(fields.officeCount)
 			? ''
 			: null, // Пустая строка после заголовка, если есть параметры
-		hasValue(fields.tariff) ? `  🎖️ Тариф: ${fields.tariff}` : null,
-		hasValue(fields.computer) ? `   🖥️ Компьютеры: ${fields.computer}` : null,
-		hasValue(fields.server) ? `   🗄️ Серверы: ${fields.server}` : null,
-		hasValue(fields.office) ? `   🏢 Офисы: ${fields.office}` : null,
+		hasValue(fields.tariffName) ? `  🎖️ Тариф: ${fields.tariffName}` : null,
+		hasValue(fields.computerCount)
+			? `   🖥️ Компьютеры: ${fields.computerCount}`
+			: null,
+		hasValue(fields.serverCount)
+			? `   🗄️ Серверы: ${fields.serverCount}`
+			: null,
+		hasValue(fields.officeCount) ? `   🏢 Офисы: ${fields.officeCount}` : null,
 
 		// Стоимость (если есть хотя бы одно поле цены)
 		hasValue(fields.totalPrice) ||
