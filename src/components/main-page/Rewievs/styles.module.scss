@@ -61,6 +61,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@media (max-width: 768px) {
+			min-width: 100%;
+		}
+		// @media (max-width: 480px) {
+		// 	min-width: 100%;
+		// 	max-width: max-content;
+		// }
 	}
 
 	.reviewsSwiper {
@@ -82,10 +89,16 @@
 			max-width: 640px;
 		}
 		@media (max-width: 768px) {
-			max-width: 480px;
+			max-width: 576px;
+		}
+		@media (max-width: 776px) {
+			max-width: 530px;
 		}
 		@media (max-width: 640px) {
-			max-width: 360px;
+			max-width: 480px;
+		}
+		@media (max-width: 586px) {
+			max-width: 380px;
 		}
 		@media (max-width: 480px) {
 			max-width: 300px;
@@ -114,7 +127,7 @@
 		}
 	}
 	.right_button {
-		@media (max-width: 640px) {
+		@media (max-width: 768px) {
 			width: 70%;
 		}
 		@media (max-width: 480px) {
@@ -122,7 +135,7 @@
 		}
 	}
 	.left_button {
-		@media (max-width: 640px) {
+		@media (max-width: 768px) {
 			width: 70%;
 		}
 		@media (max-width: 480px) {
@@ -131,11 +144,15 @@
 	}
 	.navButtonPrev {
 		left: -50px;
+		@media (max-width: 768px) {
+			left: 0;
+		}
+
 		@media (max-width: 480px) {
-			left: -35px;
+			left: -5px;
 		}
 		@media (max-width: 360px) {
-			left: -30px;
+			left: -15px;
 		}
 		// @media (max-width: 1080px) {
 		// 	left: 70px;
@@ -166,11 +183,15 @@
 	.navButtonNext {
 		right: -50px;
 
+		@media (max-width: 768px) {
+			right: 0;
+		}
+
 		@media (max-width: 480px) {
-			right: -35px;
+			right: -5px;
 		}
 		@media (max-width: 360px) {
-			right: -30px;
+			right: -15px;
 		}
 		// @media (max-width: 1080px) {
 		// 	right: 70px;
