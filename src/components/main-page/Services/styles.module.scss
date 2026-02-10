@@ -190,6 +190,10 @@
 			align-items: center;
 			padding: 10px 30px;
 
+			@media (max-width: 1040px) {
+				padding: 10px;
+				display: block;
+			}
 			@media (max-width: 992px) {
 				padding: 10px 0;
 				display: block;
@@ -212,6 +216,9 @@
 					font-size: 15.5px;
 					text-align: center;
 					line-height: 1;
+				}
+				@media (max-width: 1040px) {
+					text-align: left;
 				}
 				@media (max-width: 992px) {
 					font-size: 18px;

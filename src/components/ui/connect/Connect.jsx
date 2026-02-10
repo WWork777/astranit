@@ -265,7 +265,7 @@ export default function Connect() {
 							onClick={toggleContactList}
 						>
 							<a
-								href='https://web.whatsapp.com/send/?phone=79312832211'
+								href='https://wa.me/79312832211'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
