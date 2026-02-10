@@ -14,21 +14,6 @@ export async function generateMetadata({ params }) {
 	return {
 		title: `${page.title.toUpperCase()}`,
 		description: `${page.title}`,
-		// keywords: keywords(),
-		// alternates: {
-		// 	canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/category/${url}/${target}`,
-		// },
-		// openGraph: {
-		// 	title: ``,
-		// 	description: '',
-		// 	url: `${process.env.NEXT_PUBLIC_BASE_URL}/category/${url}/${target}`,
-		// 	images: [
-		// 		{
-		// 			url: 'https://juristkemerovo.ru/og/og.png',
-		// 			alt: page.category,
-		// 		},
-		// 	],
-		// },
 	}
 }
 

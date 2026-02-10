@@ -1,26 +1,3 @@
-// export const metadata = {
-// 	title: 'АСТРАНИТ | ТАРИФЫ',
-// 	description: 'АСТРАНИТ ТАРИФЫ ',
-// }
-
-// import TariffsDesktop from '@/components/tariffs-page/tariffs-desktop/tariffsDesktop'
-// import { mockPrices } from '@/data'
-// import { fetchPrices } from '@/lib/fetchData'
-// export default async function TariffsPage() {
-// 	let prices = []
-// 	try {
-// 		prices = await fetchPrices()
-// 	} catch (error) {
-// 		console.error(error)
-// 		prices = mockPrices
-// 	}
-// 	return (
-// 		<>
-// 			<TariffsDesktop tariffs={prices} />
-// 		</>
-// 	)
-// }
-// app/tariffs/page.js
 export const metadata = {
 	title: 'АСТРАНИТ | ТАРИФЫ',
 	description: 'АСТРАНИТ - тарифы на IT-обслуживание',
